@@ -1,0 +1,15 @@
+// showGarage(Garage* garage)
+// createGarage()  => icinde cin  ile ad ve addres alib yeni garaj yaratsin car listini nullptr edin
+// showByFuelType(Garage* garage, FuelType fuelType)
+// showByColor(Garage* garage, const char* color)
+// showGreateThanPrice(Garage* garage, double price)
+// showGreateThanYear(Garage* garage, ushort year)
+// deleteCars(Car* car)
+// deleteGarage(Garage* garage)
+// appendCarToGarage(Garage* garage, Car* car, ushort$ size)
+
+// Sonsuz dovre sechimler imkani
+	// Dersde yazdigimiz funksiyalari sechimlere elave etmek. (Mutleqdir)
+	// append
+	// removeById
+	// Exit(0)

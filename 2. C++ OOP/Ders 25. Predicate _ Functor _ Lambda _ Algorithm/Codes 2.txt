@@ -1,0 +1,118 @@
+#include <iostream>
+#include<list>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+
+// Predicat ||  Functor || Lambda || Algorithm
+/////////////////////////////////////////////////////////
+
+class Student
+{
+public:
+	int _age;
+	double _score;
+	string _fullName;
+
+	Student() = default;
+	Student(int age, double score, string fullName) : _age(age), _score(score), _fullName(fullName) {}
+
+	friend ostream& operator<<(ostream& print, const Student& other) {
+		print << "Name: " << other._fullName << endl
+			<< "Age: " << other._age << endl
+			<< "Score: " << other._score << endl;
+		return print;
+	}
+};
+
+
+
+bool removeByAge(Student& s)
+{
+	return s._age < 20;
+}
+
+
+void print(Student& st)
+{
+	if (st._age > 19)
+		cout << st << endl;
+}
+
+
+bool findMaxPredicat(Student& s1, Student& s2)
+{
+	return s1._age < s2._age;
+}
+
+
+bool countStudentScore(Student& s1)
+{
+	return s1._score > 8;
+}
+
+int main()
+{
+
+	list<Student> students;
+
+	students.push_back(Student(21, 10.5, "E.NihaD"));
+	students.push_back(Student(15, 11, "Hesen.A"));
+	students.push_back(Student(25, 12, "Amin.B"));
+	students.push_back(Student(45, 12, "Kamal.R"));
+	students.push_back(Student(18, 3, "Xeyal.A"));
+	students.push_back(Student(17, 10, "Siya.C"));
+	students.push_back(Student(19, 3, "Merac.O"));
+	students.push_back(Student(19, 8, "Ismayil.K"));
+	students.push_back(Student(19, 8, "Rustem.H"));
+	students.push_back(Student(20, 9, "Ibrahim.E"));
+
+
+	/*
+	for (auto& student : students)
+	{
+		cout << student << endl;
+	}
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+
+	students.remove_if(removeByAge);
+
+	for (auto& student : students)
+	{
+		cout << student << endl;
+	}
+	*/
+
+	// for_each(begin(students), end(students), print);
+	list<int> numbers;
+	numbers.push_back(10);
+	numbers.push_back(11);
+	numbers.push_back(12);
+	numbers.push_back(17);
+	numbers.push_back(11);
+	numbers.push_back(19);
+	numbers.push_back(-10);
+	numbers.push_back(54);
+
+	auto a = binary_search(begin(numbers), end(numbers), 17);
+	cout << a << endl;
+
+	//auto find = min_element(begin(numbers), end(numbers));
+	//auto find = max_element(begin(numbers), end(numbers));
+	//auto find = max_element(begin(students), end(students), findMaxPredicat);
+
+	//auto find = count(begin(numbers), end(numbers), 11);
+	//auto find = count_if(
+	//	begin(students),
+	//	end(students),
+	//	[](Student& s) {return s._score > 8;});
+
+	//cout << find << endl;
+
+
+}

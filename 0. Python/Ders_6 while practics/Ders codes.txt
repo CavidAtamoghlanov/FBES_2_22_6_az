@@ -1,0 +1,145 @@
+
+"""
+Amin -->
+hesen -->
+Eldar --> 
+kamal --> 
+Nijhad --> 
+rsutem --> 
+ibrahim --> 
+Eskerli hesen --> 
+Merac --> 
+Elvin -->  
+Aydinzade hesen --> 
+Iman --> 
+Mehemmed -->
+Rehimaga -->
+Ismayil -->
+"""
+# Dovur  --> 2 yere  bolunur  sonlu sonsuz  dovur
+# Sonlu dovur --> 2 yere bolunur  "serti  ve parametrli dovur"
+
+# TASk 3
+"""
+3. Istifadəçinin daxil etdiyi aralıqda (məs 10 və 30) cüt rəqəmlərin
+cəmini tək rəqəmlərin hasilini hesablayan proqram yazın.
+"""
+# start = int(input("Baslanqic daxil edin: ")) # 5
+# end = int(input("Sonluq daxil edin: ")) # 15
+
+# cut_cem = 0
+# tek_hasil = 1
+
+# while start < end:
+#     if start % 2 == 0:
+#         cut_cem += start
+#     else:
+#         tek_hasil *= start
+#     start += 1
+
+
+# while start < end:
+#     if end % 2 == 0:
+#         cut_cem += end
+#     else:
+#         tek_hasil *= end
+#     end -= 1
+
+# print("cut ededlerin cemi: ", cut_cem)
+# print("Teklerin hasili: ", tek_hasil)
+
+# ---------------------------------------------------------
+# 7. Istifadəçi tam ədəd daxil edir , bu ədədin sadə olub olmamasını
+# tapan proqram yazın.
+
+# number = int(input("eded daxil edn: "))
+# bolen = 1
+# count = 1
+
+# while (number // 2 >= bolen):
+#     if number % bolen == 0:
+#         count += 1
+#     bolen += 1
+# print(bolen)
+# if count > 2:
+#     print("murekkeb ededdir:")
+# else:
+#     print("sade eddir")
+    
+# ----------------------------------------------
+# """
+# 12. Daxil edilmiş ədəddə iki ard arda rəqəmin olub olmamasını
+# yoxlayan proqram yazın.
+# """
+# number = int(input("eded daxil edin: ")) ##  14151651651
+# originalNumber = number
+# eksi = 0
+# while number > 0:
+#     son_iki_reqem = number % 100
+   
+#     if son_iki_reqem % 11 == 0:
+#         print("var", son_iki_reqem)
+        
+#     number = number // 10
+# if number == 0:
+#     print("Yoxdur")
+# -------------------------------------------------------
+"""
+4. İstənilən ədədin polindrom olub olmamasını yoxlayan
+proqram yazın.
+"""
+
+
+# number = int(input("eded daxil edin: ")) ##  12345   
+# originalNumber = number
+# eksi = 0
+# while number > 0:
+#     son_reqem = number % 10     
+#     number = number // 10
+#     eksi = eksi * 10  + son_reqem
+# if originalNumber == eksi:
+#     print("polindrom")
+# else:
+#     print("poindromdeyil")
+# # ----------------------------------------------------
+# Verilmish bank emeliyyatini tekmilleshdirin...
+
+# messaje = '''
+# Ashaqidaki Emeliyyatlardan birini secin: 
+#     [p]    --   Emeliyyatlarin print edilmesi:
+#     [r]    --   AZN balansi artirmaq
+#     [k]    --   AZN balansdan pul cixarmaq:
+#     [d]    --   DOLLAR balansdan pul cixarmaq
+#     [t]    --   AZN to Dollar transver
+#     [c]    --   Dollar to AZN transver
+#     [ab]   --   AZN Balansa baxmaq
+#     [db]   --   DOLLAR Balansa baxmaq
+#     [e]    --   Exit
+# '''
+
+# QEYD: Programda bu xususiyyetler olmalidir..
+# --Balansi minimum 1 AZN veya dollar artirmaq olar, Daha azinda oz errorunuzu yaradirsiniz
+# --Balansdan maxsimum balansda olan qeder pul cixarmaq olar ve minimum 1 AZN veya Dollar  eks halda oz errorunuzu yaradirsiniz
+# --AZNBalansdan dollara  hazirki kurs ile pul transfer edilmelidir 0 ve ondan ashaqi meblex daxil etmek olmaz
+# --Balansi ekrana cap etmek
+# --exit
+
+
+# ---Balansa pul daxil edilerken veya pul cixarilarken mumkun olan butun ehtimallar ucun
+# 	Errorlari yaradmali  ve sonra  TRY ve EXCEPT  den istifade ederek bu errorlari tutmalisiniz
+# 	ki, programiniz cokmesin
+
+
+
+
+# # format goster
+# name = "Cavid"
+# age = 11
+
+
+# print("name: {}  {}".format(name, age))
+
+# print(f"name: {name}  {age}")
+
+
+

@@ -1,0 +1,130 @@
+#include <iostream>
+using namespace std;
+
+//
+////class A {
+////	bool a : 1;
+////	bool b : 1;
+////	bool c : 1;
+////	bool d : 1;
+////	bool t : 6;
+////};
+//
+//int main()
+//{
+//	//// Type Conversion Operators in C++
+//	// static_cast       => Compiler time castdir. 
+//	// dynamic_cast      => Run time zamani yoxlayir ve cevire bilirse cast edir. Ede bilmese NULL (nullptr) qaytarir
+//	// const_cast        => 
+//	// reinterpret_cast  => 
+//
+//
+//
+//	
+//	//// static_cast
+//	//
+//	//class A {};
+//	//A a;
+//
+//	//char q = '1';
+//	//char* ptr = (char*)&a;
+//	////char* ptr_2 = static_cast<char*>(&a); // error
+//	//char* ptr_2 = static_cast<char*>(&q); // error
+//	//cout << ptr_2 << endl;
+//
+//
+//
+//	// dynamic_cast
+//	// Cox vaxt polimorfic class-larda istifade edilir
+//
+//
+//	
+//}
+
+
+////
+////	// dynamic_cast
+////	// Cox vaxt polimorfic class-larda istifade edilir
+//class ButtonBase {
+//public:
+//	virtual void Click() { cout << "ButtonBase Click\n"; }
+//
+//	virtual ~ButtonBase() = 0 {};
+//};
+//
+//class Button : public ButtonBase {
+//public:
+//	void Click() override { cout << "Button Click\n"; }
+//};
+//
+//class CheckBox : public ButtonBase {
+//public:
+//	void Click() override { cout << "CheckBox Click\n"; }
+//};
+//
+//class RadioButton : public ButtonBase {
+//public:
+//	void Click() override { cout << "RadioButton Click\n"; }
+//};
+//
+//
+//
+//// dynamic_cast
+//
+//int main()
+//{
+//	ButtonBase** buttons = new ButtonBase * [7]
+//	{
+//			new Button(),
+//			new CheckBox(),
+//			new RadioButton(),
+//			new CheckBox(),
+//			new Button(),
+//			new CheckBox(),
+//			new RadioButton()
+//	};
+//
+//	int n = 7;
+//
+//	dynamic_cast<CheckBox*>(buttons[0]);
+//
+//	(CheckBox*)(buttons[0]);
+//
+//	for (size_t i = 0; i < n; i++)
+//		if (dynamic_cast<CheckBox*>(buttons[i]) != NULL)
+//			buttons[i]->Click();
+//	/*for (size_t i = 0; i < n; i++)
+//	{
+//		buttons[i]->Click();
+//	}*/
+//}
+//
+//
+//// polymorphic class - non polymorphic class
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// const_cast
+
+void foo(int*a)
+{
+	
+}
+
+void main()
+{
+
+	const int num = 10;
+	const int* ptr = &num;
+
+	//foo(const_cast<int*>(ptr));
+
+
+	int *newPtr = const_cast<int*>(ptr);
+
+	// Undefine behaviors
+	*newPtr = 100;
+	cout << num << endl;
+	cout << *ptr << endl;
+	cout << *newPtr << endl;
+}

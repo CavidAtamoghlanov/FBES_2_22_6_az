@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+
+class Animal
+{
+public:
+	string name;
+	Animal(string name) :name(name) {
+		cout << "Animal" << endl;
+	}
+	
+};
+
+
+class Dog : public Animal
+{
+public:
+	Dog(string name) : Animal(name) {
+	
+		cout << "Dog" << endl;
+	}
+
+	string getName()
+	{
+		return name;
+	}
+};
+
+
+class A {};
+
+int main()
+{
+	// .. Type Conversion ..
+	// 1) implicit (qeyri-ashkar)
+	// 2) explicit (ashkar) => (typecast)
+
+	/////////////////////////////////////////////////////////
+	//// UpCasting
+	//// DownCasting
+
+	//Dog pitbull("Mestanim");
+	////Animal* ptr = &pitbull; // UpCasting
+	////Dog* newDog = (Dog*)(ptr); // DownCasting => Mutleq shekilde pointer veya referenc olmalidir
+
+
+	//
+	//Animal* newanimal = &pitbull; // UpCasting => new object
+
+	//Dog *a = (Dog*)newanimal;
+	///////////////////////////////////////////////////////////////
+	
+	//// Type Conversion Operators in C++
+	// static_cast       => Compiler time castdir. 
+	// dynamic_cast      => Run time zamani yoxlayir ve cevire bilirse cast edir. Ede bilmese NULL (nullptr) qaytarir
+	// const_cast        => 
+	// reinterpret_cast  => 
+
+
+
+	
+
+	cout << sizeof A << endl;
+
+
+
+	
+}
+

@@ -1,0 +1,93 @@
+<<<<<<<<<E-Shop-App>>>>>>>>>>>>>>her bir namespace header file bolunsun
+
+1.Programin ishleme ardicilligi shekilde verildiyi kimidir
+2.Programda chixa bilecek butun errorlarin qarshisi alin,
+esasda database add, delete, get ve s.methodlarda lazim olan yerlerde error atin
+ve her bir method chagrilanda onu try catch edin.(Custom Exception klaslar yazin)
+
+CLIENT
+Butun mehsullar gorunsun
+eger istifadechi hansisa mehsulu alirsa hemen mehsul bazadan alinan say azaldin.
+istifadechi daha da detalli baxa biler hansisa mehsula ve hemen mehsulu ala biler.
+
+ADMIN
+
+Butun mehsullar gorunsun
+Mehsul Elave etme(mehsul elave olunanda hemen mehsulun sayi da daxil edilsin ki,
+ne qeder mehsuldan elave etmek lazimdi, eger daxil edilen adda mehsul varsa,
+hemen mehsulu yeni kimi yaratmasin, sadece olan mehsulun bazadaki sayinin ustune yeni
+say elave olunsun)
+
+Mehsul silme
+
+
+
+#include<iostream>
+
+using namespace std;
+
+///// ELAVE
+class Notification {
+	bool isRead; //oxunub ya yox
+	//Guest guest;
+	string text;
+	//datetime;
+};
+
+
+namespace ECommerce {
+	namespace Database {
+		/// <summary>
+		/// Database Namespace
+		/// </summary>
+		class Guest {
+			string fullname;
+			string connected_date; //tarix saat
+		};
+
+		class Admin {
+			string username;
+			string password;
+		};
+
+		class Product {
+			int id; //avtomatik
+			string name;
+			string description;
+			double price;
+			double discount;
+			double tax; //vergi faizi
+		};
+
+
+		template<typename T>
+		class DbSet {
+			T** items;
+		public:
+			void add(const T* item);
+			void deleteByid(const int& id);
+			T* getItem(const int& id);
+		};
+
+		class Database {
+			DbSet<Product>products;
+			DbSet<Admin>admins;
+			DbSet<Guest>guest;
+		};
+
+	}
+
+	namespace Client {
+
+	}
+	namespace Admin {
+
+	}
+	void start() {
+
+	}
+}
+
+void main() {
+	ECommerce::start();
+}

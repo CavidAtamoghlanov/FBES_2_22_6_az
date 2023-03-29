@@ -1,0 +1,69 @@
+	// TASK 1:
+	// Text-de axtarilan xarakterin sayini geri qaytaran funksiya yazin.
+
+	//NUMUNE:
+
+	// input: "Hello World", 'l'
+	// output: 3
+
+	// prototype: int getCountCharacter(const char* text, char character);
+
+	// cout << getCountCharacter("Hello World", 'l') <<endl;
+
+
+
+	///////////////////////////////////////////////////////////////////////
+	// TASK 2:
+	// Gonderilen text-de ilk ve son 2 xarakteri saxlayib, qalanlarini silmek.
+
+	// QEYD: Eger gonderilen text-in size-i 4-den az olarsa, deyishiklik etmesin.
+
+	// NUMUNE:
+	// input:	w3resurce
+	// output:	w3ce
+
+	// prototype: void cutText(char*& text);
+
+
+	///////////////////////////////////////////////////////////////////////
+	// TASK 3:
+	// Text-de axtarilan substring-in ne qeder istifade olundugnu tapan funksiya yazmaq.
+
+	// text = "I am a programmer and i am busy with programming, programming is a magic"
+
+	// input: text, "ram"
+	// output: 3
+
+	// QEYD: Yoxlamalar olmalidir, eger substr text-den uzun olarsa funksiya -1 qaytarsin.
+
+	// prototype: int findCountSubstr(const char* text, const char* str);
+
+
+
+
+	///////////////////////////////////////////////////////////////////////
+	// TASK 4:
+
+	//input:  - abc
+	//output: - abcing
+
+	//intput - string
+	//output - stringly
+
+
+	// prototype
+	// void updateText(char*& text);
+
+
+
+
+	///////////////////////////////////////////////////////////////////////
+	//Task 5:
+	// Gonderilen text-de axtarilan symbolun hansi index-lerde oldugnu tapmaq ve
+	// hemin index-leri yeni char massiv-ne yazmaq ve hemin massivi return etmek.
+
+	// input: "Salam salam", 'a'
+	// output: char[] output = "1379"
+
+	// prototype
+	// char* findChrIndexes(const char* text, char symbol);

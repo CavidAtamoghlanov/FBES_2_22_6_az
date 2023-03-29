@@ -1,0 +1,5 @@
+8. N ədədinin F faizini tapan proqram yazın. (F və N istifadəçi daxil edir)  
+
+9. Çevrənin uzunluğu istifadəçi tərəfindən daxil edilir. Çevrənin diametrini tapan proqram yazın.
+10. İstifadəçi konsertin biletinin qiymətini və konsertə gedəcək böyüklərin və uşaqların (ayrı-ayrı) sayını daxil edir. 
+Ümumi xərclənəcək məbləği ekrana çıxarın. (Uşaqlara bilet 40faiz ucuzdur)

@@ -1,0 +1,5 @@
+// Priority Queue template
+// class Student olmalidir.
+// Ortalamasi en yuxari olan telebe novbeden chixir.
+
+// Likendlist arashdirin.

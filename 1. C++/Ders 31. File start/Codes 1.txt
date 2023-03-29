@@ -1,0 +1,129 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+{
+
+	// // w mode example
+	// FILE* file;
+	// 
+	// //fopen_s(&file, "C:\\Users\\atamoghlanov_j\\Desktop\\colors.txt", "w");
+	// fopen_s(&file, "colors.txt", "w");
+	// 
+	// putc('K', file);
+	// putc('A', file);
+	// putc('M', file);
+	// putc('A', file);
+	// putc('L', file);
+	// putc('\n', file);
+	// putc('A', file);
+	// putc('A', file);
+	// 
+	// 
+	// 
+	// fclose(file);
+
+
+	// ---------------------------------	// // w mode example
+	 // FILE* file;
+	 // 
+	 // fopen_s(&file, "color.txt", "r");
+	 // 
+	 // if (file != nullptr)
+	 // {
+	//	  char symbol = getc(file);
+	//	  while (symbol != EOF)
+	//	  {
+	//	 	 cout << symbol << endl;
+	//	 	 symbol = getc(file);
+	//	  }
+	 // }
+	 // 
+	 // 
+	 // fclose(file);
+
+	//--------------------------------------------------------
+	  //FILE* file;
+	  //
+	  //fopen_s(&file, "color.txt", "w+");
+	  //
+	  //if (file != nullptr)
+	  //{
+		 // int size = 255;
+		 // char* name = new char[size];
+		 // char* surname = new char[size];
+
+		 // cout << "Enter your name: ";
+		 // cin.getline(name, size);
+
+		 // cout << "Enter your surname: ";
+		 // cin.getline(surname, size);
+
+		 // for (size_t i = 0; name[i] != '\0'; i++)
+		 // {
+			//  putc(name[i], file);
+		 // }
+		 // putc(' ', file);
+
+		 // for (size_t i = 0; surname[i] != '\0'; i++)
+		 // {
+			//  putc(surname[i], file);
+		 // }
+		 // // file yazma hissesi bitdi
+
+
+		 // fseek(file, 0, 0);
+		 // cout << (char)getc(file);
+
+	  //}
+	  //
+	  //
+	  //fclose(file);
+
+	//--------------------------------------------------------
+	FILE* file;
+
+	fopen_s(&file, "color.txt", "a+");
+
+	if (file != nullptr)
+	{
+		int size = 255;
+		char* name = new char[size];
+		char* surname = new char[size]; 
+		cout << "Enter your name: ";
+		cin.getline(name, size);
+
+		cout << "Enter your surname: ";
+		cin.getline(surname, size);
+
+		fputs(name, file);
+		putc(' ', file);
+		fputs(surname, file);
+		putc('\n', file);
+		//----------------------------------
+		fseek(file, 0, 0);
+		int size_ = 1000;
+		char* oxunanmelumat = new char[size_];
+		while (fgets(oxunanmelumat, size_, file) != nullptr)
+		{
+			cout << oxunanmelumat << endl;
+		}
+	}
+	fclose(file);
+
+
+	/*
+	1) sign up
+		name
+		surname
+		password
+	2) Qeydiyyatdan kecenlerin ekrana cixarilmasi
+	3) exit from program
+	
+	
+	*/
+}
+

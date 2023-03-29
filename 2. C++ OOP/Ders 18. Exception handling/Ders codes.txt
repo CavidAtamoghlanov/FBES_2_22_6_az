@@ -1,0 +1,233 @@
+#include <iostream>
+#include<string>
+#include<vector>
+
+using namespace std;
+
+////  Exception Handling => run time zamani bas veren errorlarin qarsisinin alinmasi
+
+
+// 1. Program terefinden hazir olan errorlar (standart errorlar)
+// 2. User define errorlar
+
+//keywords
+//	1. try    => Error olan hiussede programin cokmesinin qarsisini alir ve compireli catch-e kecirir
+//  3. catch  => try vasitesi ile tutulan errora gore yazacaqimiz kodlari icra edir
+//  2. throw  => bilerekden error ataraq rogrami cokerdmek ucundur
+
+
+// Istenilen bir error ata bilerik
+
+// 
+// class A {};
+// void allExceptionExample(int a)
+// {
+// 	switch (a)
+// 	{
+// 	case 1:
+// 		throw 10;
+// 	case 2:
+// 		throw 10.5;
+// 	case 3:
+// 		throw 102.36f;
+// 	case 4:
+// 		throw A();
+// 	default:
+// 		throw exception("Salam");
+// 		break;
+// 	}
+// }
+// 
+// 
+// 
+// 
+// int main()
+// {
+// 
+// 	
+// 	try
+// 	{
+// 		allExceptionExample(15);
+// 
+// 	}
+// 	catch (int ex)
+// 	{
+// 		cout << "in CaTCH for int " << ex << endl;
+// 	}
+// 	catch (double ex)
+// 	{
+// 		cout << "in CaTCH double " << ex << endl;
+// 	}
+// 	catch (A ex)
+// 	{
+// 		cout << "in CaTCH myself data type "  << endl;
+// 	}
+// 	catch (const exception ex)
+// 	{
+// 		cout << ex.what() << endl;
+// 	}
+// 	catch (...)
+// 	{
+// 		cout << "ERRORS" << endl;
+// 	}
+// 
+// 
+// }
+
+
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+
+// kewyWords
+
+// throw()
+// throw(exception_name)
+
+
+
+//int getNumber(int a, int b) throw(exception_ptr)
+//{
+//	if (b == 0)
+//		throw exception_ptr();
+//
+//	return a / b;
+//}
+
+//int getNumber(int a, int b)  noexcept
+//{
+//	if (b == 0)
+//		throw out_of_range("Salam errordur");
+//
+//	return a / b;
+//}
+//
+//
+//
+//int main()
+//{
+//	try
+//	{
+//		getNumber(10, 0);
+//	}
+//	catch (const exception& ex)
+//	{
+//		cout << ex.what() << endl;
+//	}
+//
+//}
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+
+// inner exception => ic ice exception
+
+//
+//
+//int main()
+//{
+//
+//
+//	try
+//	{
+//		try
+//		{
+//			int num;
+//			cout << "Eded  daxil edin: ";
+//			cin >> num;
+//			if (num % 2 == 0)
+//				throw exception("Cut eded olmaz");
+//
+//			cout << "Daxil edilmish eded " << num << endl;
+//
+//		}
+//		catch (const exception& ex)
+//		{
+//			cout << ex.what() << endl;
+//			throw;
+//		}
+//
+//	}
+//	catch (const exception& ex)
+//	{
+//		cout << ex.what() << endl;
+//	}
+//
+//
+//
+//}
+
+// ----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
+
+//// standart errorlar
+//int main()
+//{
+//	try
+//	{
+//		// throw bad_cast::__construct_from_string_literal("asdasdas");
+//		// throw exception("Except");
+//		// throw runtime_error("run time error");
+//
+//
+//	}
+//	catch (const std::exception& ex)
+//	{
+//		cout << ex.what() << endl;
+//	}
+//}
+
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+
+// USERD Define errors => 
+class MyNullException : public exception
+{
+private:
+	string _message;
+	int _line;
+	const char* _time;
+	const char* _file;
+public:
+	MyNullException(const char* message="Null Error", 
+					const char* file = "",
+					const char* time = "",
+					int line = 0) : exception(message)
+	{
+		
+		_file = file;
+		_time = time;
+		_line = line;
+
+		_message = "\nMessage: " + (string)message
+			+ "\nFile: " + _file
+			+ "\nTime: " + _time
+			+ "\nLine: " + to_string(_line);
+	}
+
+	char const* what() const override
+	{
+		return _message.c_str();
+	}
+
+};
+
+
+int main()
+{
+	
+	
+	try
+	{
+		throw MyNullException("Data daxil edilmeyib", __FILE__, __TIME__, __LINE__);
+	}
+	catch ( exception& ex)
+	{
+		cout << ex.what() << endl;
+	}
+
+}
+
+
+

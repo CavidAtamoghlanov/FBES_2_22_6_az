@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+void foo()
+{
+	int a = 10;
+	int b = 20;
+	int* ptr = new int(1542253);
+	throw exception("Kefim bele istedi");
+	cout << "foo" << endl;
+
+
+	delete ptr;
+}
+
+
+int main()
+{
+	// Stack Unwinding
+	int q = 230;
+	double c = 12.22;
+	try
+	{
+		foo();
+	}
+	catch (const std::exception& ex)
+	{
+		cout << "Error tutuldu" << endl;
+		
+	}
+}
+

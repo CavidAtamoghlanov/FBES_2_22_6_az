@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+
+// Menim adim Meracdir
+void findMaxWorld(const char * str) {
+	size_t len = strlen(str);
+
+	size_t bigWorldStartIndex = 0;
+	size_t bigWorldCount = 0;
+
+	size_t count = 0;
+
+	for (size_t i = 0; i <= len; i++)
+	{
+		if (str[i] != ' ' && str[i] != '\0')
+		{
+			count++;
+		}
+		else {
+			if (count > bigWorldCount)
+			{
+				bigWorldCount = count;
+				bigWorldStartIndex = i - count;
+			}
+			count = 0;
+		}
+	}
+
+	for (size_t i = 0; i < bigWorldCount; i++)
+	{
+		cout << str[i + bigWorldStartIndex];
+	}
+
+
+}
+
+void main()
+{
+
+	// & -> addres of operator
+	// & ->  reference
+	// && -> and operator
+	// &  -> bitwise  operator
+
+	// * -> vurma
+	// * -> pointer
+	// * -> dereference
+
+	char* text = new char[] {"Salam Men Step It Academyde oxuyuram"};
+
+	findMaxWorld(text);
+	
+
+	
+	
+
+}

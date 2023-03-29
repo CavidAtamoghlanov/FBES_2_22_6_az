@@ -1,0 +1,30 @@
+// class: User
+// field: string _username
+// field: string _password
+// field: string _email
+
+// Default, Param ctor
+// Initializer list: ""
+// Accessors
+// Output operator overloading (Username, ********)
+// Input operator overloading ()
+// ==
+// >
+// <
+// Assert
+// Username >= 3
+// Password >= 8
+
+
+// class: Database:
+// field: User _users** = nullptr; 
+// field: size_t _count = 0;
+// method: User* getByUsername(string username)
+// method: bool signUp(User* newUser);
+// method: bool signIn(User* newUser);
+// method: bool signIn(string username, string password);
+
+// method: User** data();
+// method: size_t size();
+// Operator: []
+// Destructor

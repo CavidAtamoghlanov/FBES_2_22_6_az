@@ -1,0 +1,7 @@
+//// inline method
+//// explicit keyword
+//// Destructor
+//// Constructor overloading
+//// Dynamic class member variable
+//// Dynamic class
+//// Static member

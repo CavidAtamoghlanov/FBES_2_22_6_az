@@ -1,0 +1,260 @@
+# import random
+
+# print(random.randint(5,155))
+# print(random.uniform(15,50))
+# print(random.random())
+# print(random.choice("rslm"))
+
+"""
+istifadeci necedene eded istediyini  (10)
+necedene boyuk herif istediyini  (5)
+necedenede kicik herif istediyini daxil edin (3)
+"""
+# import string
+# import random
+
+
+# password = ""
+
+# reqem_say = int(input("Reqemlerin sayi: "))  # 3
+# B_herif_say = int(input("Boyu say: "))
+# C_herif_say = int(input("Kicik say: "))
+# symbol_say = int(input("symbol say: "))
+
+
+# butunReqemler = string.digits
+# butunBHerifler = string.ascii_uppercase
+# butunCHerifler = string.ascii_lowercase
+# butunSymbol = string.punctuation
+
+# for i in range(reqem_say):
+#     rand = random.choice(butunReqemler)
+#     password += rand
+    
+# for j in range(B_herif_say):
+#     rand = random.choice(butunBHerifler)
+#     password += rand
+    
+# for j in range(C_herif_say):
+#     rand = random.choice(butunCHerifler)
+#     password += rand
+
+# for j in range(symbol_say):
+#     rand = random.choice(butunSymbol)
+#     password += rand   
+    
+# print(password)
+
+
+
+"""
+TASK 2
+
+istifadeci oz passwordunu daxil edir  Guclu password olub olmadiqini  deyin
+
+qeyd  minimum 1 boyuk bir kicik herif varsa
+minimum 1 reqem varsa    bu password gucludur
+uzunluqu 8 den coxdursa
+
+"""
+
+# password = input("Passwordunuzu daxil edin: ")
+
+# # yol 1
+# if len(password) >= 8:
+#     if not password.isdigit():
+#         if not password.islower():
+#             if not password.isupper():
+#                 if not password.isalpha():
+#                     print("Guclu") 
+#                 else:
+#                     print("reqem daxil edin:")
+#             else:
+#                 print("Minimum bir kicik herif olmalidir")
+#         else:
+#             print("minimum bir boyuk herif olmalidir")
+#     else:
+#         print("herif istifade edin")
+# else:
+#     print("Minimum 8 symbol olmalidir")
+    
+# #-------------------------------------------------
+# # yol 2
+# if len(password) < 8:
+#     print("Minimum 8 symbol olmalidir")
+# elif password.isalpha():
+#     print("Reqem daxil edin")
+# elif password.islower():
+#     print("Minimum 1 boyuk")
+# elif password.isupper():
+#     print("minimum 1 kicik herif")
+# elif password.isdigit():
+#     print("Minimum 2 herif")
+# else:
+#     print("Gucludur")
+
+
+# ----------------------------------------------
+# # yol 3
+# import string
+# b_say = 0
+# k_say = 0
+# r_say = 0
+
+# for i in password:
+#     if i in string.ascii_lowercase:
+#         k_say+=1
+#     elif i in string.ascii_uppercase:
+#         b_say+=1
+#     elif i in string.digits:
+#         r_say+=1
+        
+
+# if b_say > 2:
+#     if k_say > 5:
+#         if r_say > 3:
+#             print("guclu")
+  
+# home work  
+# s = 'qwertyuiqwopzercdscgnvxbhgmjlma'
+# a = ""
+# for i in s:
+#     print(f"{i} --> {s.count(i)}")
+#     if s.count(i)>1 and (not i in a):
+#         print(i)
+#         a+=i
+
+# -----------------------------------------------
+# ord()  --> verilmish symbolun assci-code-daki sira nomresini bize verir
+# chr()  --> verilmish sira nomresinde  duran symbolu gosterir
+# print(ord("["))
+# print(chr(4256))
+# -----------------------------------------------
+
+# new LIST --> Muxtelif type-li elementler coxluqu
+# listin methodlari --> original list uzerinde ishleyir
+
+
+#          0     1     2      3       4       5
+# numbers = [12, -14, 15.78, "Salam", True,  False]
+
+# print(numbers)
+# print(type(numbers))
+
+# index-e gore dataya muraciyyet
+# print(numbers)
+# print(numbers[0])
+# print(numbers[3][2])
+#--------------------------------------------
+# # list slice
+# print(numbers[5])
+# print(numbers[2:5])
+# print(numbers[:3])
+# print(numbers[3:])
+# print(numbers[:])
+# print(numbers[::2])
+# print(numbers[::-1])
+
+
+# # -----------------------------------------
+# # len() --> verilmish collection-nin elementlerini sayir
+# numbers = [12, -14, 15.78, "Salam", True,  False]
+# print(len(numbers))
+
+
+# list methods
+# numbers = [12, -14, 15.78, "Salam", True,  False]
+
+# print(numbers)
+# numbers[4] = "Sagol"
+# print(numbers)
+
+# # append() --> listin sonuna yeni element elave edir
+# numbers.append(16)
+# numbers.append(17)
+# print(numbers)
+
+
+
+
+
+
+# """
+# TASK 3
+# LIST icini 10 dene random 1 ile 100 arasi tam eded le doldurun
+
+
+
+
+# TASK 4
+# Listin icini istifadecinin daxil etdiyi sayda 
+# 1, 30 arasi ancaq 2 ve 5 bolunen kesir ededlerle doldurun
+# """
+# import random
+
+# newList = []
+
+# for i in range(10):
+#     newList.append(random.randint(1,100))
+# print(newList)
+
+
+# #insert(index, data) --> verilmish indekse  verilmish datani elave edir
+
+# numbers = [12, -14, 15.78, "Salam", True,  False]
+
+# numbers.insert(2, "HAHAH")
+# print(numbers)
+
+
+# # clear()  --> listin icindeki butun elementleri silir ve bosh list saxlayir
+# numbers = [12, -14, 15.78, "Salam", True,  False]
+# numbers.clear()
+# print(numbers)
+
+
+# # remove(data)  --> verilmish datani silir
+# numbers = [12, "Salam", -14, 15.78, "Salam", True,  False]
+
+# numbers.remove("Salam")
+# # numbers.remove("Salam1") # error list.remove(x): x not in list
+# print(numbers)
+
+# # pop() --> bos pop  en sonuncu datani silir (sildiyi datani return edir size verir)
+# numbers = [12, "Salam", -14, 15.78, "Salam", True,  False, 15]
+# numbers.pop()
+# print(numbers.pop())
+# print(numbers)
+
+
+
+# # pop(index) --> verilmish indeksdeki elementi silirr (sildiyi datani return edir size verir)
+# numbers = [12, "Salam", -14, 15.78, "Salam", True,  False, 15]
+# numbers.pop(5)
+# print(numbers.pop())
+# print(numbers)
+
+
+# # del --> listi versek  butun listi tam silir deishen yox olur
+# numbers = [12, "Salam", -14, 15.78, "Salam", True,  False, 15]
+# print(numbers)
+# del numbers
+# print(numbers)
+
+# # del --> index- verilerse verilmish index  silinir
+numbers = [12, "Salam", -14, 15.78, "Salam", True,  False, 15]
+del numbers[2]
+print(numbers)
+
+
+
+# Oyrenilesi
+# https://www.w3schools.com/python/python_ref_list.asp
+# numbers.sort()
+# numbers.reverse()
+# numbers.extend()
+# numbers.copy()  # en esasi
+# numbers.count()
+
+
+# nested list

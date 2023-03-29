@@ -1,0 +1,116 @@
+#include <iostream>
+#include<cassert>
+
+using namespace std;
+
+
+class Fraction {
+	int _num = 0;
+	int _denum = 1;
+
+public:
+	Fraction() = delete;
+
+	Fraction(int num, int denum) :_num(num), _denum(denum) {
+		cout << "Constructor with params" << endl;
+	}
+
+	Fraction(const Fraction& other)
+	{
+		cout << "Copy constructor" << endl;
+		this->_num = other._num;
+		this->_denum = other._denum;
+	}
+
+	Fraction operator*(const Fraction& other)
+	{
+
+		int newNum = this->_num * other._num;
+		int newDenum = this->_denum * other._denum;
+
+		return Fraction(newNum, newDenum);
+	}
+
+
+	Fraction& operator*=(const Fraction& other)
+	{
+		this->_num *= other._num;
+		this->_denum *= other._denum;
+
+		return *this;
+
+	}
+
+	bool operator==(const Fraction& other) {
+		return (this->_num == other._num && this->_denum == other._denum);
+	}
+	
+	bool operator!() {
+		return !this->_num;
+	}
+
+	bool operator!=(const Fraction& other) {
+		return !(this->_num == other._num && this->_denum == other._denum);
+	}
+
+
+	// Prefix
+	Fraction& operator++()
+	{
+		++this->_num;
+		++this->_denum;
+
+		return *this;
+	}
+
+
+
+
+	// Postfix
+	Fraction& operator++(int)
+	{
+		this->_num++;
+		this->_denum++;
+
+		return *this;
+	}
+	
+
+	void print()
+	{
+		cout << _num << "/" << _denum << endl;
+	}
+
+
+};
+
+
+int main()
+{
+	//int a = 10;
+
+	/*Fraction a(10, 51);
+	Fraction b(8, 56);
+
+	Fraction c = a * b;
+
+	a.print();
+	
+	b.print();
+	
+	c.print();*/
+
+	Fraction a(11, 51);
+	Fraction b(10, 51);
+
+
+	
+	 a++;
+	 a.print();
+
+
+	
+	
+	
+
+}

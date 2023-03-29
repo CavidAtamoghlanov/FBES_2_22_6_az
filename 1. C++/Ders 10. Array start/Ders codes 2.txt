@@ -1,0 +1,142 @@
+#include<iostream>
+
+using namespace std;
+
+
+int main()
+{
+
+
+	//// compiler - time constant
+	//const int a = 15;
+
+	//int b;
+	//cout << "b ye eded daxil edin: ";
+	//cin >> b;
+	//const int c = b;  // run-time const
+
+	// error 
+
+	// ----------------------------------------------
+	// compile -time error
+	// run-time error
+	// link error
+
+
+	// enum => constant integer toplusu
+	// ------------------------------------
+	// ------------------------------------
+	// Startic arrays
+	// array (list) => birden coxlu eyni TYPE li elementler coxluqu (MASSIV)
+
+	//double myArr[3]; // defien arra
+
+	//cout << myArr << endl;  // adrese muraciet
+	//cout << myArr[0] << endl; // index-e muraciet
+
+
+	//cout << sizeof myArr << endl; // arrayin olcusu
+	//cout << sizeof myArr[0] << endl; // birinci indeksin olcusu
+
+	// --------------------------------------
+	//QEYD:  Menfi indeks yoxdur
+
+
+	// double myArr[10]{};
+	// 
+	////Array Initialization
+	//int myArr[10] = {15.5,18.35,19}; // arrayin datalari hamisi 0- olaraq gelir
+
+	//cout << myArr[0] << endl;
+	//cout << myArr[1] << endl;
+	//cout << myArr[2] << endl;
+	//cout << myArr[3] << endl;
+	//cout << myArr[4] << endl;
+
+
+	/*const int size = 15;
+	int x[1]{};*/
+
+
+	/// ---------------------------------------------------
+
+	//int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+
+	//// arry uzunluqu tapaq
+	//int len = sizeof arr / sizeof arr[0];
+	//for (int i = 0; i < len; i++)
+	//{
+	//	cout << arr[i] << endl;
+	//}
+
+	//double arr[10] = {};
+
+	//for (int i = 0; i < 10; i++)
+	//{
+	//
+	//	/*
+	//		cout << "data daxil edin";
+	//		cin >> arr[i];
+	//	*/
+	//	
+	//	
+	//}
+
+	//for (size_t j = 0; j < 10; j++)
+	//{
+	//	cout << arr[j] << endl;
+	//}
+
+	/*
+	// TASK 1
+	// Size :10 | Eelementleri istifadeci daxil edir (int type-da)
+	// Elementlerin cemini tapmaq lazimdir
+
+
+	// TASK 2: Size: 15
+	// Elementler random olmalidir (-5 5 araliqinda)
+	// Menfi, Musbet ve sifirlarin sayini gostermek lazimdir
+
+
+	// TASK 3: Size 10:
+	// Elementler random olmalidir (-10 10 araliqinda)
+	// minimum ve maksimum elementleri tapmaq lazimdir
+
+
+	// TASK 4: Size: YOU | ASCII - deki butun boyuk herf-leri Array-a doldurun ve cap edin
+
+
+	// TASK 5: Arreyi tersine cevirin (yeni array yaratmadan)
+	// array = [5, 2, 3, 7] => array = [7, 3, 2, 5]
+	*/
+
+	const int size = 5;
+	int arr[size] = { 1,2,3,4,5 };
+	
+	int temp;
+	cout << "Cevirmeden evvel" << endl;
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << endl;
+	for (int i = 0; i < size/2; i++)
+	{
+		temp = arr[i];
+		arr[i] = arr[size - i - 1];
+		arr[size - i - 1] = temp;
+
+	}
+
+	cout << "Cevirmeden sonra" << endl;
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << arr[i] << " ";
+	}
+
+
+
+
+
+}

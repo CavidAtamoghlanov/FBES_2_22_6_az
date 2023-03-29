@@ -1,0 +1,42 @@
+#include <iostream>
+#include<array>
+#include<string>
+#include<list>         // doubleLinkedLIST
+#include<forward_list> // Single linked list
+#include<vector>
+#include<set>          // set, Multiset 
+#include<map>          // mep, multiMap
+#include<unordered_set>
+using namespace std;
+
+
+void main()
+{
+	// List | Set | Map | MultiSet | MultiMap | unorderedSet | UnorderedMap 
+
+
+	// set => order olunmush olur ve elementler unikdir
+
+	// set<string> colors;
+
+	// unordered_set<string> colors; // sort edilmemsih qarishiq set
+
+	// multiset<string> colors; // sort edilmish lakin elementleri tekrarlana bilen set
+
+	//colors.insert("Red");
+	//colors.insert("Green");
+	//colors.insert("Kamal");
+	//colors.insert("Kamal");
+	//colors.insert("Blue");
+	//colors.insert("Merac");
+	//colors.insert("Merac");
+
+	// //auto a = colors.find("Merac"); //  taparsa IteraTOR OBJECT GONDERIR  (tapmasa hecne return etmir)
+	// //cout << *a << endl;
+	//
+	//for (auto& i : colors)
+	//{
+	//	cout << i << endl;
+	//}
+	
+}

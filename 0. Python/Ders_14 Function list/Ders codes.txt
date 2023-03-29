@@ -1,0 +1,67 @@
+# 1. Rəqəmin xoşbəxt olub olmadığını tapan funksiya yazın. (Xoşbəxt
+# rəqəm ilk 3 rəqəmin cəmi son 3 rəqəmin cəminə bərabər olmalıdır)
+# 3 gonderilen  6  reqemli eded  xosbextirse  True  eks  halda  False  qaytarmalidir
+
+
+# def findHappy(number):
+#     number = str(number)
+#     number= list(number)
+#     cem_ilk_3 = 0
+#     cem_Son_3 = 0
+#     for i in number:
+#         if number.index(i) <= 2:
+#             cem_ilk_3+=int(i)
+#         else:
+#             cem_Son_3+=int(i)
+    
+#     if cem_ilk_3 == cem_Son_3:
+#         return True
+#     return False
+
+# print(findHappy(123006))
+# 2. Göndərilən Listin ədədi ortasını tapan funksiya yazın. ededi orta qaytarmalidir
+
+# def findedediorta(list_):
+#     return sum(list_) // len(list_)
+
+# 3. Listdeki sadə rəqəmlərin sayını qaytaran fuksiya yazın.
+
+# def findSade(list_):
+#     sadeededlersayi = 0
+#     for i in list_:
+#         count = 0
+#         for j in range(1, i+1):
+#            if i % j == 0:
+#                count += 1
+#         if count == 2:
+#             sadeededlersayi += 1
+    
+#     return sadeededlersayi
+            
+
+
+
+# a = findSade([1,2,3,6,5,2,5,6,9,5,8,9,6,5,8,9,6,3,2,5])
+# print(a)
+
+
+
+
+
+# 4. Verilən rəqəmi müəyyən dəqiqliyə qədər yuvarlaqlaşdıran funksiya
+# yazın. (Funksiya iki parametr qəbul edir, birinci kəsr rəqəm, ikinci
+# parametr isə vergüldən sonra neçə rəqəm qalmalıdır)
+# (eyer  count  gonderilmese  tam edede  yuvarlaqlasdirsin)
+
+
+def foo(number, count=0):
+    STRnumber = str(number) #"16.3545498"
+    tam = str(int(number))
+    kesir = STRnumber[len(tam)+1 :]
+    kesir = kesir[:count]
+    netice = tam+"."+kesir
+    netice = float(netice)
+    print(netice)
+
+
+foo(16.6545498)

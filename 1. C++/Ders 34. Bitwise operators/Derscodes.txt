@@ -1,0 +1,163 @@
+#include <iostream>
+#include <bitset>
+using namespace std;
+
+int main()
+{
+	// Constant pointers
+	// char niye constant olur
+
+	//-----------------------------
+	//-----------------------------
+	// Biwise Operators $, |, ^, ~, <<, >>
+
+	//-------------------------------------------------------
+	// Bitwise AND operator
+	//// & => bitler seviyyesinde Datalarin (and) olunmasi
+
+	//int a = 10;    // 01010 
+	//int b = 20;    // 10100
+
+	//int c = a & b; // 00000
+
+	//cout << a << endl;
+	//cout << b << endl;
+	//cout << c << endl;
+
+	//-------------------------------------------------------
+	//// Bitwise OR operator
+	//// | => bitler seviyyesinde Datalarin (or) olunmasi
+
+	//int a = 10;    // 01010 
+	//int b = 20;    // 10100
+
+	//int c = a | b; // 11110
+
+	//cout << a << endl;
+	//cout << b << endl;
+	//cout << c << endl;
+
+	////----------------------------------------------------------
+	//// Bitwise XOR operator
+	//// ^ => bitler seviyyesinde Datalarin (XOR) olunmasi
+
+	//int a = 10;    // 01010 
+	//int b = 20;    // 10100
+
+	//int c = a ^ b; // 11110
+
+	//cout << a << endl;
+	//cout << b << endl;
+	//cout << c << endl;
+
+	//----------------------------------------------------------
+	//// Bitwise XOR operator
+	//// ^ => bitler seviyyesinde Datalarin (XOR) olunmasi
+
+	//int a = 10;    // 01010 
+	//int b = 20;    // 10100
+
+	//int c = a ^ b; // 11110
+
+	//cout << a << endl;
+	//cout << b << endl;
+	//cout << c << endl;
+
+	//// Bitwise NOT operator
+	//// ~ => bitler seviyyesinde Datalarin (NOT) olunmasi
+
+	//int a = 10;        // 000000000000000000000000000000000001010 
+	//              
+	//                
+	//                   // 111111111111111111111111111111111110101
+	//                   //     +
+	//                   // 00000001
+	//int c = ~a + 1;    // 11110110
+
+	////bitset<90> d = 18446744073709551615;
+	////bitset <90> q = d << 26;
+	//cout << a << endl;
+
+	//cout << c << endl;
+
+	// -------------------------------------------------------------
+	//// Bitwise left swipe operator 
+	//// <<  => Verilmish deyeri dediyimiz byte qeder sola surusdurur
+
+	//int a = 15;     //   0001111
+
+	//int b = a <<  6; //  1111000001
+
+	//cout << a << endl;
+	//cout << b << endl;
+
+	// ----------------------------------------------------------------
+	//// Bitwise right swipe operator 
+	//// >>  => Verilmish deyeri dediyimiz byte qeder sola surusdurur
+
+	//int a = 15;     //  00001111
+
+	//int b = a >> 1; //  00000011
+
+	//cout << a << endl;
+	//cout << b << endl;
+
+	// ----------------------------------------------------------------
+	// ----------------------------------------------------------------
+	// Constant pointers
+
+	// constant pointer
+	// constant value
+	// constant pointer and value
+
+	//// constant value
+	//int a = 10;
+	//int b = 20;
+	//const int*  ptr = &a;
+	//ptr = &b;
+
+
+	//const int c = 15;
+	//const int* d = &c;
+
+
+	//// Constant pointer
+	//int a = 15;
+	//int b = 20;
+	//int* const ptr = &a;
+
+	//const int* const ptr_2 = &a;
+
+
+
+	// -----------------------------------------------------------
+	//// char niye constant olur
+
+	//char a[] = "Salam";
+
+	//
+
+	//char b = 'b';
+	//b = 'c';
+
+	////----------------------------------------------------
+	//// Pointer size calculate
+
+	//int a[10]{1,2,3,4,5,6,7,8,9,5};
+	//int* ptr = a;
+
+
+	// ----------------------------------------------
+	// struc
+
+	struct Person
+	{
+		int* ptr;
+		int a;
+		int f;
+		char b;		
+		int age :6; // 2
+	};
+
+
+}

@@ -1,0 +1,2 @@
+https://www.tutorialspoint.com/cplusplus/cpp_data_types.htm
+https://www.programiz.com/cpp-programming/operators

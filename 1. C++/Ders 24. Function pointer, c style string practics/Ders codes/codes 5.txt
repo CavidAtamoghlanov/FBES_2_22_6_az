@@ -1,0 +1,73 @@
+#include<iostream>
+using namespace std;
+
+
+
+
+void main()
+{
+	//// pointer to pointer
+	//int number = 10;
+	//int* ptr = &number;
+	//int** pptr = &ptr;
+	//int*** ppptr = &pptr;
+
+
+	/*
+	cout << number << endl;
+
+	cout << ptr << endl;
+	cout << &number << endl;
+	cout << endl;
+	cout << &ptr << endl;
+	cout << pptr << endl;
+	cout << endl;
+	cout << &pptr << endl;
+	cout << ppptr << endl;
+	*/
+
+
+	//cout << number << endl; // 10
+	//cout << *ptr   << endl; // 10
+	//cout << **pptr  << endl; // num ad
+	//cout << ***ppptr << endl; // ptr ad
+
+	// ------------------------------------
+
+	/*
+	int* a = new int;
+	int* b = new int(10);
+	int* c = new int[5] {};
+
+
+	int** d = new int*;
+	*d = b;
+
+	cout << d << endl;
+	cout << **d << endl;
+	*/
+
+
+char * arr = new char('a');
+char ** arr_ = new char * (arr);
+
+
+delete arr_;
+delete arr;
+
+//char**** arr_r = new char*** (new char**(new char*(arr)));
+//
+//cout << *(*(*(*arr_r))) << endl;
+
+
+
+
+
+
+
+
+
+	
+
+
+}

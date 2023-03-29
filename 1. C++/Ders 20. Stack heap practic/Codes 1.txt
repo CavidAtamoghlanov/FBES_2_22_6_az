@@ -1,0 +1,127 @@
+#include<iostream>
+
+using namespace std;
+
+
+void fillArray(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+		arr[i] = rand() % 30;
+}
+
+void printArray(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+		cout << arr[i] << " ";
+	cout << endl;
+}
+
+int* pushFront(int* arr, int* size, int NewData) // 12345     9123
+{
+	int* newArr = new int[*size + 1]{};
+	newArr[0] = NewData;
+	for (int i = 1; i <= *size; i++)
+		newArr[i] = arr[i - 1];
+
+	delete[] arr;
+	arr = nullptr;
+	(*size)++;
+	return newArr;
+}
+
+int* insert(int* arr, int* size, int index, int NewData) // 12345  2 3
+{
+	int* newArr = new int[*size + 1]{};
+	newArr[index] = NewData;
+
+	for (int i = 0, j = 0; i <= *size; i++)
+	{
+		if (i == index)
+			continue;
+		newArr[i] = arr[j++];
+	}
+
+	cout << endl;
+	delete[] arr;
+	arr = nullptr;
+	(*size)++;
+	return newArr;
+}
+
+int* deleteFront(int* arr, int* size)
+{
+	(*size)--;
+	int* newArray = new int[*size];
+
+	for (int i = 0; i < *size; i++)
+		newArray[i] = arr[i + 1];
+
+	delete[] arr;
+	arr = nullptr;
+	return newArray;
+}
+
+
+int* deleteBack(int* arr, int* size)
+{
+	(*size)--;
+	int* newArray = new int[*size];
+
+	for (int i = 0; i < *size; i++)
+		newArray[i] = arr[i];
+
+	delete[] arr;
+	arr = nullptr;
+	return newArray;
+}
+
+int* deleteByIndex(int* arr, int* size, int index)
+{
+	(*size)--;
+	int* newArray = new int[*size];
+	for (int i = 0, j = 0; i <= *size; i++)
+	{
+		if (i == index) continue;
+		else newArray[j++] = arr[i];
+	}
+
+	delete[] arr;
+	arr = nullptr;
+	return newArray;
+}
+
+void main()
+{
+	/*
+	* 1. pushFront(int * arr, int &size, int NewData) => VErilmish arrayin evveline yeni element elave edir
+	* 2. insert(int * arr, int &size,int index, int NewData) => verilmish istenilen indekse yeni element elave edir
+	*
+	* 3. deleteFront(int * arr, int *size) => evveldeki elementi silir
+	* 4. deleteBack(int * arr, int *size)  => son elementi silir
+	* 5. deleteByIndex(int * arr, int *size, int index)  => Verilmish indeksi silir
+	*
+	*
+	* 6. combineTwoArray(int * arr_1, int * size_1, int * arr_2, int * size_2) =>
+	*		Iki arrayin birleshmesi
+	*
+	* 7. deleteBlcokFromArray(int * arr_1, int * size_1, int * arr_2, int * size_2) =>
+	*		Birinci arraYDEN IKINCI ARRAYIN elementlerini silmey
+	*/
+
+
+	/*\
+	A = {1, 5,3, 3,9,15,19, 9,19}
+	B = {1,3,9, 19, 19}
+	A = {5,3,15,9}
+	*/
+
+	int size = 10;
+	int* arrmMain = new int[size] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	printArray(arrmMain, size);
+
+	arrmMain = deleteByIndex(arrmMain, &size, 3);
+
+	printArray(arrmMain, size);
+
+
+}

@@ -1,0 +1,37 @@
+1. Klaviaturadan 10 tam ədəd daxil edilir, mənfi ədədlərin
+faizini, müsbət ədədlərin faizini və 0-ların faizini tapın.
+
+2. Klaviaturadan 10 tam ədəd daxil edilir. Cütlərin və
+təklərin neçə faiz olduğunu hesablayan proqram yazın.
+
+3. İstənilən ədədin polindrom olub olmamasını yoxlayan
+proqram yazın.
+
+
+4. 1-100 arasındakı bütün sadə ədədləri çıxaran program
+yazın. Burada, dövr içərisində dövr işlətməlisiniz. Xarici
+dövr 1-100 arasında hərəkət edəcək. Daxili dövr isə
+ədədin sadə olub olmadığını yoxlayacaq.
+
+5. Ekrana istifadəçinin daxil etdiyi say qədər, ulduzlardan üfiqi xətt
+çıxaran proqram yazın.
+
+6. Ekrana, 1-50 aralığındakı rəqəmlərdən ancaq cüt olanları
+çıxaran proqram yazın.
+
+7. Istifadəçinin daxil etdiyi aralıqda (məs 10 və 30) cüt rəqəmlərin
+cəmini tək rəqəmlərin hasilini hesablayan proqram yazın. 
+8. 1-100 diapazonunda 3-ə bölünüən bütün ədədləri ekrana çıxaran proqram
+yazın
+
+9. Ədədin faktorialını tapan proqram yazın. (Məsələn (! - faktorial
+işarəsidir), 5! = 1*2*3*4*5)
+
+10. Ədədin üstünü hesablayan proqram yazın (istifadəçi iki ədəd
+daxil edəcək əsas və üst məs. 2 və 3 cavab 8 alınmalıdır) 
+
+11. İstifadəçi tam ədəd daxil edir, bu ədədin qalıqsız bölündüyü
+bütün rəqəmləri ekrana çıxaran proqram yazın.
+
+
+butun tasklar for ile yazilmalidir

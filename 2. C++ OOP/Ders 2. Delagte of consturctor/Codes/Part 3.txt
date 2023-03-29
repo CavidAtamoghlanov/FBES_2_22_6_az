@@ -1,0 +1,67 @@
+#include <iostream>
+#include <cassert>
+using namespace std;
+
+// inline method
+// explicit keyword
+// Destructor
+// Constructor overloading
+// Dynamic class member variable
+// Dynamic class
+// 
+// 
+// Static member
+
+// delagate constructor
+
+
+// -------------------------------------------
+
+
+class Student {
+private:
+	char* _name = new char[10];
+	int _age;
+
+public:
+
+	explicit Student() {
+		_name = nullptr;
+		_age = 0;
+	}
+	explicit Student(const char*name) {
+		int len = strlen(name) + 1;
+		strcpy_s(this->_name, len, name);
+		_age = 0;
+	}
+
+	explicit Student(int age) {
+		_name = nullptr;
+		_age = age;
+	}
+
+	explicit Student(const char* name, int age) {
+		int len = strlen(name) + 1;
+		strcpy_s(this->_name, len, name);
+		_age = age;
+	}
+
+	// print
+	void print() {
+		cout << "Name: " << (_name ? _name : "null") << endl;
+		cout << "Age: " << _age << endl;
+	}
+
+	~Student() {
+		delete[] _name;
+	}
+	
+};
+
+int main()
+{
+
+	Student* s1 = new Student("Amin");
+	delete s1;
+	
+}

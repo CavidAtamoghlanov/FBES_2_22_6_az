@@ -1,0 +1,223 @@
+# """
+# 14) Nested List 1 (Listi ashagida gosterilen formada
+# doldurmaq ve cap etmek)
+# (5x5)
+# 1 0 1 0 1
+# 1 0 1 0 1
+# 1 0 1 0 1
+# 1 0 1 0 1
+# 1 0 1 0 1
+# """
+
+
+
+
+# esasList = []
+# size = 5
+
+# for row in range(size):
+#     newList = []
+#     for column in range(size):
+#         if column % 2 == 0:
+#             newList.append(1)
+#         else:
+#             newList.append(0)
+    
+#     esasList.append(newList)
+
+# # --------------------------------------
+# print(esasList)
+# for i in esasList:
+#     for j in i:
+#         print(j, end=" ")
+#     print()
+    
+#     ### 14 end
+
+
+# #-----------------------------------------
+# """
+# ) Nested List 2 (Listi ashagida gosterilen formada
+# doldurmaq ve cap etmek)
+# (5x5)
+# 1 0 0 0 1
+# 0 1 0 1 0
+# 0 0 1 0 0
+# 0 1 0 1 0
+# 1 0 0 0 1
+# """
+# esasList = []
+# size = 5
+
+# for row in range(size):
+#     newList = []
+#     for column in range(size):
+#         if column == row or column + row == size-1:
+#             newList.append(1)
+#         else:
+#             newList.append(0)
+    
+#     esasList.append(newList)
+
+# # --------------------------------------
+# print(esasList)
+# for i in esasList:
+#     for j in i:
+#         print(j, end=" ")
+#     print()
+# -----------------------------------------------------------------
+# -----------------------------------------------------------------
+# Functions   --> Mueyyen bir isi icra eden  hazir  kod bloku
+
+# Built in function   --> Python uzerinde hazir gelen funksiyalar
+# User defin Function --> User terefinden yaradilan funksiyalar
+
+# fuksiyanin uctun cehetleri
+    # 1) kod tekrarinin qarsisini alir
+    # 2) Isimizi asanlasdirir
+    
+# Funksiya nece olmalidir
+    # 1) funksiya adina uygun bir is gormelidir
+    # 2) funksiya gorduyu is adina uygun olmalidir
+    # 3) funksiyanin commenti olmalidir
+
+
+# def --> keyworld  vasitesi ile yaradilir
+"""
+def function_name(parametir):  # declarate function
+    body
+    
+function_name()
+
+"""
+
+# def sayHi():
+#     print("Hesen")
+#     print("Huseyn")
+#     print("Hakuna matata")
+
+ 
+# sayHi()
+# print(sayHi)
+
+
+# def sayHI(name):  # parametir
+#     print(f"Salam {name}")
+
+
+# s = input("Ad daxil edin: ")
+# sayHI(s)  # argument
+# sayHI("Elsen")
+
+
+# ----------------------------------------------------------------------
+# # TASk 1
+# # funkdiyaya gonderilmish ededin faktorialini tapan funksiya yazin
+
+# def findFactorial(eded):
+#     hasil = 1
+#     for i in range(1, eded+1):
+#         hasil = hasil * i
+#     print(hasil)
+
+
+
+# findFactorial(15)
+# eded = int(input("eded daxil edin: "))
+# findFactorial(eded)
+# ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+
+# return  --> funksiyadan geri  onun cagrildigi yere data qaytarir
+
+
+# def findFactorial(num):
+#     hasil = 1
+#     for i in range(1, num+1):
+#         hasil = hasil * i
+
+#     print(hasil)
+    
+#     return hasil
+    
+
+
+    
+  
+    
+# netice = findFactorial(5)
+# # print(netice)
+
+# # example  
+# # (gonderilmish iki ededden en boyuyunu return eden funksiya yazin)
+
+# def findMax(num_1, num_2):
+#     if num_1 > num_2:
+#         return num_1
+    
+#     return num_2
+
+# a = findMax(10, 10)
+# print(a)
+ 
+ # -----------------------------------------------------------------------------
+# 1. Ədədin kubunu qaytaran funksiya yazın.
+
+
+
+# def findPow(number, ust):
+    
+#     hasil = number
+#     for i in range(1, ust):
+#         hasil = hasil * number
+    
+#     return hasil
+
+
+# eded = int(input("Eded daxil edin "))
+# netice = findPow(eded, 2)
+# print(netice)
+
+#-------------------------------------------------------------------------------------------
+# TASK 2
+# 9. Funksiya 2 ədəd qəbul edir və bunlar arasındakı bütün ədədləri
+# toplayıb qaytarır.
+
+
+
+# # TASK 3
+# # 3. Ədəd müsbətdirsə doğru, mənfidirsə yanlış qaytaran funksiya yazın.
+# "#"
+# def createKvadrat(row, column, symbol):
+#     for i in range(row):
+#         for j in range(column):
+#             print(symbol, end=" ")
+#         print()
+
+# createKvadrat(5,5,"&")
+
+# #--------------------------------------------------------------
+# import random
+# def findList(start, end, size):
+#     esasList = []
+    
+#     for i in range(size):
+#         rand = random.randint(start, end)
+#         esasList.append(rand)
+    
+#     say = 0
+#     for j in esasList:
+#         if j % 3 == 0 and j%5!=0:
+#             say+=1
+    
+#     return say
+
+# print(findList(-50,500, 1000))
+    
+    
+"""
+4) Ölçüsü 20 olan və random rəqəmlərdən ibarət list
+yaradın. Listin maximum və minimum elemtini tapan
+program yazın. (Dəyəri qaytarın) (max, min hazir olar)
+"""

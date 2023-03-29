@@ -1,0 +1,126 @@
+#include<iostream>
+using namespace std;
+
+
+
+void main()
+{
+	srand(time(nullptr));
+
+	//// Pointer yaratmaq heapde
+
+
+	//int** arr = new int* [] {
+	//	new int(10),
+	//	new int(15),
+	//	new int(19)
+	//};
+
+	////cout << arr[0] << endl;
+
+	//for (size_t i = 0; i < 3; i++)
+	//{
+	//	cout << *arr[i] << " ";
+	//}
+
+	//for (size_t i = 0; i < 3; i++)
+	//{
+	//	delete[] arr[i];
+	//}
+
+	//delete[] arr;
+	//arr = nullptr;
+	//----------------------------------------------------
+
+	//int** arr = new int* [3]{
+	//	new int[3]{},
+	//	new int[3]{},
+	//	new int[3]{},
+	//};
+
+	//
+	////cout << arr << endl;
+	////cout << arr[2][2] << endl;
+	//
+
+	//// fill
+	//srand(time(nullptr));
+	//for (size_t i = 0; i < 3; i++)
+	//{
+	//	for (size_t j = 0; j < 3; j++)
+	//	{
+	//		arr[i][j] = rand() % 10;
+	//	}
+	//}
+
+
+
+	//// print
+	//for (size_t i = 0; i < 3; i++)
+	//{
+	//	for (size_t j = 0; j < 3; j++)
+	//	{
+	//		cout << arr[i][j] << " ";
+	//	}
+	//	cout << endl;
+	//}
+
+
+
+
+
+
+	//// silmey
+
+	//for (size_t i = 0; i < 3; i++)
+	//{
+	//	delete[] arr[i];
+	//}
+
+	//delete[] arr;
+	//arr = nullptr;
+	// ----------------------------------------------------------------
+	int row, column;
+
+	cout << "Enter row: ";
+	cin >> row;
+	cout << "Enter Column: ";
+	cin >> column;
+
+	int** arr = new int* [row] {};
+
+	//  fill free arr
+	for (size_t i = 0; i < row; i++)
+	{
+		arr[i] = new int[column]{};
+	}
+
+	// fill arrrrr
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < column; j++)
+		{
+			arr[i][j] = rand() % 10;
+		}
+	}
+
+
+	// print
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < column; j++)
+		{
+			cout << arr[i][j] << " ";
+		}
+		cout << endl;
+	}
+
+	// silmey
+	for (size_t i = 0; i < row; i++)
+	{
+		delete[] arr[i];
+	}
+	delete[] arr;
+	arr = nullptr;
+
+}

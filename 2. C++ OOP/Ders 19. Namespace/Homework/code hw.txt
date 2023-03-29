@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+
+class Customer {
+public:
+	int id;
+	string name;
+	string surname;
+	string dateOfBirth;
+};
+
+
+class Admin {
+public:
+	int id;
+	string name;
+	string surname;
+	string dateOfBirth;
+};
+
+class Product {
+public:
+	int id;
+	string name;
+	double price;
+	string color;
+};
+
+
+class ProductItem {
+public:
+	int id;
+	Product* product;
+	int quantity;
+
+	double TotalPrice() { return product->price * quantity; }
+};
+
+
+class Order {
+public:
+	vector<ProductItem> productItem;
+	int custumerId;
+	string datetime;
+};
+
+class Database {
+	vector<ProductItem> productItem;
+	vector<Order> orders;
+	vector<Customer> customers;
+	vector<Admin> admins;
+
+	void Update();
+	void Create();
+	void Read();
+	void Delete();
+};
+
+
+int main() {
+
+	return 0;
+}

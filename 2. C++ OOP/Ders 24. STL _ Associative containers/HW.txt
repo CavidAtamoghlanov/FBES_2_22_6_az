@@ -1,0 +1,19 @@
+Penaly class-i yazmaq
+Id, Text, DateTime, Price
+
+
+1 mashin nomresinin choxlu cermeleri(Penalties) ola biler.
+
+
+Bir neche mashin elave edib, onlara her birine ferqli sayda cerime elave etmek
+ve onlari cap etmek.
+
+
+Output operatornu overloading etmek.(for Penalty)
+
+
+Cerimeler:
+Qosha xett
+Qirmizi ishiq
+Dayanma durma
+ve s.

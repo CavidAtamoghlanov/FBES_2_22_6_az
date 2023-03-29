@@ -1,0 +1,100 @@
+#include <iostream>
+#include <cassert>
+using namespace std;
+
+
+
+
+struct Node
+{
+	string data;
+	Node* next;
+	Node* prev;
+
+	Node() :data(), next(), prev() {}
+	Node(string data) :data(data), next(), prev() {};
+};
+
+
+
+
+
+class doubleLinkedList
+{
+	Node* head;
+	Node* end;
+public:
+	doubleLinkedList() :head(), end() {}
+
+	/*
+	addBack
+	addFront
+	popBack
+	popFront
+
+
+	displayFront
+	displayBack
+	*/
+
+	void addBack(Node* item)
+	{
+		if (head == NULL)
+		{
+			head = item;
+			head->next = NULL;
+			head->prev = NULL;
+			
+			end = head;
+			return;
+		}
+		end->next = item;
+		item->prev = end;
+		item->next = NULL;
+		end = item;
+	}
+
+	void addBack(const string& item)
+	{
+		addBack(new Node(item));
+	}
+
+
+	void display()
+	{
+		cout << "{";
+		Node* endItem = head;
+		while (endItem != NULL)
+		{
+			cout << endItem->data << " ";
+			endItem = endItem->next;
+		}
+		cout << "}" << endl;
+	}
+
+
+
+
+
+
+
+
+
+
+};
+
+
+
+int main()
+{
+
+	doubleLinkedList list;
+
+	list.addBack("11");
+	list.addBack("12");
+	list.addBack("13");
+	list.addBack("14");
+
+	list.display();
+
+}

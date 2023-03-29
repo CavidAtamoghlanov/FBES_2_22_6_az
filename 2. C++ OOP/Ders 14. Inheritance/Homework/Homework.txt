@@ -1,0 +1,7 @@
+1) Single
+2) Multilevel
+3) Multiply
+4) Hierarcal
+
+// Real heyatdan heresine aid bir numune yazmaq
+// fields, methods

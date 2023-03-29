@@ -1,0 +1,5 @@
+https://www.programiz.com/cpp-programming/class-templates
+https://www.mygreatlearning.com/blog/templates-in-cpp/
+https://www.javatpoint.com/cpp-templates
+https://en.cppreference.com/w/cpp/language/partial_specialization
+https://www.ibm.com/docs/en/zos/2.3.0?topic=only-partial-specialization-c

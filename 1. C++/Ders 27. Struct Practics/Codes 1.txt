@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+
+//struct HttpSomeRequestForAdmin {
+//	double b;
+//	int* q;
+//	short a;
+//	short d;
+//	int* c;
+//	char n;
+//}a; // type def  verilmesi
+
+
+//struct HttpSomeRequestForAdmin {
+//	
+//	unsigned short age1 : 15;
+//	unsigned short age  : 1;
+//	unsigned short age3 : 1;
+//}Some; 
+
+
+
+
+
+
+int main()
+{
+
+	
+
+}
+
+

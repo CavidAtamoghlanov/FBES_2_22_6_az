@@ -1,0 +1,30 @@
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+
+/*
+	1. scop, logal and global variable
+	2. static keyword
+	3. function overloding
+*/
+// local variable => scop daxilinde yaradilmish deishen o scopun local deishenidir
+
+int age = 15; // global
+
+
+void foo()
+{
+	int age = 15; // local 
+	age = 20;
+}
+
+int main()
+{
+
+
+
+	system("pause");
+	return 0;
+}
+

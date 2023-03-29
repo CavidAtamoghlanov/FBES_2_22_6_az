@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+
+class Student {
+public:
+	char* name;
+	char* surname;
+	int age;
+
+
+	// 4 cur constructor var
+	// Constructor ==> classin objectini yaradan funksiya (object yaradildiqda aftomatiq isleyir)
+	// -------------------------
+	// 1. Default consturctor      => 
+	// 2. constructor with params  => 
+	// 3. copy constructor
+	// 4. move Constructor
+
+
+	// Default constructor
+	Student() {
+		
+		name = nullptr;
+		surname = nullptr;
+		age = 10;
+	}
+
+
+	// constructor with params
+	Student(const char* n, const char *s, int a) {
+		int len = strlen(n) + 1;
+		name = new char[len];
+		strcpy_s(name, len, n);
+
+		int len_s = strlen(s) + 1;
+		surname = new char[len_s];
+		strcpy_s(surname, len_s, s);
+
+		age = a;
+	}
+
+	void print() {
+		cout << (name != nullptr ? name : "NULL")<< endl;
+		cout << (surname != nullptr ? surname : "NULL") << endl;
+		cout << age << endl;
+	}
+};
+
+
+
+int main()
+{
+	Student s1("Cavid","Atamoghlanov", 15);
+	s1.print();
+
+	Student s2("Huseyn", "Gasanli", 21);
+	s2.print();
+
+}

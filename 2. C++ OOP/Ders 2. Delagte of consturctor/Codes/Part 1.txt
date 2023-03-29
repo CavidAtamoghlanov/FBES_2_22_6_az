@@ -1,0 +1,28 @@
+// -------------------------------------------
+// delete default constructor
+// 1 => delete key word-u
+// 2 => Default constructoru PRIVITE  ederek
+// 3 => Parametrli constructor yaradaraq
+
+class Student {
+private:
+	char* _name;
+	int _age;
+	// yol 1
+	//Student(){}
+public:
+	// yol 2
+	//Student() = delete;
+
+	// yol 3
+	Student(int age) {
+
+	}
+};
+
+int main()
+{
+
+	Student a();
+
+}

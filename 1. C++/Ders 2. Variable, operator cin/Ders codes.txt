@@ -1,0 +1,135 @@
+#include<iostream>
+
+using namespace std;
+/*
+1. variable   => Adi type deyeri olcusu adresi olan ramda saxlanilan yaddas sahesidir.
+2. operators  => 
+3. Data type  => 
+*/
+
+int main()
+{
+	// INITALIZE PROSESI
+	//int age = 15; // Initalize  --. deshenin yaradilma prosesi
+	//char symbol = 'a'; // Initalize  --. deshenin yaradilma prosesi
+	//cout << age << endl;
+	//cout << symbol << endl;
+
+
+	// assign prosesi --> deishenin deismesi
+	//int age = 15; // Initialize --> Deishenin yaradilmasi (deishen ikidefe yaradila ilmez)
+	//cout << age << endl;
+	//age = 18;  // assign prosesi --> (deishenin deishme prosesi)
+	//cout << age << endl;
+
+
+
+	// DEFINE PROSESI  --> Deishen yaradilir ve data verilmir
+	//int age; // Define prosesi
+	//age = 15;
+	//cout << age << endl;
+
+	/////////////////////////////////////////////////////////////
+	// desishenin adlandirimasi qaydalari
+	/*
+		1. Reqemle baslaya bilmez
+		2. Xususi symbollarla baslaya bilmez (istifade edile bilmez)
+		3. Xususi keyworl istifade etmey olmaz (int, for, while, if  etc)
+		4. Literal  -->  (Sabit deyer) ('a', "Salam", 15, etc, true, false)
+	*/
+
+	// ----------------------------------------------------------------------
+	// ----------------------------------------------------------------------
+
+	// Operators  --> 
+
+	//variable++  // incriment 1 vahid artirmaq
+	//variable--  // decriment 1 vahid azaltmaq
+	//--variable  // (ilk evvel 1 vahid azaldir sonra deisheni istifade edir)
+	//++variable  // (ilk evvel 1 vahid artirir sonra deisheni istifade edir)
+
+	/*
+	int / int => int
+	float / float => float
+	double / double => double
+
+	float / int    => float
+	int / float    => float
+	double / float => double
+	float / double => double
+	double / int   => double
+	int / double   => double
+	*/
+
+
+	//int age = 15;
+	//cout << age << endl;
+	//
+	//cout << age++ + ++age << endl;
+
+
+	// Comperation operators (Relational Operators)
+		//bool a;
+		//a = 16 > 15;
+		//cout << boolalpha << a << endl; // boolalpha --> consolda metini true veya false olaraq gosterir
+
+	//Logic operators
+		/*
+		
+		&& => and
+		|| => or
+		!  => not
+
+		*/
+
+	int age_Elvin = 26;
+	int age_hesen = 15;
+
+	//bool isEven = age_Elvin > age_hesen && 15 % 2 == 0;
+	//cout << isEven << endl;
+
+	// sizeof  --> verilmish datanin ram uzerindeki neqeder yer tutduqunu bildirir
+	 // &variable  --> deishenin ram uzerinde tutduqu adresi bize verir(16 liq sistemde)
+	/*
+	cout << sizeof(age_Elvin) << endl;
+	cout << sizeof age_Elvin << endl;
+	cout << &age_Elvin << endl;
+	*/
+
+
+	//// ?:    => ternal operator
+	//cout << ((age_Elvin > age_hesen) ? "Elvin" : "Hesen") << endl;
+	// --------------------------------------------------------------
+	// --------------------------------------------------------------
+
+	// consoldan data daxil edilir
+	//  cin >> variable;
+
+	/*
+	int age;
+	cout << "Yasinizi daxil edin: ";
+	cin >>  age;
+	cout << "Age data: " << age << endl;
+	*/
+
+	// EXAMPLE
+	// 1. İki rəqəm daxil edilir, onların ədədi ortasını tapan proqram yazın.
+	//float a, b; // singl line  define
+	//cout << "Birinci ededi daxil edin: ";
+	//cin >> a;
+	//cout << "Ikinci ededi daxil edin: ";
+	//cin >> b;
+	//float netice = (a + b) / 2;
+	//cout << netice << endl;
+
+
+	// TASK 1
+	// Istifadeci dogum ilini daxil edir Yasini tapib ekrana cixarin
+
+
+	
+
+
+	system("pause");
+	return 0;
+}

@@ -1,0 +1,63 @@
+# import random
+# import time
+# # final project millioncuu
+
+# questionIndex = 0
+# correctAnswer = 2
+# allAnswer = 1
+
+
+# questions = [
+#     ["Question 1", ['a3', 'a1', 'a2', 'a4'], 'a3', 1000],
+#     ["Question 2", ['a1', 'a2', 'a3', 'a4'], 'a2', 2000],
+#     ["Question 3", ['a1', 'a2', 'a3', 'a4'], 'a1', 4000],
+   
+# ]
+
+# jokers = ['50-50', 'Call Friend', 'Autoria']
+
+
+# for i in questions:
+#     print(i[0])
+#     random.shuffle(i[1])
+#     # cavablarin ekrana cixarilmasi
+#     index = 0
+#     for j in i[1]:
+#         if index == 0:
+#             print(f"A) {j}")
+#             index+=1
+#         elif index == 1:
+#             print(f"B) {j}")
+#             index+=1
+    
+#     secim = input()
+#     if secim.upper() == "A":
+#         if i[allAnswer][0] == i[correctAnswer]:
+#             print("dogru cavabi secdiniz")
+#         else:
+#             pass
+#     elif secim.upper() == "B":
+#         if i[allAnswer][1] == i[correctAnswer]:
+#             print("dogru cavabi secdiniz")
+#     elif secim.upper() == "C":
+#         if i[allAnswer][2] == i[correctAnswer]:
+#             print("dogru cavabi secdiniz")
+#     elif secim.upper() == "D":
+#         if i[allAnswer][3] == i[correctAnswer]:
+#             print("dogru cavabi secdiniz")
+    
+#############################################################
+#############################################################
+#############################################################
+
+# import math             # kitabxaninain adi ile methoda muraciet olunur
+# import random as r      # oz verdiyimiz ad ile methodlara muraciet olunur
+# from datetime import *
+# from string import ascii_lowercase, punctuation
+
+
+# # print(math.factorial(5))
+# # print(dir(math))
+# ---------------------------------------------------------------------
+
+

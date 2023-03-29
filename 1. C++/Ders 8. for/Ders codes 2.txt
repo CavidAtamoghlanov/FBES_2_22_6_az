@@ -1,0 +1,164 @@
+#include<iostream>
+
+using namespace std;
+
+
+int main()
+{
+	//srand(time(NULL));
+	//cout << rand() % 10 << endl;
+
+// Prefix Condition  (do while)
+// Postfix While     (while)
+
+
+// ----------------------------------------------------------
+// 4. İstənilən ədədin polindrom olub olmamasını yoxlayan proqram yazın.
+////	(ededi istifadeci daxil edir) 1212
+//
+//    int num, num_rev = 0;
+//    cout << "Eded daxil edin:";
+//    cin >> num;
+//    int num_cpy = num;
+//    do {
+//        num_rev = num_rev * 10 + num % 10;
+//        num /= 10;
+//
+//    } while (num > 0);
+//    if (num_rev == num_cpy) {
+//        cout << "polindromdur";
+//    }
+//    else {
+//        cout << "polindrom deyil";
+//    }
+
+	//// Ternal..  TASk
+	//int number;
+	//int numCopy;
+	//int numTers = 0;
+	//
+	//cout << "Istenilen bir eded  daxil edin: ";
+	//cin >> number; // 0
+	//numCopy = number;
+
+	//do
+	//{
+	//	int sonreqem = number % 10;
+	//	
+	//	numTers = numTers * 10 + sonreqem;
+	//	number /= 10;
+	//} while (number > 0);
+
+	/*if (numTers == numCopy)
+	{
+		cout << "Poliindrom" << endl;
+	}
+	else {
+		cout << "Poli indrom deyil" << endl;
+	}*/
+
+	// Teral (sert ? Truhisse : Falasehisse)
+
+	// -----------------------------------------------------------------
+	// -----------------------------------------------------------------
+	// -----------------------------------------------------------------
+
+	//// while
+
+	//int start = 10;
+
+	//while (start <= 100)
+	//{
+	//	if (start % 2 == 0)
+	//	{
+	//		cout << start << endl;
+	//	}
+	//	start++;		
+	//}
+
+
+	//// for
+
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	if (i % 2 == 0) continue;
+
+	//	cout << i << endl;
+	//}
+
+
+	//// for deishenin colde yazilmasi
+	//size_t i = 0;
+	//for (; i < 10; i++)
+	//{
+	//	cout << i << endl;
+	//}
+	//i = 15;
+	//cout << i << endl;
+	//cout << i << endl;
+
+
+	//for (int i = 0; true; i++)
+	//{
+	//	cout << i << endl;
+	//}
+
+	////  for => iki parametirli (deishenli)
+
+	//for (int q = 0, a = 15; (q < 10 && a < 14); q++, a++)
+	//{
+	//
+	//	cout << "Salam" << endl;
+	//}
+	//
+
+	// for -> ile
+	// TASK 1
+	// istifadecinin daxil etdiyi araliqda ancaq 3 ve 5 bolunen ededleri ekrana cixarin
+
+	/*int start, end;
+	cout << "Start daxil edin: ";
+	cin >> start;
+	cout << "End daxil edin: ";
+	cin >> end;
+
+	for (; start < end; start++)
+	{
+		if (start % 3 == 0 && start % 5 == 0)
+		{
+			cout << start << endl;
+		}
+	}*/
+
+
+	// TASK 2
+	// istifadeci daxil etdiyi sayda Horizontal ulduzlar cixarin
+
+	/*int count;
+	cout << "count daxil edin: ";
+	cin >> count;
+
+	for (int i = 0; i < count; i++)
+	{
+		cout << "*";
+	}*/
+
+
+	int count;
+	cout << "count daxil edin: ";
+	cin >> count;
+
+	for (int row = 0; row < count; row++)
+	{
+		for (int column = 0; column < count; column++)
+		{
+			cout << "*" << " ";
+		}
+		cout << "\n";
+	}
+
+	
+
+
+	system("pause");
+}

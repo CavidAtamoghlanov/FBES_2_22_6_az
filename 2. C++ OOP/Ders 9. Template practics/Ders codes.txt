@@ -1,0 +1,121 @@
+
+#include <iostream>
+using namespace std;
+
+template<typename TPairKey, typename TPairValue>
+class KeyValuePair
+{
+public:
+	TPairKey _key;
+	TPairValue _value;
+	KeyValuePair()
+	{
+
+	}
+
+	KeyValuePair(TPairKey key, TPairValue value)
+	{
+		this->_key = key;
+		this->_value = value;
+	}
+
+
+	void print()
+	{
+		cout << _key << ":" << _value;
+	}
+
+};
+
+
+
+template<typename TKey, typename T>
+class Dictionary
+{
+	size_t _count = 0;
+	size_t _capacity = 5;
+	KeyValuePair<TKey, T>* _pairs = nullptr;
+
+	
+
+
+public:
+	Dictionary()
+	{
+	
+		_pairs = new KeyValuePair<TKey, T>[_capacity];
+	}
+
+	Dictionary(size_t capacity)
+	{
+		_capacity = capacity;
+		_pairs = new KeyValuePair<TKey, T>[_capacity];
+
+	}
+
+	void add(const KeyValuePair<TKey, T> item)
+	{
+		if (_count == _capacity)
+		{
+			_capacity += 5;
+			KeyValuePair<TKey, T>* temp = new KeyValuePair<TKey, T>[_capacity];
+
+			for (size_t i = 0; i < _count; i++)
+			{
+				temp[i] = _pairs[i];
+			}
+
+			temp[_count] = item;
+			_count++;
+			_pairs = temp;
+			return;
+		}
+		
+		_pairs[_count] = item;
+		_count++;
+	}
+	T& operator[](const TKey key)
+	{
+		for (size_t i = 0; i < _count; i++)
+		{
+			if (_pairs[i].key == key) return _pairs[i][key];
+		}
+		// Key tapılmasa yenisini əlavə edin.
+	}
+
+
+	void print()
+	{
+		cout << "{";
+		for (size_t i = 0; i < _count; i++)
+		{
+			_pairs[i].print();
+			i == _count - 1 ? cout << "" : cout << ", ";
+			
+		}
+		cout << "}";
+		cout << endl;
+	}
+
+};
+
+
+int main()
+{
+
+
+
+
+
+	Dictionary<string, string> map;
+	map.add(KeyValuePair<string, string>("char1", "Niahtr"));
+	map.add(KeyValuePair<string, string>("2", "Hesen"));
+	map.add(KeyValuePair<string, string>("5", "Ismayil"));
+	map.add(KeyValuePair<string, string>("9", "Kamal"));
+	
+
+	map.print();
+	
+
+
+}

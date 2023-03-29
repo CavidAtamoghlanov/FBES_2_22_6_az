@@ -1,0 +1,64 @@
+#include <iostream>
+#include <stdio.h>
+
+
+input    -->  giriş
+output   -->  çıxış
+FILE     -->  fayl --> (stream)
+
+
+=== Modes ===
+
+b --> binary
+
+(w) mode => File movcuddursa onu acir icindeki butun melumatlari silir daha sonra bize yazmaqa icaze verir
+		File movcud deyilse yeni file yaradir ve yazmaqa icaze verir
+
+1) write  -->  yazmaq      --> "w"  --> "wb"  --> "w+"  --> "wb+"
+2) read   -->  oxumaq      --> "r"  --> "rb"  --> "r+"  --> "rb+"
+3) append -->  əlavə etmək --> "a"  --> "ab"  --> "a+"  --> "ab+"
+
+
+
+fopen_s  -->  faylı açmaq
+fclose   -->  faylı bağlamaq
+
+putc     -->  qoymaq, (yazmaq)
+getc     -->  almaq, (oxumaq)
+
+putchar(int) --> ASCII --> Misal: 65=='A' 
+
+EOF      -->  End of File
+
+feof(file) --> faylın sonun catdi
+
+Buffer   -->  Bufer (yaddaş sahəsi)
+
+fputs    -->  toplu yazmaq
+fgets    -->  toplu oxumaq (aşkar, \n, son) (məlumatı buffer-ə köçürmək)
+
+fwrite   -->  toplu yazmaq
+fread_s  -->  toplu oxumaq
+fread    -->  toplu oxumaq
+
+
+
+
+int fseek(FILE *stream, long int offset, int whence); --> (kursorun yerini dəyişmək)
+
+Return Value: Bu funksiya müvəffəqiyyətli olarsa sıfırı qaytarır və ya sıfırdan fərqli bir dəyər qaytarır.
+
+offset   -->  nə qədər sürüşdürmək (Bu, haradan ofset ediləcək baytların sayıdır.)
+
+whence   -->  (haradan) - Bu, ofsetin əlavə olunduğu mövqedir. Aşağıdakı sabitlərdən biri ilə müəyyən edilir.
+
+1) SEEK_SET -->  #define 0 (Faylın başlanğıcı)
+2) SEEK_CUR -->  #define 1 (Fayl göstəricisinin cari mövqeyi)
+3) SEEK_END -->  #define 2 (Faylın sonu)
+
+
+
+
+ftell(FILE *stream) funksiyası fayl göstəricisinin cari vəziyyətini qaytarır.
+
+rewind(FILE *stream) funksiyası fayl mövqeyinin göstəricisini verilmiş fayl axınının başlanğıcına təyin edir.

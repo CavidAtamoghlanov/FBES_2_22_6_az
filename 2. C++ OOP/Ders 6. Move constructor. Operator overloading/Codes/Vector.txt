@@ -1,0 +1,236 @@
+#include <iostream>
+#include<cassert>
+
+using namespace std;
+
+
+class Fraction {
+	int _num = 0;
+	int _denum = 1;
+
+public:
+	Fraction() = delete;
+
+	Fraction(int num, int denum) :_num(num), _denum(denum) {
+		cout << "Constructor with params" << endl;
+	}
+
+	Fraction(const Fraction& other)
+	{
+		cout << "Copy constructor" << endl;
+		this->_num = other._num;
+		this->_denum = other._denum;
+	}
+
+	Fraction operator*(const Fraction& other)
+	{
+
+		int newNum = this->_num * other._num;
+		int newDenum = this->_denum * other._denum;
+
+		return Fraction(newNum, newDenum);
+	}
+
+
+	Fraction& operator*=(const Fraction& other)
+	{
+		this->_num *= other._num;
+		this->_denum *= other._denum;
+
+		return *this;
+
+	}
+
+	bool operator==(const Fraction& other) {
+		return (this->_num == other._num && this->_denum == other._denum);
+	}
+
+	bool operator!() {
+		return !this->_num;
+	}
+
+	bool operator!=(const Fraction& other) {
+		return !(this->_num == other._num && this->_denum == other._denum);
+	}
+
+
+	// Prefix
+	Fraction& operator++()
+	{
+		++this->_num;
+		++this->_denum;
+
+		return *this;
+	}
+
+
+
+
+	// Postfix
+	Fraction& operator++(int)
+	{
+		this->_num++;
+		this->_denum++;
+
+		return *this;
+	}
+
+	void operator()() {
+		this->print();
+	}
+
+
+
+	void print()
+	{
+		cout << _num << "/" << _denum << endl;
+	}
+
+
+};
+
+
+
+
+
+class VectorInt {
+	int* _array = nullptr;
+	size_t _size = 0;    // Index
+	size_t _capacity = 0;
+
+public:
+
+	VectorInt(const size_t capacity)
+	{
+		if (capacity <= 0)
+		{
+			assert(!"Error min size = 1");
+		}
+		_capacity = capacity;
+		_array = new int[_capacity];
+	}
+
+	void append(int item)
+	{
+		if (_size < _capacity)
+		{
+			_array[_size] = item;
+			_size++;
+			return;
+		}
+
+		_capacity *= 2;
+
+		int* temp = new int[_capacity];
+
+		for (size_t i = 0; i < _size; i++)
+		{
+			temp[i] = _array[i];
+		}
+
+		temp[_size] = item;
+		_size++;
+
+		delete[] _array;
+		_array = temp;
+
+
+
+	}
+
+
+	void print() {
+		for (size_t i = 0; i < _size; i++)
+		{
+			cout << _array[i] << " ";
+		}cout << endl;
+	}
+
+	void operator()()
+	{
+		for (size_t i = 0; i < _size; i++)
+		{
+			cout << _array[i] << " ";
+		}cout << endl;
+	}
+
+	size_t getCapacity()
+	{
+		return _capacity;
+	}
+
+	int operator[](int index)
+	{
+		if (index < 0) assert(!"error");
+
+		if (index >= _size) assert(!"Error ");
+
+		return _array[index];
+	}
+	
+
+};
+
+
+
+
+
+
+
+
+
+
+
+class Time {
+private:
+	unsigned short _hours;
+	unsigned short _minutes;
+	unsigned short _seconds;
+public:
+
+	
+	// Operator Overloading
+	// (++, --) (Postfix, Prefix)
+	// (<, >, <=, >=, !=, ==)
+	// () => print evezi ishlesin.
+	// hamisi 0-a beraber olsa => true
+	bool operator!() const;
+};
+
+
+
+
+
+
+int main()
+{
+	//int a = 10;
+
+	/*Fraction a(10, 51);
+	Fraction b(8, 56);
+
+	Fraction c = a * b;
+
+	a.print();
+
+	b.print();
+
+	c.print();*/
+
+
+	VectorInt v1 = 5;
+	v1.append(10);
+	v1.append(11);
+	v1.append(12);
+	
+
+	v1[1];
+
+
+
+	cout << "Capacity: " << v1.getCapacity() << endl;
+
+
+
+
+}

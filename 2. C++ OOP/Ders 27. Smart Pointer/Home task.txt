@@ -1,0 +1,25 @@
+
+class myShared_ptr
+{
+private:
+	int* _ptr;
+	int* count = new int(0);
+public:
+
+	// default constructor
+	// parametrli constructor
+	// copy constructor
+	// move constructor
+	// reste method
+	// relase  method
+	// get method
+	// cout operator overloadin
+	// dereference overloading
+	// bool  overloadin
+	// destructor
+
+
+	
+
+
+};

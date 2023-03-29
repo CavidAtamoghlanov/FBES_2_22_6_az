@@ -1,0 +1,64 @@
+#include <iostream>
+#include<array>
+#include<string>
+#include<list>         // doubleLinkedLIST
+#include<forward_list> // Single linked list
+#include<vector>
+#include<set>          // set, Multiset 
+#include<map>          // mep, multiMap
+#include<unordered_set>
+#include<unordered_map>
+using namespace std;
+
+
+void main()
+{
+	// List | Set | Map | MultiSet | MultiMap | unorderedSet | UnorderedMap 
+
+
+	// map => keyler tekrarlana bilmez, Order olunub
+	// multiMap => keyler tekrarlana biler, order olunub
+
+	//map<int, string> students;
+	//students.insert({ 1, "Qasan" });
+	//students.insert({ 1, "Quseyn" });
+	//students.insert({ 2, "Huseyn" });
+	//students.insert({ -1, "Qulam" });
+
+	////cout << students.at(1) << endl;
+	////cout << students[3] << endl;
+	//students[1] = "Kamal";
+	/*for (auto& i : students)
+	{
+		cout << i.first << " " << i.second << endl;
+	}*/
+
+
+	map<string, list<string>> students;
+
+	list<string> a;
+	a.push_back("10");
+	a.push_back("10");
+	a.push_back("10");
+	a.push_back("10");
+	a.push_back("10");
+
+	students.insert({ "1", a });
+	students.insert({ "2", a });
+	students.insert({ "3", a });
+	students.insert({ "4", a });
+	students.insert({ "5", a });
+	
+	for (auto& i : students)
+	{
+		cout << i.first << " : { ";
+		for (auto& j : i.second)
+		{
+			cout << j << " ";
+		}
+		cout <<" }" << endl;
+	}
+
+	
+	
+}

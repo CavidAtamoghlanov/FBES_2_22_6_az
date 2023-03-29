@@ -1,0 +1,63 @@
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+
+
+/*
+
+4. İstifadəçinin seçimindən asılı olaraq Toplama, Çıxma , Vurma, Bölmə
+funksiyalarından birini çağıran , funksiya yazın.
+*/
+int cem(int a, int b)
+{
+	return a + b;
+};
+
+int cixma(int a, int b)
+{
+	return a - b;
+};
+
+int vurma(int a, int b)
+{
+	return a * b;
+};
+
+int bolme(int a, int b)
+{
+	return a / b;
+};
+
+void total(char op, int num1, int num2)
+{
+	if (op == '+')
+	{
+		cout << cem(num1, num2) << endl;
+	}
+	else if (op == '-')
+	{
+		cout << cixma(num1, num2) << endl;
+	}
+	else if (op == '*')
+	{
+		cout << vurma(num1, num2) << endl;
+	}
+	else if (op == '/')
+	{
+		cout << bolme(num1, num2) << endl;
+
+	}
+};
+
+
+
+int main()
+{
+
+	
+
+
+	system("pause");
+	return 0;
+}

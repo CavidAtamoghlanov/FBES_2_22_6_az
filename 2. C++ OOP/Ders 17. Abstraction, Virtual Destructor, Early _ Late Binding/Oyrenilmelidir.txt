@@ -1,0 +1,10 @@
+Iheritence
+Abstracton
+Encapsulation
+Polymirphism
+
+
+Tekrar edin
+
+Yeni movzu
+Exception ,  Exception handling

@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+void sayHi(int n) {
+	cout << "Hello\n";
+
+	if (n == 1) return;
+
+	sayHi(n - 1);
+}
+
+int factorial(int n) { //1
+	if (n == 1) return 1;
+
+	return n * factorial(n - 1);
+}
+
+
+// void showEvenNumbers(int n) {
+// 	  if(n%2==0) cout << n << endl;
+// 	  
+// 	  if (n == 0) return;
+// 	  
+// 	  showEvenNumbers(n - 1);
+// 	  
+// 	  if (n % 2) cout << n << endl;
+// }
+
+
+
+void showOddNumbers(int i, int n) {
+	if (i % 2) cout << i << endl;
+
+	if (i == n) return;
+
+	showOddNumbers(i + 1, n);
+}
+
+
+int sumArrayElements(int arr[], int n) {
+	if (n == 1) return arr[0];
+
+	return arr[n - 1] + sumArrayElements(arr, n - 1);
+}
+
+
+int main()
+{
+	const int n = 5;
+	int arr[n]{ 1, 4, 5, 2, 3 };
+	cout << sumArrayElements(arr, n) << endl;
+
+
+
+
+	// showOddNumbers(5, 33);
+
+
+	// cout << factorial(5) << endl;
+	// sayHi(10);
+}

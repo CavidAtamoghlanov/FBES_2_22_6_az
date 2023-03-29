@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+
+typedef void (*fPtr)();
+
+
+void foo()
+{
+	cout << "Foo function" << endl;
+}
+
+
+void goo(void (*a)()) {
+	cout << "goo function" << endl;
+	
+	a();
+}
+
+
+
+void doo(fPtr a) {
+	cout << "goo function" << endl;
+
+	a();
+}
+
+void main()
+{
+	fPtr f  = foo;
+
+	/*auto fPtr = foo;*/
+
+	goo(foo);
+	
+
+}

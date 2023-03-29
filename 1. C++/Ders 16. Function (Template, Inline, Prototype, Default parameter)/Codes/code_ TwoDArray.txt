@@ -1,0 +1,80 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+////  (Pass Two Dimensional Array to Function)
+
+
+void display(int arr[], const int n1, const int n2) {
+	for (size_t i = 0; i < n1; i++) {
+		for (size_t j = 0; j < n2; j++)
+			cout << arr[i * n2 + j] << ' ';
+
+		cout << endl;
+	}
+}
+
+void fillArray(int arr[], const int n1, const int n2) {
+	for (size_t i = 0; i < n1; i++) {
+		for (size_t j = 0; j < n2; j++)
+			arr[i * n2 + j] = rand() % 10;
+	}
+}
+
+
+int main()
+{
+	srand(time(0));
+
+	const int n1 = 3, n2 = 4;
+
+	int arr[n1][n2]{
+		{64, 34, 25, 12},
+		{22, 11, 90, 13},
+		{17, 58, 84, 72}
+	};
+
+	fillArray(arr[0], n1, n2);
+	display(arr[0], n1, n2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+void display(int arr[], int n1, int n2) {
+	int size = n1 * n2;
+
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << arr[i] << ' ';
+	}
+}
+
+
+int main()
+{
+	const int n1 = 3, n2 = 4;
+
+	int arr[n1][n2]{
+		{64, 34, 25, 12},
+		{22, 11, 90, 13},
+		{17, 58, 84, 72}
+	};
+
+	display(arr[0], n1, n2);
+}
+*/

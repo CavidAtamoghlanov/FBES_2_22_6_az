@@ -1,0 +1,97 @@
+#include<iostream>
+using namespace std;
+
+
+// create array her iki usul ile
+template <typename T>
+void createTwoDArray(T ** arr, int row, int column)
+{
+	for (size_t i = 0; i < row; i++)
+		arr[i] = new T[column] {};
+}
+
+template <typename T>
+T** createArrarFromZero(int row, int column)
+{
+	T** arr = new T* [row] {};
+	for (size_t i = 0; i < row; i++)
+		arr[i] = new T[column] {};
+
+	return arr;
+}
+
+// fill arr
+template <typename T>
+void fillArr(T** arr, int row, int column, int min=0, int max=10)
+{
+	// fill arrrrr
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < column; j++)
+		{
+			arr[i][j] = min + rand() % (max - min);
+		}
+	}
+}
+
+
+// print arr
+template <typename T>
+void printArr(T** arr, int row, int column)
+{
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < column; j++)
+		{
+			cout << arr[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
+template <typename T>
+void freeArr(T**& arr, int row)
+{
+	for (size_t i = 0; i < row; i++)
+	{
+		delete[] arr[i];
+	}
+	delete[] arr;
+	arr = nullptr;
+}
+
+void main()
+{
+	srand(time(nullptr));
+
+	// 1. create array
+	// 2. fill array
+	// 3. print
+	// 4. delete
+	// ----------------------------------------------------------------
+	int row, column;
+
+	cout << "Enter row: ";
+	cin >> row;
+	cout << "Enter Column: ";
+	cin >> column;
+
+	char** arr = createArrarFromZero<char>(row, column);
+	// fill
+	fillArr(arr, row, column, 65, 90);
+	// print
+	printArr(arr, row, column);
+	// silmey
+	freeArr(arr, row);
+
+	/*
+		TASK 1: Iki olculu arrayin elementleri cemini tapan ve return edn funksiya
+
+		TASK 2:  Ancaq musbet ededlerin cemini tapan funksiya
+
+		TASK 3: Herbir listin elementleri cemini ayrica tapib 
+			yeni bir bir olculu arraye yazib return eden funksiya yazin
+
+		
+	*/
+}

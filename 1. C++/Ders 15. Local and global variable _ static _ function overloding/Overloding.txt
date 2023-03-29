@@ -1,0 +1,49 @@
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+
+/*
+	 Function owerloding
+
+	 1. eyni adda olmalidir 
+	 2. Parametirler ferqli olmalidir
+		1. say
+		2. type
+	 3. returnType-in function overlodinge adiyyati yoxdur
+	
+*/
+
+
+int foo(int a, int b)
+{
+	return a + b;
+}
+
+int foo(float a, int b)
+{
+	return a + b;
+}
+
+// overloding
+int foo(int a, int b, int c)
+{
+	return a + b;
+}
+
+
+// overloding
+int foo(int a, int b, int c, int d)
+{
+	return a + b + c;
+}
+
+
+int main()
+{
+	foo(2.0,2);
+
+	system("pause");
+	return 0;
+}
+

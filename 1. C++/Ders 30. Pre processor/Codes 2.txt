@@ -1,0 +1,133 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+struct Person {
+	char* name;
+	char* surname;
+	int age;
+};
+
+
+void deletePerson(Person**& persons) {
+	for (size_t i = 0; i < 3; i++)
+	{
+		delete[] persons[i]->name;
+		delete[] persons[i]->surname;
+		delete[] persons[i];
+	}
+
+	delete[] persons;
+	persons = nullptr;
+}
+
+
+void append(Person**& allPerson, Person*newPerson, int& size) {
+	size++;
+	Person** newAllPerson = new Person * [size];
+
+	for (size_t i = 0; i < size-1; i++)
+	{
+		newAllPerson[i] = allPerson[i];
+	}
+	newAllPerson[size - 1] = newPerson;
+
+
+	delete[] allPerson;
+	allPerson = newAllPerson;
+}
+
+int main()
+{
+
+	// delete 
+	/*
+	int* a = new int;
+	delete a;
+	a = nullptr;
+
+	int* c = new int[1] {10};
+	delete[] c;
+	*/
+
+	// stackde yaradilma
+	/*
+	Person amin = Person{
+		new char[255] {"Amin"},
+		new char[255] {"Bennayev"},
+		150
+	};
+	*/
+	/////////////////////////////////////////////////
+	// heap
+
+	/*Person* metin = new Person{
+		new char[255] {"Metin"},
+		new char[255] {"Abbasov"},
+		15
+	};
+
+	cout << metin->name << endl;
+	cout << metin->surname << endl;
+	cout << metin->age << endl;
+
+	delete[] metin->name;
+	delete[] metin->surname;
+	delete[] metin;
+	metin = nullptr;*/
+
+
+
+	Person* metin = new Person{
+		new char[255] {"Metin"},
+		new char[255] {"Abbasov"},
+		15
+	};
+
+	Person* amin = new Person{
+		new char[255] {"Amin"},
+		new char[255] {"Abbasov"},
+		15
+	};
+
+	Person* siya = new Person{
+		new char[255] {"Siya"},
+		new char[255] {"Abbasov"},
+		15
+	};
+
+	int size = 3;
+	Person** allPerson = new Person * [size] {
+			siya,
+			amin, 
+			metin
+	};
+
+	Person* nihad = new Person{
+		new char[255] {"Nihad"},
+		new char[255] {"Abbasov"},
+		1
+	};
+
+
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << allPerson[i]->name << endl;
+	}
+
+	append(allPerson, nihad, size);
+
+	cout << endl;
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << allPerson[i]->name << endl;
+	}
+
+	// Delete
+	deletePerson(allPerson);
+
+
+	
+
+}
+

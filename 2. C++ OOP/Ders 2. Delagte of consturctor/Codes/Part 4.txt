@@ -1,0 +1,92 @@
+#include <iostream>
+#include <cassert>
+using namespace std;
+
+// inline method
+// explicit keyword
+// Destructor
+// Constructor overloading
+// Dynamic class member variable
+// Dynamic class
+// 
+// 
+// Static member
+
+// delagate constructor
+
+
+// -------------------------------------------
+
+
+class Student {
+private:
+	static int _staticId;
+	char* _name;
+	int _age;
+	int _id;
+
+public:
+
+	explicit Student() {
+		_name = nullptr;
+		_age = 0;
+		_id = ++_staticId;
+	}
+	explicit Student(const char*name) {
+		int len = strlen(name) + 1;
+		_name = new char[len];
+		strcpy_s(this->_name, len, name);
+		_age = 0;
+		_id = ++_staticId;
+	}
+	explicit Student(int age) {
+		_name = nullptr;
+		_age = age;
+		_id = ++_staticId;
+	}
+
+	explicit Student(const char* name, int age) {
+		int len = strlen(name) + 1;
+		_name = new char[len];
+		strcpy_s(this->_name, len, name);
+		_age = age;
+		_id = 0;
+	}
+
+	// print
+	void print() {
+		cout << "Id: " << _id << endl;
+		cout << "Name: " << (_name ? _name : "null") << endl;
+		cout << "Age: " << _age << endl;
+	}
+
+	static int getStaticId() {
+		return _staticId;
+	}
+
+	~Student() {
+		delete[] _name;
+	}
+	
+};
+
+
+// static field
+int Student::_staticId = 0;
+
+int main()
+{
+
+	Student s1("Amin");
+	s1.print();
+	Student s2("Hesen");
+	Student s3("Kamal");
+	Student s4("Eli");
+	Student s5("Xezer");
+	s5.print();
+	
+	cout << Student::getStaticId() << endl;
+	
+	
+	
+}

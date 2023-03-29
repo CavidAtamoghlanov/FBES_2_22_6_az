@@ -1,0 +1,189 @@
+# """
+# 4. İstənilən ədədin polindrom olub olmamasını yoxlayan
+# proqram yazın.
+# """
+
+# eded = int(input("eded daxil edin: ")) # 0
+# eded_origin = eded
+# eks = 0
+
+# if eded > 0:
+#     while eded > 0:
+#         son_reqem = eded % 10
+#         eded = eded // 10
+#         print(son_reqem)
+#         eks = (eks * 10) + son_reqem
+# else:
+#     eded = eded * -1
+#     eded_origin = eded_origin * -1
+#     while eded > 0:
+#         son_reqem = eded % 10 
+#         eded = eded // 10
+#         print(son_reqem)
+#         eks = (eks * 10) + son_reqem
+    
+#     eded_origin = eded_origin * -1
+#     eks = eks * -1
+
+# if eks == eded_origin:
+#     print("poliindromdur")
+# else:
+#     print("poliindrom deyil")
+    
+# --------------------------------------------------
+
+"""
+6. Rəqəmi sola sürüşdürən program yazmalısınız. İstifadəçi
+iki ədəd daxil edir. (məs. 12345 və 3, çıxışda 45123
+rəqəmi alınmalıdır)
+
+"""
+
+
+
+
+# eded = int(input("eded daxil edin: ")) # 8461256985 // 10000000
+# eded_or = eded
+# surusdurme_miqdari = int(input("surusdurme miqdarini daxil edin: ")) # 3
+# count = 0
+
+# while eded >0:
+#     eded //= 10
+#     count += 1
+
+# resualt = eded_or / (10 ** (count-surusdurme_miqdari)) # 846,1256985
+# tam_hisse = int(resualt)  # 846
+
+# kesir_hisse = resualt - tam_hisse 
+# tam_hisse_iki = round(kesir_hisse * (10 ** (count-surusdurme_miqdari)))  #1256985
+# tam_hisse_iki = tam_hisse_iki * (10 ** surusdurme_miqdari)
+# netice = tam_hisse_iki + tam_hisse
+# print(netice)
+# ----------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------
+
+"""5. 1-100 arasındakı bütün sadə ədədləri çıxaran program
+yazın. Burada, dövr içərisində dövr işlətməlisiniz. Xarici
+dövr 1-100 arasında hərəkət edəcək. Daxili dövr isə
+ədədin sadə olub olmadığını yoxlayacaq."""
+
+# baslanqic = 1
+# son = 100
+
+# while son >= baslanqic:
+#     baslanqic
+#     start = 1
+#     count = 0
+#     while baslanqic >= start:
+#         if baslanqic % start == 0:
+#             count += 1
+#         start+=1
+    
+#     if count <= 2:
+#         print(baslanqic)
+#     baslanqic += 1
+
+# 00000000000000000000000000000000000000000000000000000000000000000
+# 00000000000000000000000000000000000000000000000000000000000000000
+# 00000000000000000000000000000000000000000000000000000000000000000
+# ------------------------------------------------------
+#  new  lesson  FOR
+#  for  --> parametrli  (collection --> toplu  ile ) isleyen  dovur
+
+# name = "Hakuna matata"
+# count = 0
+# for i in name:
+#     if i == "a":
+#         count += 1
+# print(count)
+
+
+
+# say = 1
+# for i in 1,2,3,5,-45,"85",96,1,3,3,3,3, "sas",True, False,1,23:
+
+#     print(i)
+
+
+# # range(end) 1 -ci  formasi
+# range(25) # 0 dan  verilmishg edede  kimi  butun  ededleri  size  verir
+
+# for i in range(50):
+#     print(i)
+
+
+
+
+
+
+
+# # range(start, end) 2 -ci formasi
+# range(-7, 38) # verilmish araliqdaki ededleri  size  verir (end -e  kimi  end  ozu daxil  deyil)
+
+# for i in range(50, 157):
+#     print(i)
+
+
+
+
+
+
+# # # range(start, end, step)   3 -cu  formasi
+# # range(-5, 50, 5) # baslanqic  sonluq ve addimlar verilir.. 
+# # range(50, -5, -1)
+# # for i in range(1, 26,3):
+# #     print(i)
+
+# for i in range(50 , -5, -1):
+#     print(i)
+
+# -----------------------------------------------------------------------------
+# for i in range(1, 144):
+#     if i == 9:
+#         break
+#     print(i)
+
+# print("end")
+
+# -------------------------------------------
+
+# example  -->  istifadecinin daxil etdiyi araliqda 3 ve 5  bolunen  ededleri  ekrana  cixarin
+
+
+# start=  int(input("Baslanqic daxil edin: ")) #3
+# end = int(input("Sonluq daxil edin: ")) #8
+
+# for step in range(start, end):
+#     if step % 15 == 0:
+#         print(step)
+
+
+
+# # TASK 1
+# # 0 dan istifadecinin  daxil  etdiyi  edede  kimi  butun ededlerin cemini  tapin
+
+# eded = int(input("Eded daxil edin: "))
+# cem = 0
+# for i in range(0, eded):
+#     cem += i
+# print(cem)
+
+
+
+# -------------------------------------
+# TASk 2
+# istifadeci 10  dene  tam eded  daxil  edir 
+# bu  ededlerden  necesi  musbet necesinin menfi  olduqunu  tapin
+
+# musbet_say=0
+# menfi_say=0
+# for i in range(10):
+#     eded = int(input("eded  daxil edin: "))
+#     if eded > 0:
+#         musbet_say += 1
+#     else:
+#         menfi_say += 1
+# print(musbet_say)
+# print(menfi_say)
+
+

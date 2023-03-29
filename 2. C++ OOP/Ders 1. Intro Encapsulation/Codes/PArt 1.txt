@@ -1,0 +1,25 @@
+/*
+    OOP => Object Oriented Programming
+
+    "OOP Encapsulation Polymorphism Inhertinace Abstaction 
+        ozunde birleshdiren Object yonumlu paradiqmadir (Anlayis)    
+    "
+    4 esas prinsipi var
+
+    1. Encapsulation => Class daxilindeki fields capsullasdirib qorumaya aliriq
+    2. Polymorphism  => Bir methodun Islenme yerine gore ozunu ferqli cur aparmasi
+    3. Inhertinace   => (toreme) Bir classin diger classdan torenmesi ve onun methodl;arini ve filed-lerini istifade etmesi
+    4. Abstaction    => Objecti-yaradila bilmir. Tekrarin qarsisini almaq
+
+
+    Class => ozunde eyni ve muxtelif type-lari birleshdirem blockdur
+    object => class-dan yaradilmish deyer
+    
+    
+    
+    Starct default olarad PUBLIC -dir 
+    Class- default olaraq PRIVATE -dir
+      
+    
+    
+    */

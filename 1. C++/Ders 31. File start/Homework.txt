@@ -1,0 +1,9 @@
+Append mode arashdirmaq
+
+Sign up, Sign in
+
+Istifadeci username ve password ile qeydiyyatdan kechir.
+Istifadeci username ve password ile girish ede bilmelidir.
+
+username:tural password:tural123
+username:ceyhun password:ceka123

@@ -1,0 +1,141 @@
+#include <iostream>
+#include <stack>
+#include <vector>
+
+using namespace std;
+
+
+// Polymorphsm
+// virtual method , virtual desctructor
+// final keyword
+
+
+// upcasting
+// downcasting
+
+// // // // // // // // // // // // //
+// // virtual method 
+
+class Base
+{
+protected:
+	int value;
+	Base(int v) : value(v) {}
+public:
+	virtual string getName() { return "BASE"; }
+	int getValue() { return value; }
+	virtual ~Base() { cout << "Base desctructor" << endl; }
+};
+
+class Derived : public Base
+{
+public:
+	Derived(int v) : Base(v) {}
+
+	string getName() override { return "Derived"; }
+	int getValue() { return value; }
+	~Derived() override { cout << "Derived desctructor" << endl; }
+};
+
+
+class Niat : public Derived
+{
+public:
+	Niat(int v) : Derived(v) {}
+	string getName() override { return "Niat"; }
+	int getValue() { return value; }
+	~Niat() { cout << "Niat desctructor" << endl; }
+};
+
+
+
+class Derived_2 : public Base
+{
+public:
+	Derived_2(int v) : Base(v) {}
+	string getName() { return "Derived_2"; } // default overried
+	int getValue() { return value; }
+	~Derived_2() { cout << "Derived_2 desctructor" << endl; }
+};
+
+
+
+int main()
+{
+	{
+		//// Base a(15); // protected conxtructor olduqu ucun object yaradila bilmir
+		// Derived a(10);
+		// cout << a.getName() << endl;
+		// cout << a.getValue() << endl;
+	}
+
+	{
+		//Derived a(10);
+		//cout << a.Base::getName() << endl;
+		//cout << a.getValue() << endl;
+	}
+
+	{
+		// Base classin pointeri oz objectinin ve derived classin objectinin addresini saxlaya biler lakin ancaq oz daxilindeki method ve fieldlere cata biler
+		// Derived a(10);
+		// Derived* ptrr = &a;
+		// 
+		// cout << ptrr->getName() << endl;
+		// 
+		// Base* ptr = &a;
+		// Base& ref = a;
+		// cout << ptr->getName() << endl;
+	}
+
+
+	{
+		/*
+		vector<Base*> arr;
+		arr.push_back(new Derived(10));
+		arr.push_back(new Derived_2(11));
+		arr.push_back(new Derived_2(12));
+		arr.push_back(new Derived(13));
+
+		for (size_t i = 0; i < arr.size(); i++)
+		{
+			cout << arr[i]->getName() << endl;
+			cout << arr[i]->getValue() << endl;
+			cout <<
+				"-----------------------------" << endl;
+		}
+		*/
+	}
+
+	{
+		// virtual desctuructor
+		/*vector<Base*> arr;
+		arr.push_back(new Derived(10));
+		arr.push_back(new Derived_2(11));
+		arr.push_back(new Derived_2(12));
+		arr.push_back(new Derived(13));*/
+
+		//Niat* ob = new Niat(10);
+		//Base* ptr = ob;
+		//delete ptr;
+
+
+
+		// / / // / / / / / / / / / / / / / / / / / / /
+		//// upcasting => 
+		//Base* ob = new Derived(10);
+
+
+
+
+		//// downcasting
+		//vector<Base*> arr;
+		//arr.push_back(new Derived(10));
+		//arr.push_back(new Derived_2(11));
+		//arr.push_back(new Derived_2(12));
+		//arr.push_back(new Derived(13));
+
+		//((Derived_2*)arr[1])->getName();
+
+	}
+
+}

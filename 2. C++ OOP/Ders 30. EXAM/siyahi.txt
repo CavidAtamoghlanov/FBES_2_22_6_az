@@ -1,0 +1,11 @@
+Amin     =>  File
+Kamal    =>  File
+Nihad    =>  File
+Xeyal    =>  File
+Siya     =>  Quiz
+Ismayil  =>  Quiz
+Ibrahim  =>  File
+Hesen    =>  together
+Rustem   =>  File
+Merac    =>  File
+Mehemmed =>  File

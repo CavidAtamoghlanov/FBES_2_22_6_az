@@ -1,0 +1,3 @@
+https://www.programiz.com/cpp-programming/do-while-loop
+https://www.geeksforgeeks.org/loops-in-c-and-cpp/
+https://www.tutorialspoint.com/cplusplus/cpp_for_loop.htm

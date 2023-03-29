@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+
+bool isCompareboy(int a, int b)
+{
+	return a > b;
+}
+
+bool isComparekic(int a, int b)
+{
+	return a < b;
+}
+
+
+
+
+void sort(int *arr, int size, bool (*f)(int, int)) {
+	int temp;
+	for (size_t i = 0; i < size; i++)
+	{
+		for (size_t j = 0; j < size - i - 1; j++)
+		{
+			if (f(arr[j], arr[j+1]))
+			{
+				swap(arr[j], arr[j + 1]);
+			}
+		}
+
+	}
+}
+
+
+
+
+
+
+void main()
+{
+
+	int* arr = new int[5]{ -5,15,-8,19,9 };
+
+	for (size_t i = 0; i < 5; i++)
+	{
+		cout << arr[i] << " ";
+	}
+
+	cout << endl;
+	sort(arr, 5);
+
+	cout << endl;
+
+	for (size_t i = 0; i < 5; i++)
+	{
+		cout << arr[i] << " ";
+	}
+
+
+}

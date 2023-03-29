@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+
+// this => objectin ozunu gosteren gosterici(POINTER)
+// Class daxilinde classin field-erine ve methodlarina muraciet ucundur
+
+
+
+class Student {
+public:
+	char* name;
+	int age;
+
+
+	// constructor with params
+	Student(const char* name, int age) {
+		int len = strlen(name) + 1;
+		this->name = new char[len];
+		strcpy_s(this->name, len, name);
+		this->age = age;
+	}
+
+	void print() {
+		cout << (name != nullptr ? name : "NULL")<< endl;
+		cout << age << endl;
+	}
+
+
+	// destructor => classin objecti silinen zaman isleyen FUnksiya
+	~Student() {
+		cout << "des" << endl;
+		delete name;
+		name = nullptr;
+	}
+};
+
+
+
+int main()
+{
+	Student s1("Cavid", 15);
+	s1.print();
+
+	Student s2("Huseyn", 21);
+	s2.print();
+
+
+
+
+}

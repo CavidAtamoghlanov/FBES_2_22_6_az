@@ -1,0 +1,155 @@
+#include<iostream>
+
+
+
+using namespace std;
+
+
+int main()
+{
+	//int color;
+	//cout << "blue 1\nyellow  3\n red 4 " << endl;
+	//cin >> color;
+
+	// eyni dataya mexsus iki case ola bilmez
+	// case => literal verilmelidir
+	// switch => float ve double verile bilmez
+	/*switch (color)
+	{
+	case 10:
+		system("color 10");
+		break;
+	case 30:
+		system("color 30");
+		break;
+	case 40:
+		system("color 40");
+		break;
+	default:
+		cout << "error" << endl;
+		break;
+	}*/
+
+
+	// task 1
+	// istifadeci heftenin gununu daxil edir  hansi gun olduqunu ekrana cixarin
+	// sehfdaxil edildikde error cixarin
+	// ------------------------------------------------------------------
+	// ------------------------------------------------------------------
+	/*int mark;
+	cout << "Qiymet daxil edin: ";
+	cin >> mark;
+
+	switch (mark)
+	{
+	case 100:
+	case 99:
+	case 98:
+	case 97:
+	case 96:
+	case 95:
+	case 94:
+	case 93:
+	case 92:
+	case 91:
+		cout << "A" << endl;
+		break;
+
+	case 158:
+	case 89:
+	case 88:
+	case 87:
+	case 86:
+	case 85:
+		cout << "B" << endl;
+		break;
+
+	default:
+		break;
+	}*/
+	// ------------------------------------------------------
+	// TASk 2
+	// istifadeci qiymetini daxil edir
+	/*
+	91 - 100 => A
+	81 - 90 => B
+	71 - 80 => C
+	61 - 70 => D
+	51 - 60 => E
+	0  - 50 => F
+
+	// MAKS 6 case ve 1 default istifade etmey olar
+	*/
+
+	/*int mark;
+	cout << "Qiymet daxil edin: ";
+	cin >> mark;
+	int CopyMark = (mark - 1) / 10;
+	switch (CopyMark)
+	{
+	case 9:
+		cout << "A" << endl;
+		break;
+	case 8:
+		cout << "B" << endl;
+		break;
+
+	case 7:
+		cout << "C" << endl;
+		break;
+	case 6:
+		cout << "D" << endl;
+		break;
+	case 5:
+		cout << "E" << endl;
+		break;
+	default:
+		cout << "F" << endl;
+		break;
+
+
+	}*/
+	// ----------------------------------------------------
+	/*
+		4. Kalkulyator düzəltməli. İki kəsr ədəd daxil edilir a və b. Ekrana seçimlər çıxır (+,-,*,/)
+		1) a + b
+		2) a – b
+		3) a * b
+		4) a / b.
+		Seçilən rəqəmə əsasən, nəticə ekrana çıxır.
+	*/
+	// ---------------------------------------------------------------------
+	// ---------------------------------------------------------------------
+	// ---------------------------------------------------------------------
+	// data type 
+	// 1. Built- in (int, double, float, char)
+	// 2. user (enum, class, struct, typedef)
+
+
+	// enum  ==> deishenlerin bir ad altinda saxlanilmasi (ve oz deishen data type-mizin yaradilmazi)
+
+	/*
+		int bold = 100;
+		int italic = 200;
+		int underline = 300;
+	*/
+
+
+
+	//enum FontStyle { bold = 100, itlaic = 200, underline = 300 };
+
+	//FontStyle a = bold;
+	//FontStyle::bold;
+
+
+
+		//enum BOOL { FALSE=100, TRUE=155, __NULL };
+
+
+		////BOOL isChek_2 = FALSE;
+		////cout << "Salam " << isChek_2 << endl;
+		//BOOL::FALSE
+
+
+		system("pause");
+}

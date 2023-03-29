@@ -1,0 +1,179 @@
+#include <iostream>
+#include <iomanip>	//	setw
+#include <string>	//	getline
+#include <sstream>	//	stringstream
+
+
+using namespace std;
+
+
+int main()
+{
+	stringstream ss;
+	string data;
+
+	/*
+		ss << "Hello World!";
+
+		ss >> data;
+		cout << data << endl;
+
+		ss >> data;
+		cout << data << endl;
+	*/
+
+
+
+
+	/*
+		string name;
+		int age;
+
+		ss << "Kenan 18 Eli 19";
+
+		ss >> name;
+		ss >> age;
+		cout << name << ' ' << age << endl;
+
+		ss >> name;
+		ss >> age;
+		cout << name << ' ' << age << endl;
+	*/
+
+
+
+
+	/*
+		ss.str("Hello World!");
+		cout << ss.str() << endl;
+	*/
+
+
+
+
+
+
+	/*
+		ss << "Hello \n World!";
+
+		// ss >> data;
+
+		// getline(ss, data);
+		// cout << "Data is " << data << endl;
+		//
+		// getline(ss, data);
+		// cout << "Data is " << data << endl;
+
+
+		getline(ss, data, ':');
+		cout << "Data is " << data << endl;
+	*/
+
+
+
+
+
+	/*
+		int n;
+		ss << "10 20 30";
+		ss << " 40 50";
+		ss << " 60";
+		ss << " 70 80 90";
+
+		// cout << ss.str() << endl;
+
+		ss >> n;
+	*/
+
+
+
+
+
+
+	// ss.flush();
+
+
+
+
+	/*
+		// ios::beg == 0
+		// ios::cur == 1
+		// ios::end == 2
+
+
+		ss << "Hello World";
+
+		cout << ss.tellg() << endl;
+
+		ss.seekg(1, ios::beg);
+		cout << ss.tellg() << endl;
+
+		ss.seekg(1, ios::cur);
+		cout << ss.tellg() << endl;
+
+		// ss.seekg(-1, ios::end);
+
+		ss >> data;
+		cout << data << endl;
+	*/
+
+
+
+
+
+	/*
+		ss << "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat mauris nunc congue nisi vitae.";
+
+		while (!ss.eof())
+		{
+			ss >> data;
+			cout << data << endl;
+		}
+	*/
+
+
+
+
+
+	/*
+		int number;
+
+		ss << "10 20 30";
+		ss << " 40 50";
+		ss << " 60";
+		ss << " 70 80 90";
+		ss << ' ' << 3;
+
+
+		while (!ss.eof())
+		{
+			ss >> number;
+			cout << number << endl;
+		}
+	*/
+
+
+
+
+
+
+	/*
+		// cin.clear();
+		// cin.ignore();
+
+
+
+		int n;
+		cout << "Enter number: ";
+		cin >> n;
+
+		cin.ignore();
+
+		cout << "Enter text: ";
+		getline(cin, data);
+
+		cout << "\nNumber: " << n << endl;
+		cout << "Text: " << data << endl;
+	*/
+
+}

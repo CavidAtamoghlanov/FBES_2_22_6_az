@@ -1,0 +1,66 @@
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+
+
+//// Function Declaration => funksiyanin yaradilmase (elan edilmesi)
+//int functionName_1()
+//{
+//	cout << "int function" << endl;
+//
+//	return 10;
+//}
+//
+//void functionName_2()
+//{
+//	cout << "Salam" << endl;
+//	cout << functionName_1() << endl;
+//	
+//}
+
+
+// void => funksiyasinda return sadece  qirmaq meqsedi ile islene biler
+//void foo()
+//{
+//	cout << "hello" << endl;
+//	return;
+//	cout << "hello 2" << endl;
+//}
+
+
+
+// // function parametir
+// int findCub(int num, int num2, char a)
+// {
+// 	return num * num * num;
+// }
+
+int main()
+{
+
+	
+  /*
+	1. Build-in  => kitabxanalardan hazir gelen funksiyalar
+	2. user deefine => oz yaraddiqimiz funksiyalar
+	3. void function => return olmur
+	4. 
+  */
+
+	// funksiyanin cagrilmasi ve icra edilmesi
+	// int a = functionName_1();
+	// cout << a << endl;
+	// functionName_2();
+
+
+	// reference  muraciet
+	//cout << functionName_1 << endl;
+	//functionName_2();
+
+	//int a = 56;
+	//cout << findCub(a, 12, 'a') << endl;
+
+
+	system("pause");
+	return 0;
+}

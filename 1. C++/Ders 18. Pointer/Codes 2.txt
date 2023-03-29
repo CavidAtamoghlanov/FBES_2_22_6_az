@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+void foo(int num) // copy
+{
+	cout << num << endl;
+}
+
+
+void foo2(int &num) // self => deishenin ozu gelir
+{
+	cout << num << endl;
+	num = 19;
+}
+
+
+void foo3(int* num) // by pointer
+{
+	cout << *num << endl;
+}
+
+
+
+int main()
+{
+	// -----------------------------------------
+	// Funksiyaya Parametir gondermeyin formasi
+	// 
+	// 1. by value       (copy)
+	// 2. by reference   (self)
+	// 3. by pointer     (address)
+
+	int a = 10;
+
+	foo(a); // copy
+	foo2(a); // self
+	foo3(&a); // pointer
+	
+	
+
+	return 0;
+}

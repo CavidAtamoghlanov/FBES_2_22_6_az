@@ -1,0 +1,172 @@
+#include <iostream>
+#include <cassert>
+using namespace std;
+
+
+
+class singleLinkedList
+{
+	class Node
+	{
+	public:
+		string data;
+		Node* next;
+
+		Node() :data(), next() {}
+		Node(string data) :data(data), next() {};
+
+	};
+	Node* head;
+
+public:
+
+	// default constructor
+	singleLinkedList() : head() {}
+
+	// Add_front item string
+	// add_back
+	
+	// pop_back
+	// pop_front
+	// display
+
+	void addFront(Node* item)
+	{
+		if (head == nullptr)
+		{
+			head = item;
+			return;
+		}
+
+		Node* temp = head;
+
+		head = item;
+		item->next = temp;
+		temp = nullptr;
+
+	}
+
+	void addFront(const string& item)
+	{
+		addFront(new Node(item));
+	}
+
+	void addBack(Node* item)
+	{
+		if (head == nullptr)
+		{
+			head = item;
+			return;
+		}
+
+		Node* endItem = head;
+		while (endItem->next != NULL)
+		{
+			endItem = endItem->next;
+		}
+		endItem->next = item;
+	}
+
+	void addBack(const string& item)
+	{
+		addBack(new Node(item));
+	}
+	// pop_back
+	
+	string popBack()
+	{
+		if (head == NULL) assert(!"Element yoxdur");
+
+		if (head->next == NULL)
+		{
+			string item = head->data;
+			delete head;
+			head = NULL;
+			return item;
+		}
+
+		/*// variant 1
+		Node* endItem = head;
+		Node* endSeconItem = endItem;
+		while (endItem->next != NULL)
+		{
+			endSeconItem = endItem;
+			endItem = endItem->next;
+		}
+
+		endSeconItem->next = nullptr;
+		string item = endItem->data;
+		delete  endItem;
+		endItem = NULL;
+		return item;
+		*/
+
+
+
+		// variant 2
+		Node* endItem = head;
+		while (endItem->next->next != NULL)
+		{
+			endItem = endItem->next;
+		}
+		string item = endItem->next->data;
+		delete endItem->next;
+		endItem->next = nullptr;
+		return item;
+
+	}
+
+
+
+
+	// pop_front
+
+
+	void display()
+	{
+
+
+		cout << "{";
+		Node* endItem = head;
+		while (endItem != NULL)
+		{
+			cout << endItem->data << " ";
+			endItem = endItem->next;
+		}
+		cout << "}" << endl;
+
+
+
+	}
+};
+
+
+int main()
+{
+	
+	singleLinkedList list;
+
+	list.addFront("11");
+	list.addFront("12");
+	list.addFront("13");
+
+	list.addBack("WEfwefwe");
+	list.addBack("15");
+	list.addBack("16");
+	list.addBack("17");
+	list.addFront("18");
+	list.display();
+	list.popBack();
+
+	list.addBack("19");
+	list.addBack("20");
+
+
+
+
+
+	list.display();
+
+
+
+}

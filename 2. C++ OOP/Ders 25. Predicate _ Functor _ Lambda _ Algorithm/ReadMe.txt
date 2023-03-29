@@ -1,0 +1,1 @@
+Sadece 3,4,5,7,8,14,15,16 -da istenilenleri yazmaq

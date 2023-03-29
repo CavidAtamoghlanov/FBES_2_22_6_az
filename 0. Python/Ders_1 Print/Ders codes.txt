@@ -1,0 +1,59 @@
+# Compliyator -->  Butun kodu oxuyur eyer hecbir  error yoxdursa  kodlari  run edir
+
+# Python compliyatorunun adi interpretatordur
+# interpretator -- > Tercumandir  bizim yazdiqimiz  kodlari masin diline  cevirir
+# kodalri  setir be setir oxuyur  ve  cevirir
+
+# preprocessor --> koddaki  kommentleri  bosluqlari  silir (interpretatordan evvel isleyir)
+
+# High level ve loü level  programlasdirma  dilleri  ve  onlarin  ferqi
+# İmperativ  ve decrelativ  diller
+
+
+# ------------------------------------------------------------------------
+# print(10)
+# print(15)
+# print(-10)
+# print(5+5 + 5)
+# print(10 / 0)
+# print("Hakuna Matata")
+# print('hakuna matata')
+# print("10 + 15")
+
+
+
+# single line 
+"""
+
+Multy line
+"""
+# ----------------------------------------------------------------------------------
+
+# # riyazi  operatrorlar
+# print(10 + 10)
+# print(15 - 5)
+# print(25 / 15)
+# print(15 * 5)
+# print(15 // 2) # --> bolunmeden  alinan  tam hisse
+# print(15 % 4)  #  bolunmeden  alinan qaliq  hisse
+# print(5 ** 3)  # --> ustu  quvvetin hesablanmasi
+
+# ----------------------------------------------------
+# # escape secuence   \\, \t, \n, \',  \", \b
+
+# print("Hakuna\"s matata")
+# print('hakuna\' matata')
+# print("\\cavid")
+# print('Salam\t\t\t\t\t\tSagol')
+# print("Hakuna\nmatata\n\tSalam")
+
+# -------------------------------------------------------
+
+# print(" ********        *                ")
+# print("*               * *               ")
+# print("*              *   *              ")
+# print("*             *******             ")
+# print("*            *       *            ")
+# print(" ********   *         *           ")
+
+

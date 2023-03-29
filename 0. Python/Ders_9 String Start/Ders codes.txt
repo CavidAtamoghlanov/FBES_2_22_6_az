@@ -1,0 +1,230 @@
+# from calendar import c
+
+# # paterin 11
+# size = 6
+# for row in range(1, size):
+#   say = 1
+#   for column in range(1, size+1):
+#     if column % 2 == 0:
+#       print(say, end=" ")
+#       say+=1
+#     elif column % 2!= 0:
+#       print(row, end=" ")
+      
+#   print()
+  
+  
+# # paterin 10
+# size = 6
+# for row in range(1, size):
+#   say = 1
+#   for column in range(1, size+1):
+#     if column % 2 != 0:
+#       print(say, end=" ")
+#       say+=1
+#     elif column % 2== 0:
+#       print(row, end=" ")
+      
+#   print()
+
+# patterin 9
+# size = 6
+# say = 1
+# for row in range(1, size):
+#   for column in range(1, size):
+#     print(column * say, end="   ")
+#   say+=1
+#   print()
+
+
+
+# size = 6
+# say = 2
+# for row in range(1, size):
+#   for column in range(1, size):
+#     print(say, end=" ")
+#     say+=2
+#   print()
+
+
+# # tic tac toe  game
+# x1 = x2 = x3= x4 = x5 = x6 = x7 = x8 = x9 = " "
+# sira = "X"
+
+# while True:
+
+#   print(
+#   f"""
+#   {x1} | {x2} | {x3}
+#   _________
+#   {x4} | {x5} | {x6}
+#   _________
+#   {x7} | {x8} | {x9}
+
+#   """)
+  
+#   secim = input(f"yer secin:{sira} ")
+#   if secim == "x1" and x1 == " ":
+#     x1 = sira
+#     if sira == "X":
+#       sira = "O"
+#     elif sira == "O":
+#       sira = "X"
+#   elif secim == "x2" and x2 == " ":
+#     x2 = sira
+#     if sira == "X":
+#       sira = "O"
+#     elif sira == "O":
+#       sira = "X"
+#   elif secim == "x3" and x3 == " ":
+#     x3 = sira
+#     if sira == "X":
+#       sira = "O"
+#     elif sira == "O":
+#       sira = "X"
+  
+  
+#   if x1 == x2 == x3 != " ":
+#         print(f"{x1} --> Qalib geldi")
+#   elif x4 == x5 ==x6 != " ":
+#         print(f"{x4} --> Qalib geldi")
+##############################################################
+##############################################################
+# strings --> Dirnaqda yazilan hersey stringdir..  Symbollar toplusu
+
+# name = "Salam menim en sevdiyim reng Saridir"
+
+# string ile isleyen musteqil funksiyalar
+# len() --> verilmish collection-uzunluqunu  tapir
+
+
+# count = 0
+# for i in name:
+#   count += 1
+# print(count)
+# print(len(name))
+
+#       0123456789
+# name = "Salam menim en sevdiyim reng Saridir"
+
+# index --> Ozunden sola surusdurduyu elementlerin sayi (saga surusme migdari) (elementin sira nomresi)
+# index --> 0-dan baslayir...
+# sonuncu indeks  = len - 1
+
+# indec-se gore elemente muraciet
+# print(name[1]) # verilmish index-deki element
+# print(name[351]) # string index out of range
+# print(name[-10])
+
+
+# string slice  -->  stringlerin parcalanmasi
+# print(name[5])
+# print(name[5:15])
+# print(name[5:15:3])
+# print(name[15:3:-1])
+# print(name[5:])
+# print(name[:15])
+# print(name[:])
+# print(name[::-1])
+
+#------------------------------------------------------------
+# String methods --> 
+# stringin methodlari onun copyasi uzerinde ishleyir original deishmir
+
+
+# name = "Salam menim en Salam sevadiyaim reng Saridir"
+# count = 0
+# for i in name:
+#       if i == "a":
+#             count +=1
+
+# # count() # --> verilmish elementin sayini bize verir
+# print(name.count("l"))
+
+# https://www.w3schools.com/python/python_ref_string.asp
+
+
+# # startswith() --> string verilmish element ile basladiqda  True eks halda False verir
+# print(name.startswith("S"))  
+# # endswith() --> string verilmish element ile bitdikde  True eks halda False verir
+# print(name.endswith("Saridir"))  
+
+
+# # index()  --> verilmish elementin index-sini  bize verir.. element yoxdursa error verir
+# print(name.index("a"))
+# # rindex()
+# print(name.rindex("a"))
+
+
+
+# # find() --> verilmish elementin index-sini  bize verir.. element yoxdursa  (-1) verir
+# print(name.find("a"))
+# # rfind()
+# print(name.rfind("a"))
+
+
+
+
+# name = "Salam menim en Salam sevadiyaim Salam reng Saridir"
+# replace(old, new)  # verilmish kohne sozleri yenisi ile evez edir
+# replace(old, new, say)  # verilmish kohne sozleri yenisi ile evez edir verilmish sayda
+
+#------------------------------------------------------
+# name = name.split(" ")
+# print(name)
+# a = 0
+# index = 0
+# for i in name:
+  
+#   if i == "Salam":
+#     a+=1
+#     if a == 3:
+#       name[index] = "Sagol"
+#   index += 1
+# print(" ".join(name))
+
+# name = "Salam menim-en Salam sevadiyaim-Salam reng Saridir"
+# # 
+# print(name.split("-")) # stringi parcalayib list halina getirir
+
+
+
+# # strip()  --> Sringin evvelinde ve sonundaki menasiz bosluqlari silir
+# name = "          a                               Say Hello "
+# print(name.strip())
+# print(name)
+
+# name = "          a                               Say Hello "
+# print(name.lstrip())  # sol terefdeki bosluqlari silir
+# print(name.rstrip())  # sag terefdeki bosluqlari silir
+
+
+# change  methods:
+# s = "guEssmYnw1eb 2umBer"
+
+# print(s.capitalize())
+# print(s.title())
+# print(s.upper())
+# print(s.lower())
+
+
+# # check methods
+# print(s.isupper())
+# print(s.islower())
+# print(s.isalpha())
+# print(s.isalnum())
+
+# import string
+
+# print(string.ascii_lowercase)
+# print(string.ascii_uppercase)
+# print(string.ascii_letters)
+# print(string.punctuation)  # butun symbollar
+# print(string.digits)
+# print(string.hexdigits)
+
+# import random
+# print(random.random())  # 0.0 ile 1.0  araliqinda random eded  verir
+# print(random.randint(-5,15))  # -5 ile 15  araliqinda random tam eded  verir
+# print(random.uniform(-5,15))  # -5 ile 15  araliqinda random KESIR eded  verir
+# print(random.choice("Salam")) # verilmish collection dan boir element secir

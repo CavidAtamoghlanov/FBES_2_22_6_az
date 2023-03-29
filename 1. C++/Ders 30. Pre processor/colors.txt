@@ -1,0 +1,17 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+int main()
+{
+	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE); // consolu tutmaq ucun hansi consoil ile isleyecek
+	cout << "Hesen" << endl;
+
+	SetConsoleTextAttribute(console, 12); // bundan sonraki hissede reng verilmish formada olur
+
+	cout << "Hesen" << endl;
+
+	SetConsoleTextAttribute(console, 15);
+
+}
+

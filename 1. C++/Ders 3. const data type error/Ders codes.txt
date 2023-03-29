@@ -1,0 +1,115 @@
+#include<iostream>
+
+using namespace std;
+
+typedef int salam;
+
+
+
+
+int main() {
+	// Singli line defin and initalize
+	// int a, b, c; // define single line
+	// int z = 16, c = 15, d = 0; // single line initalize
+	
+	// const  => sabit deyer (deishmeyen deyer) (assing ola bilmez)
+	// const int a = 15;
+
+	// const int b; // const  define ola bilmez
+
+
+	// Operators and Operand
+		// 1. Unar    => Yaninda bir Operand isteyir (++variable, --, -)
+		// 2. Binar   => Her iki terefinde Operand olan ()
+		// 3. Ternal  => (?:)  3 operand ile isleyir
+
+	// cout << 10.5 % 4 << endl;  // mod operatoru kesir ededler ile istifade edile bilmez
+
+
+	// -------------------------------------------------------------------
+	// Errors        => 2 yere bolunur
+	// Compile time  => Program ise salinmaq istendikde ortaya cixan error
+	// run time      => Program isleyen zaman cixan errorlar
+
+	//const int a; // Compile error
+
+	// ---------------------------------------------------------------
+	/*
+		TASK 1
+		Istifadeci terefinden 3 reqemli eded d axil edilir
+		Ededin reqemleri cemini tapin
+		Example 135 => 1+3+5 => 9
+	*/
+	/*
+	int num, r1, r2, r3;
+
+	cout << "3 reqemli eded daxil edin: ";
+	cin >> num;
+
+	r1 = num / 100;
+	r2 = (num / 10) % 10;
+	r3 = num % 10;
+
+	cout << "Netice: " << (r1 + r2 + r3) << endl;
+	*/
+
+
+	/*
+	* TASK 2
+		İstifadəçi kq daxil edir, Kilogramı Gallona çevirən proqram yazın.
+		  (Bir gallonun neçə kilogram olduğunu internetdən araşdırın)
+
+	*/
+	/*
+		int kq;
+		double galon;
+
+		cout << "Kq  daxil edin: ";
+		cin >> kq;
+		galon = kq * 0.26;
+		cout << kq << " Kiloqram " << galon << " Galon edir" << endl;
+	*/
+
+
+
+	// -------------------------------------------------------------
+	// Data Type
+	// Build in (int, float, double, char, bool)
+	// (class, struc, union, enum)
+
+
+	// unsigned  --> Musbete teref data saxlayir
+	// signed    --> Menfi ve musbet terefe data saxlayir (default olaraq signed  dir)
+
+
+    // type modifer
+	/*
+		1. long
+		2. short
+		3. long long
+		4. signed
+		5. uns
+	*/
+
+	/*unsigned int a = 4294967295+2;
+	cout << a << endl;*/
+
+
+	//int a = 1000000;
+	//short int b = 33000;
+	//long long int c = 10000;
+
+
+	//cout << typeid('1').name() << endl;
+
+	////typedef  // HAnsisa bir type oz istediyiniz kimi adlandira bilersiniz
+
+	//int a = 10;
+	//salam c = 15;
+	// ----------------------------------------------------------------------
+
+
+
+	return 0;
+
+}

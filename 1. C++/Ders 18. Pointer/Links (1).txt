@@ -1,0 +1,3 @@
+https://www.programiz.com/cpp-programming/pointers
+https://www.programiz.com/cpp-programming/pointer-void
+https://www.programiz.com/c-programming/c-pointer-functions

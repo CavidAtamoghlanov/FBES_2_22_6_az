@@ -1,0 +1,6 @@
+
+https://www.programiz.com/cpp-programming/function            --- Function Prototype
+https://www.programiz.com/cpp-programming/inline-function     --- Inline Function
+https://www.programiz.com/cpp-programming/default-argument    --- Default Arguments(Parameters)
+https://www.programiz.com/cpp-programming/storage-class       --- Local, Global, Static variables
+https://www.programiz.com/cpp-programming/function-template   --- Function Template

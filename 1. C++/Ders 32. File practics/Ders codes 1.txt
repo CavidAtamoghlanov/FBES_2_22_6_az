@@ -1,0 +1,133 @@
+#include <iostream>
+
+using namespace std;
+
+#pragma warning (disable: 4996)
+int main()
+{
+	// // binary formada yazmaq
+	// FILE* file;
+	// fopen_s(&file, "array.bin", "wb");
+	// 
+	// if (file)
+	// {
+	// 	int size = 10;
+	// 	int* arr = new int[10] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	// 
+	// 	// binary formatda file-a melumati yazdi
+	// 	fwrite(arr, sizeof(int), size, file);
+	// 	delete[] arr;
+	// 	arr = nullptr;
+	// }
+	// 
+	// 
+	// fclose(file);
+
+
+
+	 // // oxumaq
+	 // FILE* file;
+	 // fopen_s(&file, "array.bin", "rb");
+	 // if (file)
+	 // {
+	 // 	int size = 10;
+	 // 	int* arr = new int[size] {};
+	 // 
+	 // 	fread(arr, sizeof(int), size, file);
+	 // 
+	 // 	for (size_t i = 0; i < size; i++)
+	 // 	{
+	 // 		cout << arr[i] << " ";
+	 // 	}
+	 // 
+	 // 
+	 // }
+	 // fclose(file);
+
+
+	// -----------------------------------------
+	/*
+	* 1. Istifadeci arrayin olcusunu  ve daxilinde olacaq
+	maksimum ve minimum deyerleri daxil edir
+	Arrayi daxil edilmish araliqda verilmish sayda random ededler ile doldurub
+	daha sonra bu arrayi Binary formatda file yazib sonra oxumaq lazimdir
+	*/
+
+	// srand(time(nullptr));
+	// int size, max, min;
+	// 
+	// cout << "Size daxil edin: ";
+	// cin >> size;
+	// cout << "Minimum daxil edin: ";
+	// cin >> min;
+	// cout << "Maksimum daxil edin: ";
+	// cin >> max;
+	// 
+	// 
+	// FILE* file = fopen("tast2.bin", "wb+");
+	// 
+	// if (file)
+	// {
+	// 	int* arr = new int[size] {};
+	// 	for (size_t i = 0; i < size; i++)
+	// 	{
+	// 		arr[i] = min + rand() % (max - min);
+	// 	}
+	// 
+	// 	cout << endl << "File-yazilmamais" << endl;
+	// 	for (size_t i = 0; i < size; i++)
+	// 	{
+	// 		cout << arr[i] << " ";
+	// 	}
+	// 
+	// 	fwrite(arr, sizeof(int), size, file);
+	// 	delete[] arr;
+	// 	arr = nullptr;
+	// 
+	// 
+	// 	// oxuma hissesi
+	// 	rewind(file);
+	// 	arr = new int[size] {};
+	// 	fread_s(arr, sizeof(int)*size, sizeof(int), size, file);
+	// 
+	// 	cout << endl << "File-dan oxunan melumatlar" << endl;
+	// 	for (size_t i = 0; i < size; i++)
+	// 	{
+	// 		cout << arr[i] << " ";
+	// 	}
+	// 
+	// }
+	// 
+	// fclose(file);
+
+
+	/*
+	TASK 2:
+
+
+	Personstructi yaradiriq
+	name
+	surname
+	age
+	email
+	password
+
+	olur
+	------------------------
+	Person listi
+
+	MENU
+	Yeni person yarat
+	Personlara bax
+	Personlari file yaz
+	
+	Cixis
+
+	
+	*/
+
+
+
+
+
+}

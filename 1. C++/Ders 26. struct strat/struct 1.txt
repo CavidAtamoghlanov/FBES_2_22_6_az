@@ -1,0 +1,61 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+
+// member  =>  Struct daxilinde yaradilmish herbirshey
+// field   =>  Struct daxilinde yaradilmish deishenler
+// method  =>  Struct daxilinde yaradilmish functions
+
+struct Person {
+	const char* name = nullptr;
+	const char* surname = nullptr;
+	int age = 0;
+
+	void print() {
+		cout << name << " " << surname << " " << age << endl;
+	}
+};
+
+
+
+
+void main()
+{
+
+	// struct  => User define data type (Bir cox data type bir araya yigmaq ucundur)
+	// Person type-ndan yaradilmish herbir deishen onun OBJECTI yeni instance sayil
+	Person p1{"Kamal", "Hesenov"};
+	Person p2{"Hesen", "Bagirov"};
+	Person p3{"Huseyn", "Eliyev"};
+	Person p4{"Qasan", "Kamalov"};
+	Person p5{"Amin", "Huseynov"};
+
+	Person* students = new Person[5]{};
+
+	students[0] = p1;
+	students[1] = p2;
+	students[2] = p3;
+	students[3] = p4;
+	students[4] = p5;
+
+
+	// print
+	for (size_t i = 0; i < 5; i++)
+	{
+		students[i].print() ;
+	}
+
+
+
+
+	/*cout << (*students).age << endl;
+
+	cout << students->age << endl;
+
+	cout << p1.age << endl;*/
+
+	
+	
+
+}

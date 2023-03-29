@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int number = 10;
+
+
+int main()
+{
+	srand(time(NULL));
+	// cout << rand() % 10 << endl;
+
+	int min = 10;
+	int max = 120;
+
+	int random = min + rand() % (max - min + 1);
+
+	cout << random << endl;
+	cout << random / 10.0 << endl;
+}

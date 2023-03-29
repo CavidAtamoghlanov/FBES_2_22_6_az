@@ -1,0 +1,172 @@
+#include<iostream>
+using namespace std;
+
+/*
+
+	1. Increment decrement (Prefix, Posfix)
+		(++prefix) (--prefix) ==> operator deishenin evvelinde islendikde PREFIX adlanir
+
+		(Posfix++)(Posfix--)  => Operator deishenden sonra isledildikde
+
+
+	2. Type casting
+*/
+
+
+
+int main()
+{
+
+	/*
+	int a = 5;
+	cout << a++ << a << endl;
+	cout << --a << endl;
+	*/
+
+	//int num = 10;    // 10
+
+	//cout << (++num) << endl; // 23
+	//cout << num++ - num-- << endl; // 0
+	//cout << num << endl; // 12
+	//
+
+	//int c = 18;
+	//cout << c - 10 << endl;
+	//cout << ++c + ++c << endl;
+	//cout << c++ << endl;
+	//cout << c << endl;
+
+	// ----------------------------------------
+	// ----------------------------------------
+
+	//NEW LESSON  => TYPE CASTING
+		// 1. implicite (qeyri askar)  =>
+	/*int a;
+	cin >> a;
+	cout << a << endl;*/
+
+	//int a = 17;
+	//cout << a / 2 << endl;
+	//char a = 'aaaa';
+	//char a = 255;
+	//cout << a << endl;
+
+
+
+	// 2. expilicite (Askar)       =>
+
+	//int a = 65;
+	//char b = 'ias';
+	//cout << (char)a << endl;
+
+	//cout << char(a) << endl;
+
+	//cout << int(b) << endl;
+
+	//a = 0;
+	//cout << bool(a) << endl;
+	//char v = 'a';
+	//cout << (bool)v << endl;
+
+	// İstifadəçi ədəd daxil edir. Həmin ədədin ASCİİ cədvəlindəki xarakterini ekrana çıxarın.
+
+
+	//int num;
+	//cout << "Eded daxil edin: ";
+	//cin >> num;
+	////unsigned char b = char(num);
+	////cout << "netice: " << b << endl;
+
+	//cout << "Netice " << char(num) << endl;
+
+	// -----------------------------------------------------------------------------
+	// TASK 1
+	//	İstifadəçi iki kəsr ədəd daxil edir.Onların tam və kəsr hissələrinin cəmini tapın.
+	//	(Məsələn : 1.5 və 3.2 - Tam hissə cəmi 4, kəsr hissə cəmi 0.7 edir)
+	/*
+	float num_1, num_2, kesir_1, kesir_2;
+	int tam_1, tam_2;
+	cout << "Num1 daxil edin: ";
+	cin >> num_1;
+	cout << "Num2 daxil edin: ";
+	cin >> num_2;
+
+	tam_1 = int(num_1);
+	tam_2 = num_2;
+
+	kesir_1 = num_1 - tam_1;
+	kesir_2 = num_2 - tam_2;
+
+	cout << "Tamlarin cemi: " << tam_1 + tam_2 << endl;
+	cout << "kesirlerin cemi: " << kesir_1 + kesir_2 << endl;
+	*/
+
+
+
+	/*
+	* TASk 2
+	İstifadəçi sahib olduğu pulu daxil edir (Kəsr halda: məsələn 15.30). İstifadəçinin neçə manat və
+neçə qəpiyi olduğunu ekrana çıxarın. ( Ekrana 15 manat, 30 qəpik çıxmalıdır)
+	*/
+	/*float pul,  kesir_1;
+	int tam_1;
+	cout << "pul daxil edin: ";
+	cin >> pul;
+
+	tam_1 = pul;
+	kesir_1 = pul - tam_1;
+	kesir_1 = (kesir_1 * 100);
+	cout << tam_1 << " manat " << kesir_1 << " Qepik" << endl;*/
+
+
+	/*
+	TASK 3
+	• İstifadəçi kütləni tonla daxil edir (Kəsr ədəd). Ekrana ton,kiloqram,qram halında çıxarın.
+(Məsələn 126.456789 Ton, Ekrana 126 Ton, 456 kq, 789 q çıxmalıdır)
+	*/
+
+	/*double kutle;
+	int ton, kq, qr;
+	cout << "ton daxil edin ";
+	cin >> kutle;
+
+	ton = kutle;
+
+	kq = (kutle - ton) * 1000;
+
+	qr = int((kutle - ton) * 1000000) % 1000;
+
+	cout << ton << endl;
+	cout << kq << endl;
+	cout << qr << endl;*/
+
+
+
+
+	/*
+	* TASK 5
+		• İstifadəçi aeroporta məsafəni və ora çatmaq üçün sahib olduğu vaxtı daxil edir . Aeroporta
+		çatmaq üçün hansı sürətlə getməli olduğunu tapan proqram yazın.
+
+
+		TASK 6
+		• İstifadəçi telefon danışığının başlanğıc (saat, dəqiqə, saniyə ) və son (saat, dəqiqə, saniyə)
+		zamanını daxil edir. Danışığın dəqiqəsi 20 qəpik olarsa, ümumi qiyməti ekrana çıxarın.
+
+
+		TASK 8
+		• İstifadəçi AZN ilə pul daxil edir. Əlavə olaraq dolların,avronun, rublun məzənnəsini daxil edir.
+
+
+		TASk 9
+		İstifadəçi bir notebookun qiymətini, almaq istədiyi sayı, və endirim faizini daxil edir. Program
+		ekrana ümumi sifarişin neçə AZN olacağını çıxarır.
+
+
+	*/
+
+
+
+
+
+}

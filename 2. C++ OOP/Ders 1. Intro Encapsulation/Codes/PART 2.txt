@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+
+class Student {
+	// Access modifier 
+	// 1. public     => Hem class hemde classdan yaradilmish object terefinden istifade edile bilir
+	// 2. private    => Yalniz Classin-oz daxilinde istifade edile bilir
+	// 3. protected  => Classin oz daxilinde ve toremesinde istifade edile bilir
+public:
+	// Class fields  (memmber)
+	char* name;
+	char* surname;
+	int age;
+
+
+	// Method
+	void print() {
+		cout << name << endl;
+		cout << surname << endl;
+		cout << age << endl;
+	}
+};
+
+
+
+int main()
+{
+	Student s1;
+	s1.name = new char[]{ "Cavid" };
+	s1.surname = new char[] { "Atamoghlanov" };
+	s1.age = 10;
+	s1.print();
+
+
+
+
+	Student s2;
+	s2.name = new char[] { "Hesen" };
+	s2.surname = new char[] { "Abdullazade" };
+	s2.age = 10;
+	s2.print();
+
+
+
+}

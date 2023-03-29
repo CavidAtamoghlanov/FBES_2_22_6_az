@@ -1,0 +1,134 @@
+# default parametr
+
+
+# def sum_(a,b,c=0,d=12):
+#     return a+b+c
+
+
+# print(sum_(3, 5, 10))
+
+# ----------------------------------------------
+# def sum_(a=6,b=4,c=1,d=9,e=True):
+#     pass
+
+
+# sum_()
+# ------------------------------------------
+# ##  TASK
+# # funksiya  3 paraMETIR QEBUL EDIR (gender, age, chiledCount) 
+# # istifadeciye pensiya dusub dusmediyini bildiriri
+
+# def Pensiya(gender, age, chiledcount=0):
+#     if gender == "male":
+#         if age >= 65:
+#             if chiledcount == 0:
+#                 print(f"Bey size adi pensiya dusur")
+#             else:
+#                 print(f"Bey size {chiledcount} qat pensiya")
+#         else:
+#             print(f"Bey size pensiya dusmur")
+#     elif gender == "famale":
+#         if age >= 63:
+#             print(f"Xanim size {chiledcount} qat pensiya")
+#         else:
+#             print(f"Xanim size pensiya dusmur")
+            
+# Pensiya("male", 69,5)
+# ----------------------------------------------------------------
+# # *args --> istenilen sayda  funksiyaya  data  gondere bilerik
+# # def sum_(*d):       
+# #     print(d)
+# #     print(type(d))
+
+
+# # sum_(1,2, "Salam", [1,2,3], True)
+
+# def sum_(*a):       
+#     cem = 0
+#     for i in a:
+#         cem += i
+#     return cem
+
+
+# print(sum_(1,2))
+
+
+# # funksiyaya  gonderilmish istenilen  sayda  datadn 
+# # necesinin int  necesinin str  olduqunu  qaytaran funksiya yaradin
+
+# def count(*args):
+#     intcount = 0
+#     strcount = 0
+#     for i in args:
+#         if type(i) == int:
+#             intcount += 1
+#         elif type(i) == str:
+#             strcount += 1
+    
+#     print(f"{intcount} int ve {strcount} str  var")
+    
+# count(1,2,5,"Salam", 15.0, True, False, [1,5,2])
+
+# # final project millioncuu
+
+# questionIndex = 0
+# correctAnswer = 2
+# allAnswer = 1
+
+
+# questions = [
+#     ["Question 1", ['a1', 'a2', 'a3', 'a4'], 'a3', 1000],
+#     ["Question 2", ['a1', 'a2', 'a3', 'a4'], 'a2', 2000],
+#     ["Question 3", ['a1', 'a2', 'a3', 'a4'], 'a1', 4000],
+   
+# ]
+# jokers = ['50-50', 'Call Friend', 'Autoria']
+
+
+# print()
+# print('Qeustion'.center(30, '='))
+
+# print('Answer A', 'Answer B')
+# print('Answer C', 'Answer D')
+
+
+# print('\n\nJokers')
+# print('1) 50-50')
+# print('2) Call Friend')
+# print('3) Autoria')
+
+
+
+# print(f'\n\tMoney {4000}$')
+# print(f'\tFor Exit: 0')
+
+# ---------------------------------------------------------------
+
+# Welcome Best Oil
+# [1] --> Oil
+# [2] --> Market
+# [3] --> submit (enter)
+# [0] --> exit
+#
+
+
+# ---------------------------------------
+# set
+# set -> unicdir
+# set --> index  anlayisi yoxdur buna gorede elementler  random  ardicilliqla  saxlanilir
+
+# newSet = {1, 2, 5, "Salam"}
+# print(newSet)
+# # for i in newSet:
+# #     print(i)
+
+# newSet.add(3)
+# print(newSet)
+# newSet.pop()
+# print(newSet)
+
+
+a = [1,2,3,4]
+b = [5,6,7,8]
+c = [1,5,2,6,3,7,4,8]
+

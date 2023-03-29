@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+////  (Function Prototype, Inline Function, Default parameter, Template Function)
+
+// Inline Function
+
+inline void display(int data) {
+	cout << data << endl;
+	cout << "code 1" << endl;
+	cout << "code 2" << endl;
+}
+
+int main()
+{
+	cout << "Before\n" << endl;
+	display(10);
+
+	////////////////
+
+	cout << "After\n" << endl;
+	cout << 10 << endl;
+	cout << "code 1" << endl;
+	cout << "code 2" << endl;
+}

@@ -1,0 +1,106 @@
+#include<iostream>
+
+using namespace std;
+//#pragma warning(disable: 4996); // Link errorlari sondure bilerik (herbirini yox)
+
+
+
+
+void main()
+{
+
+	//  **** C Style String ****
+	// \0 => null terminator 
+	
+	//cout << "Salam" << endl;
+
+	//// Way 1
+	//char arr[6]{ 'S','A','L','A','M','\0'};
+
+	//cout << &arr[0] << endl;
+	//cout << &arr[2] << endl;
+
+
+	//// Way 2
+	//char arr_2[]{ 'S','A','L','A','M', '\0'};
+	//cout << &arr_2[0] << endl;
+	//cout << &arr_2[2] << endl;
+
+
+	//// Way 3
+	//char arr_3[6] = "Salam";
+	//cout << &arr_3[0] << endl;
+	//cout << arr_3[2] << endl;
+
+	
+	//// Way 4
+	//const char* arr_4 = "Salam";
+	//cout << &arr_4[0] << endl;
+	//cout << arr_4[2] << endl;
+
+
+	//cout << arr_2 << endl;
+	//cout << arr_3 << endl;
+
+	// -----------------------------------------------------
+
+	/*char arrStr[] = "Hello World";*/
+	//int len = (sizeof arrStr / sizeof arrStr[0]) - 1;
+	/*
+	cout << len << endl;
+	
+	for (size_t i = 0; i < len; i++)
+	{
+		cout << arrStr[i] << endl;
+	}
+	*/
+
+	// ------------------------------------- 
+	//char arrStr[] = "Hello World";
+	/*
+	*** With while ***
+
+	int count = 0;
+	while (true)
+	{
+		if (arrStr[count] == '\0') break;
+		count++;
+	}
+	cout << count << endl;
+	
+	*/
+
+
+	//// *** with for ***
+	// int count = 0;
+	// for (size_t i = 0; arrStr[i] != '\0'; i++)
+	// {
+	// 	count++;
+	// }
+	// cout << count << endl;
+	// 
+	// ----------------------------------------------------------
+	// char arrStr[] = "Hello World";
+	// cout << strlen(arrStr) << endl;
+
+	// ---------------------------------------------------------
+	////char* arrPtr = new char[5000] {"Salam"};
+	//char* arrPtr = new char[5000] { 'S','A','L','A','M','\0' };
+	//int size = 6;
+	//char* arrNew = new char[size]{};
+
+	//strcpy_s(arrNew, size, arrPtr);
+
+	//delete[] arrPtr;
+	//cout << arrNew << endl;
+
+	char *arr = new char[30]{};
+	int x;
+	//cin >> arr;
+	cin.getline(arr, 10000000);
+
+
+	cout << arr << endl;
+
+
+}

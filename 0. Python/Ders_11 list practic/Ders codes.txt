@@ -1,0 +1,112 @@
+
+# Oyrenilesi
+# https://www.w3schools.com/python/python_ref_list.asp
+# numbers.sort()
+# numbers.reverse()
+# numbers.extend()
+# numbers.copy()  # en esasi
+# numbers.count()
+
+
+# nested list
+
+
+
+# """
+# bos listin icini 10 ile 100 araliqinda 
+# ancaq 2 ve 3 eyni anda bolune bilen reqemler ile doldurun 19 dene
+# """
+# a = []
+# import random
+# say = 0
+# while True:
+#     say+=1
+#     rand = random.randint(10, 100)
+#     if rand % 6 == 0:
+#         a.append(rand)
+#         if len(a) == 19:
+#             break
+
+# print(a)
+# print(say)
+
+
+"""
+1. 5x5 ölçüsündə ikiölçülü massivi 0-20 aralığında random ədədlərlə
+doldurun. Massivdəki ədədlərin cəmini tapın. 
+"""
+
+
+# import random
+
+# a = []
+
+# for i in range(5):
+#     newList = []
+#     for j in range(5):
+#         rand = random.randint(0,20)
+#         newList.append(rand)
+    
+#     a.append(newList)
+
+# print(a)
+
+
+# a = [[14, 7, 5, 11, 1], [0, 20, 10, 10, 2], [2, 11, 9, 17, 16], [11, 12, 20, 16, 4], [14, 2, 19, 18, 4]]
+
+# for i in a:
+#     for j in i:
+#         print(j)
+    
+
+"""
+3. 5x5 ölçüsündə ikiölçülü massivi (-100) və (100) aralığında random
+ədədlərlə doldurun. 
+
+Massivdəki minimal və maksimal elementləri
+tapan program yazın.
+"""
+
+# import random
+# esasList = []
+
+# for i in range(5):
+#     bosList = []
+#     for j in range(5):
+#         rand = random.randint(-100,100)
+#         bosList.append(rand)
+    
+#     esasList.append(bosList)
+# print(esasList)
+
+# # 00000000000000000000000000000000000000000000000000000000000000000000
+# default_max = esasList[0][0]
+# default_min = esasList[0][0]
+
+# for i in esasList:
+#     for j in i:
+#         if default_max < j:
+#             default_max = j
+        
+#         if default_min > j:
+#             default_min  = j
+
+# print(default_max)
+
+# newList = [['*','*','*'], ["#","#","#"],["@","@","@"]]
+
+
+# for i in newList:
+#     print(f"'{i[0]}' '{i[1]}'  '{i[2]}'")
+
+
+# for i in newList:
+#     for j in i:
+#         print(f"'{j}'", end=" ")
+#     print()
+#--------------------------------------------------------------------------------
+group = [["Cavid", "Atamoglanov", 35, 11.5], ["Huseyn", "Hesenli", 41, 11.5]]
+
+
+while True:
+    secim = input("Secim edin:")

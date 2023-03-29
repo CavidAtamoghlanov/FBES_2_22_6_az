@@ -1,0 +1,68 @@
+#include <iostream>
+#include<array>
+#include<string>
+#include<list>         // doubleLinkedLIST
+#include<forward_list> // Single linked list
+#include<vector>
+#include<set>          // set, Multiset 
+#include<map>          // mep, multiMap
+using namespace std;
+
+
+void main()
+{
+	// List | Set | Map | MultiSet | MultiMap | unorderedSet | UnorderedMap 
+
+	// LIST
+
+	list<int> numbers;
+	numbers.push_back(10);
+	numbers.push_back(12);
+	numbers.push_front(11);
+	numbers.push_front(-8);
+	numbers.push_front(-10);
+
+	/*
+	-10 -8 11 10 12
+	for (auto i = numbers.begin(); i != numbers.end(); i++)
+		cout << *i << endl;
+		*/
+
+		/*cout << numbers.front()<<endl;
+		cout << numbers.back()<<endl;
+		cout << "IsEmpty: " << numbers.empty() << endl;*/
+		//numbers.clear();
+
+
+		//numbers.assign(3, 15); // listi assing edir
+		//numbers.assign({12,3,4,5,-5}); // listi assing edir
+
+
+		//set<int> s;
+		//s.insert(15);
+		//s.insert(12);
+		//s.insert(13);
+		//s.insert(14);
+
+		//numbers.assign(s.begin(), s.end()); // listi assing edir
+
+		//numbers.erase(--numbers.end());
+
+		//numbers.remove(-100); // elementi silir
+			// bir elementden neqeder varsa hamisini silir
+
+		//numbers.reverse(); // tersine cevirir
+		//numbers.sort();
+
+		// numbers.unique(); // tekrarlansan elementleri uniq edir
+		// numbers.sort();
+		// numbers.merge({ 15,16,17 }); // ancaq sort olunmush formatda isleyeceq 
+
+	//numbers.insert(numbers.end(), 3, 15);
+	//numbers.insert(++numbers.begin(), { 1,2,3,4,5,6 });
+
+
+	for (auto& number : numbers)
+		cout << number << endl;
+
+}

@@ -1,0 +1,39 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+	/*
+	* 1. point const () => const value
+	* 2. const Point () => const address
+	* 3. const point and const value () => cosnt value apoint
+	*/
+
+	/*
+	const int x = 10;
+	int a = 19;
+
+	const int* ptr = &x;
+	*/
+
+	// value const
+	/*const int* ptr_1 = &x;
+
+	ptr_1 = &a;*/
+
+	// const pointer
+	//int* const ptr_2 = &x;
+	//cout << *ptr_2 << endl;
+	//ptr_2 = &a;
+	//cout << *ptr_2 << endl;
+
+
+
+	//const int* const ptr_2 = &x;
+	//cout << *ptr_2 << endl;
+
+}

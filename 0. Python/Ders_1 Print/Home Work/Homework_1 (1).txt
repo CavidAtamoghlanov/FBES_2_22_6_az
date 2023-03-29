@@ -1,0 +1,11 @@
+1) Kompilyasiya nedir?
+2) Interpretasiya nedir ?
+5) High ve low level programming nedir? Ferqleri nedir?
+6) Comment nedir ?
+9) // - nedir ?
+10) / - nedir?
+11) ** - nedir?
+12) % - nedir?
+13) \n - nedir?
+14) \t - nedir?
+15) \ - nedir ?

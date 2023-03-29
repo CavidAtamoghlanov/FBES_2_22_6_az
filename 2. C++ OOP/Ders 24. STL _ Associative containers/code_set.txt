@@ -1,0 +1,33 @@
+#include <iostream>
+#include <set>				// set, multiset
+#include <unordered_set>    // unordered_set, unordered_multiset
+
+using namespace std;
+
+
+int main()
+{
+	// set<string> colors;
+	// 
+	// colors.insert("Red");
+	// colors.insert("Green");
+	// colors.insert("Azure");
+	// colors.insert("Blue");
+
+	// auto iter = colors.find("Green");
+	// colors.insert(iter, "Yellow");
+
+
+	// auto count = colors.count("Red");
+	// cout << count << endl;
+
+
+	// colors.erase("Red");
+
+	// auto cmp = colors.value_comp();
+	// auto result = cmp("A", "B");
+	// cout << result << endl;
+	// 
+	// for (auto& color : colors)
+	// 	cout << color << endl;
+}

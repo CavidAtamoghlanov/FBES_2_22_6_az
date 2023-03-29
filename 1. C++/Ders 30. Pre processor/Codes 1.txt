@@ -1,0 +1,47 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+#include "Header.h"
+#include "Header1.h"
+
+#pragma warning disable(95555)
+
+
+#define PI 3.14 // Pre processor ile constand deyer yaratmaq
+# undef PI  // pre processordaki cnstandi free edir
+
+
+#define baslanqic {
+#define soluq }
+
+#ifndef hesen
+	#define hesen 13
+#endif
+
+
+
+#define a(q, d) (q + d)
+#define b(q, d) (q > d)
+
+#define printLine(value) (cout << value << endl)
+#define print(value) (cout << value)
+
+
+
+
+int main()
+{
+	/*
+	*** Pre Processor ***
+	* 1. Xususi kodlar (# ile yazilanlar)
+
+	*/
+	//cout << a(10, 20) << endl;
+	//cout << a(10, 20) << endl;
+
+	//print("Salam");
+	//printLine("Salam");
+
+}
+

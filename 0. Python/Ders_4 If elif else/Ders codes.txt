@@ -1,0 +1,186 @@
+# if  -->  budaqlanan  Algorithm-min kodunbu  qurmaq ucun
+
+"""
+sintaxsis
+if 6 > 5:
+    print("if isledi")
+
+print("END")
+
+"""
+# name = "Salam necesen"
+# print(name)
+
+# if 6 > 5:
+#     print("if isledi")
+#     print("if isledi")
+#     print("if isledi")
+#     print("if isledi")
+#     print("if isledi")
+# print("END")
+
+# # -------------------------------------
+# if 6 and 5%5==1:
+#     print("Salam")
+# else:
+#     print("Sagol")
+# print("ENd")
+
+# -------------
+# TASK  
+# istifadeci  istenilen bir eded  daxil edir
+# eyer  eded  cutdurse  bize  cutdur  deyilsin  eks  halda tekdir  deyilsin
+
+
+
+# number = int(input("Eded daxil edin: "))
+
+# if number % 2 == 0:
+#     print("Cutdur")
+# else:
+#     print("Tekdir")
+
+# -----------
+############## if --> musteqildir
+############## else --> if-den  aslidir
+# if 6:
+#     print("Test 1")
+
+# if 6<18:
+#     print("Test 2")
+
+# if 18%6!=0:
+#     print("test 3")
+# else:
+#     print("test 4")
+    
+# if 36:
+#     print('test 5')
+
+# ---------------------------------------------------------
+# ------------
+
+
+# task
+# istifadeci  login ve  passwordunu  daxil  
+# edin  daxil edilmish  login ve  password  dogrudursa  WELCOME  deyilir eks halda
+# Invalid  email or  password
+
+
+# login = "Cavid@gmail.com"
+# password = "a3184073"
+
+# login_user = input("Login daxil edin: ")
+# password_user = input("Password daxil edin: ")
+
+# if login_user == login and password == password_user:
+#     print("Welcome")
+# else:
+#     print('invalid login or password')
+# ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+# elif  --> musteqil islene bilmir  mutleq  bir if-den aslidir
+
+
+
+# age = 11
+
+
+# if age == 10:
+#     print("senin 10 yasin var")
+# elif age == 11:
+#     print("senin 11 yasin var")
+# elif age == 12:
+#     print("senin 12 yasin var")
+# elif age == 13:
+#     print("senin 13 yasin var")
+
+# if age == 14:
+#     print("senin 14 yasin var")
+# else:
+#     print("sizin yasiniz uygun deyil")
+
+# ----------------------------------
+# ----------------------------------
+# ----------------------------------
+# /--------------  Ifin icini  hecbir  halda bosh buraxmaq olmaz
+# if 6>5:
+#     pass 
+    
+# print("end")
+
+# # ---------------------------------------------
+# # 2. İstifadəçi 1-20 arası ədəd daxil edir. Ədəd sadədirsə True, mürəkkəbdirsə False çap
+# # olunsun. (Sadə ədədlər yalnız özünə və 1-ə bölünən ədədlərdir)
+
+# eded = int(input("Eded daxil edin: "))
+
+# netice = (eded % 2 != 0 and eded % 3 != 0 and eded % 5 != 0) or eded == 2 or eded == 3 or eded == 5
+
+# print(netice)
+
+
+# ---------------------------------------------
+# ---------------------------------------------
+# ---------------------------------------------
+# NESTED if  --> ic ice  ifler
+
+# print("Start")
+
+# if 6<7:
+#     print("if 1 isledi")
+#     if 8%2 != 0:
+#         print("if 2 isledi")
+#     elif 6>3:
+#         print("if 1 in elifi isledi")
+    
+# else:
+#     print("if 1 islemedi")
+#     if 2:
+#         print("elsin icindeki if isledi")
+    
+# print("end")
+# -------------------------------------------------------
+
+# -------------------------------------------------------
+# -------------------------------------------------------
+
+# task
+# # istidfadeci oz  loginini  daxil edir  eyer login dogrudursa o  
+# passwordu  daxil etmeye  kecir
+# ve eyer passwordda  dogrudursa  welcome  deyilir yox 
+# password yanlisdirsa  password sehfdir  deyilir\
+
+
+# ------  yol bir
+from cmath import log
+
+
+login = "Cavid@gmail.com"
+password = "a3184073"
+
+# login_user = input("Login daxil edin: ")
+
+# if login_user == login:
+#     password_user = input("Password daxil edin: ")
+#     if password == password_user:
+#         print("WELCOME")
+#     else:
+#         print("Sifre yanlisdir")
+# else:
+#     print("Senin emailin sehjfdir")
+
+
+# # ------  yol 2
+# login_user = input("Login daxil edin: ")
+# password_user = input("Password daxil edin: ")
+
+# if login != login_user:
+#     print("Login sehfdir")
+# elif password != password_user:
+#     print("passsword yanlisdir")
+# else:
+#     print("Welcome")
+# ------------------------------------------------------

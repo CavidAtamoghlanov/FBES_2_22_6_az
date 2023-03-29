@@ -1,0 +1,211 @@
+#include<iostream>
+
+using namespace std;
+
+
+void fillArray(int*, int);
+void printArray(int*, int);
+int* pushFront(int*, int*, int);
+int* insert(int*, int*, int, int);
+int* deleteFront(int*, int*);
+int* deleteBack(int*, int*);
+int* deleteByIndex(int*, int*, int);
+
+/*
+	int* arrMain = new int[size_1]{ 1,1,2,2,3,3,4,5,5,6 };
+	int* arrMain_2 = new int[size_2]{ 1,2,3,4,6 };
+*/
+int* deleteBlcokFromArray(int* arr_1, int* size_1, int* arr_2, int* size_2, int *size_3)
+{
+
+	int* saveIndex = new int[*size_2];
+	int sizeLochal = 0;
+	bool isCheckLochal;
+
+
+	for (size_t i = 0; i < *size_2; i++)
+	{
+		for (size_t j = 0; j < *size_1; j++)
+		{
+			if (arr_2[i] == arr_1[j])
+			{
+				isCheckLochal = true;
+				for (size_t k = 0; k < sizeLochal; k++)
+				{
+					if (saveIndex[k] == j)
+					{
+						isCheckLochal = false;
+						break;
+					}
+				}
+				if (isCheckLochal)
+				{
+					saveIndex[sizeLochal++] = j;
+					break;
+				}
+			}
+		}
+	}
+	// ---------------------------------------------------------
+
+	int newSize = *size_1 - sizeLochal;
+	int *newArray = new int[newSize] {};
+	int index = 0;
+
+	for (size_t i = 0; i < *size_1; i++)
+	{
+		isCheckLochal = true;
+		for (size_t j = 0; j < sizeLochal; j++)
+		{
+			if (i == saveIndex[j])
+			{
+				isCheckLochal = false;
+				break;
+			}
+
+		}
+		if (isCheckLochal)
+		{
+			newArray[index++] = arr_1[i];
+		}
+	}
+
+
+	*size_3 = newSize;
+	delete[] saveIndex;
+	return newArray;
+
+}
+
+
+
+void main()
+{
+	/*
+	* 1. pushFront(int * arr, int &size, int NewData) => VErilmish arrayin evveline yeni element elave edir
+	* 2. insert(int * arr, int &size,int index, int NewData) => verilmish istenilen indekse yeni element elave edir
+	*
+	* 3. deleteFront(int * arr, int *size) => evveldeki elementi silir
+	* 4. deleteBack(int * arr, int *size)  => son elementi silir
+	* 5. deleteByIndex(int * arr, int *size, int index)  => Verilmish indeksi silir
+	*
+	*
+	* 6. combineTwoArray(int * arr_1, int * size_1, int * arr_2, int * size_2) =>
+	*		Iki arrayin birleshmesi
+	*
+	* 7. deleteBlcokFromArray(int * arr_1, int * size_1, int * arr_2, int * size_2) =>
+	*		Birinci arraYDEN IKINCI ARRAYIN elementlerini silmey
+	*/
+
+
+	/*\
+	A = {1, 5,3, 3,9,15,19, 9,19}
+	B = {1,3,9, 19, 19}
+	A = {5,3,15,9}
+	*/
+	int size_1 = 10;
+	int size_2 = 5;
+	int* arrMain = new int[size_1]{ 1,1,2,5,3,3,4,5,2,6 };
+	int* arrMain_2 = new int[size_2]{ 1,2,2,4,6 };
+	printArray(arrMain, 10);
+	printArray(arrMain_2, 5);
+
+	int size_3 = 0;
+	int* arr_3 = deleteBlcokFromArray(arrMain, &size_1, arrMain_2, &size_2, &size_3);
+
+	printArray(arr_3, size_3);
+
+
+
+	
+
+}
+
+
+
+
+void fillArray(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+		arr[i] = rand() % 30;
+}
+
+void printArray(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+		cout << arr[i] << " ";
+	cout << endl;
+}
+
+int* pushFront(int* arr, int* size, int NewData) // 12345     9123
+{
+	int* newArr = new int[*size + 1]{};
+	newArr[0] = NewData;
+	for (int i = 1; i <= *size; i++)
+		newArr[i] = arr[i - 1];
+
+	delete[] arr;
+	arr = nullptr;
+	(*size)++;
+	return newArr;
+}
+
+int* insert(int* arr, int* size, int index, int NewData) // 12345  2 3
+{
+	int* newArr = new int[*size + 1]{};
+	newArr[index] = NewData;
+
+	for (int i = 0, j = 0; i <= *size; i++)
+	{
+		if (i == index)
+			continue;
+		newArr[i] = arr[j++];
+	}
+
+	cout << endl;
+	delete[] arr;
+	arr = nullptr;
+	(*size)++;
+	return newArr;
+}
+
+int* deleteFront(int* arr, int* size)
+{
+	(*size)--;
+	int* newArray = new int[*size];
+
+	for (int i = 0; i < *size; i++)
+		newArray[i] = arr[i + 1];
+
+	delete[] arr;
+	arr = nullptr;
+	return newArray;
+}
+
+int* deleteBack(int* arr, int* size)
+{
+	(*size)--;
+	int* newArray = new int[*size];
+
+	for (int i = 0; i < *size; i++)
+		newArray[i] = arr[i];
+
+	delete[] arr;
+	arr = nullptr;
+	return newArray;
+}
+
+int* deleteByIndex(int* arr, int* size, int index)
+{
+	(*size)--;
+	int* newArray = new int[*size];
+	for (int i = 0, j = 0; i <= *size; i++)
+	{
+		if (i == index) continue;
+		else newArray[j++] = arr[i];
+	}
+
+	delete[] arr;
+	arr = nullptr;
+	return newArray;
+}

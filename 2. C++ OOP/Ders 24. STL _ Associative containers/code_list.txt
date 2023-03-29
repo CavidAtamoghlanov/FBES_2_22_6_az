@@ -1,0 +1,78 @@
+#include <iostream>
+#include <list>				// doubly linked list
+#include <forward_list>		// singly linked list
+#include <vector>
+
+using namespace std;
+
+
+int main()
+{
+	list<int> numbers;
+
+	//	numbers.push_front(15);
+	//	numbers.push_front(15);
+	//	numbers.push_back(5);		// Tail
+	//	numbers.push_front(25);		// Head
+
+
+	// numbers.insert(numbers.begin(), 3, 99);
+	numbers.insert(numbers.begin(), 99);
+	numbers.insert(numbers.begin(), { 1,2,3,4,5 });
+
+
+
+	vector<int> vec;
+	vec.push_back(100);
+	vec.push_back(101);
+	vec.push_back(102);
+
+	numbers.insert(numbers.begin(), vec.begin(), vec.end()-1);
+
+
+
+	// numbers.pop_back();
+	// numbers.pop_front();
+
+	cout << "Size: " << numbers.size() << endl;
+	cout << "Head: " << numbers.front() << endl;
+	cout << "Tail: " << numbers.back() << endl;
+	cout << "IsEmpty: " << numbers.empty() << endl;
+
+	// numbers.erase(numbers.begin());
+	// numbers.clear();
+	// numbers.remove(15);
+	// numbers.reverse();
+	// numbers.sort();
+	// numbers.unique();
+
+
+
+	//	list<int> numbersMerge;
+	//	numbersMerge.push_front(88);
+	//	numbersMerge.push_front(99);
+	//	numbersMerge.sort();
+	//	// numbers.merge(numbersMerge);
+	//	// numbers.splice(numbers.begin(), numbersMerge);
+
+
+
+	// numbers.assign({ 1, 2, 3, 4, 5 });
+
+
+
+	//	for (auto& number : numbers)
+	//		cout << number << endl;
+
+
+
+
+	// forward_list<int> numbersForward;
+
+
+
+	for (auto i = numbers.begin(); i != numbers.end(); i++)
+		cout << *i << endl;
+
+
+}

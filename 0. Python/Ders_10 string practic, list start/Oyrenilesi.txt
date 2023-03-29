@@ -1,0 +1,11 @@
+
+
+Oyrenilesi
+# https://www.w3schools.com/python/python_ref_list.asp
+# numbers.sort()
+# numbers.reverse()
+# numbers.extend()
+# numbers.copy()  # en esasi
+# numbers.count()
+
+nested list

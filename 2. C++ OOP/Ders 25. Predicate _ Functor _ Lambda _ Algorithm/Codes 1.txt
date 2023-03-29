@@ -1,0 +1,93 @@
+#include <iostream>
+#include<list>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+
+// Predicat ||  Functor || Lambda || Algorithm
+/////////////////////////////////////////////////////////
+
+void foo()
+{
+	cout << "Hakuna Matata FOO" << endl;
+}
+void doo()
+{
+	cout << "Hakuna Matata DOO" << endl;
+}
+void print(void(*ptr)())
+{
+	ptr(); // call function || Invoke
+}
+
+
+//-----------------------------------------------------------------
+
+//inline bool predicateASC(int& num_1, int& num_2)
+//{
+//	return num_1 < num_2;
+//}
+//
+//
+//inline bool predicateDESC(int& num_1, int& num_2)
+//{
+//	return num_1 > num_2;
+//}
+//
+//inline bool removeIfPredicate(int& value)
+//{
+//	return value < 21;
+//}
+//
+//
+//
+//class Person
+//{
+//	int _age;
+//public:
+//	Person(int age) :_age(age) {};
+//
+//	
+//};
+
+
+int main() 
+{
+
+	// Predicat =>  funksiyanin parametr olaraq diger bir funksiyanin pointerini qebul etmesi
+	// functor  =>  classin objectinin addressini gonderdikde ona uygun islemesidir funksiyanin
+
+	//list<int> numbers;
+	//numbers.push_back(10);
+	//numbers.push_back(11);
+	//numbers.push_back(12);
+	//numbers.push_back(17);
+	//numbers.push_back(21);
+	//numbers.push_back(19);
+	//numbers.push_back(-10);
+	//numbers.push_back(54);
+
+
+	//for (auto& number : numbers)
+	//{
+	//	cout << number << " ";
+	//}
+	//cout << endl;
+	//cout << endl;
+	//cout << endl;
+
+	//// numbers.sort(predicateDESC);
+	////numbers.remove_if(removeIfPredicate);
+
+	//Person A(21);
+	//numbers.remove_if(A);
+
+	//for (auto& number : numbers)
+	//{
+	//	cout << number << " ";
+	//}
+
+
+}

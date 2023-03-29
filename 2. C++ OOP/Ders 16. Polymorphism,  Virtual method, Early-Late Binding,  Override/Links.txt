@@ -1,0 +1,3 @@
+https://www.programiz.com/cpp-programming/virtual-functions
+https://www.programiz.com/cpp-programming/polymorphism
+https://www.geeksforgeeks.org/c-final-specifier/

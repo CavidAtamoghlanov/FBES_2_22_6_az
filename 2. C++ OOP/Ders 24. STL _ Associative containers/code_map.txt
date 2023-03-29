@@ -1,0 +1,123 @@
+#include <iostream>
+#include <vector>
+#include <map>		// map, multimap
+
+using namespace std;
+
+/*
+int main()
+{
+
+	map<int, string> colors;
+
+	colors.insert({1, "Red" });
+	colors.insert({2, "Red" });
+	colors.insert({3, "Green" });
+	colors.insert({4, "Azure" });
+	colors.insert({5, "Blue" });
+	colors.insert(pair<int, string>(6, "White"));
+
+	// colors[5] = "Black";
+	// cout << colors[5] << endl;
+
+
+	for (auto& pair : colors) {
+		cout << pair.first << ' '<<pair.second << endl;
+		// cout << colors[pair.first] <<endl;
+	}
+}
+*/
+
+
+
+
+
+
+
+
+/*
+
+float Add(float a, float b) { return a + b; }
+float Subtract(float a, float b) { return a - b; }
+float Multiply(float a, float b) { return a * b; }
+float Divide(float a, float b) { return a / b; }
+
+
+int main() {
+	// float (*ptr)(float, float) = Subtract;
+
+
+	map<char, float (*)(float, float)> calc;
+	calc['+'] = Add;
+	calc['-'] = Subtract;
+	calc['*'] = Multiply;
+	calc['/'] = Divide;
+
+	float a, b;
+	char op;
+
+	while (true)
+	{
+		cin >> a >> op >> b;
+		cout << calc[op](a, b) << endl;
+	}
+
+
+
+
+	// map<float (*)(float, float), char> calc1;
+	// calc1[Add] = 'D';
+	// 
+	// cout << calc1[Add] << endl;
+}
+*/
+
+
+
+
+/*
+	class Student {
+	public:
+		map<string, string> fields;
+
+		void print() {
+			for (auto& field : fields)
+				cout << field.first << ' ' << field.second << endl;
+		}
+	};
+
+
+	int main() {
+		Student student1;
+		student1.fields["Name"] = "Emin";
+		student1.fields["Surname"] = "Novruz";
+		student1.fields["Age"] = "14";
+		student1.fields["Score"] = "2.14";
+
+
+		Student student2;
+		student2.fields["Name"] = "Royal";
+		student2.fields["Surname"] = "Bedelli";
+		student2.fields["Age"] = "1";
+		student2.fields["Score"] = "0.15";
+		student2.fields["HasGlass"] = "True";
+		student2.fields["HasBeard"] = "True";
+
+
+		student1.print();
+		cout << endl;
+		student2.print();
+	}
+*/
+
+
+
+
+
+int main() {
+	// TASK
+
+	// Word			-> söz, kəlmə
+	// Dictionary	-> lüğət
+	// Hi			-> A yoldaş, Ey
+}

@@ -1,0 +1,184 @@
+#include<iostream>
+
+using namespace std;
+
+
+void fillArray(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+		//*(arr + i) = rand() % 30;
+		arr[i] = rand() % 15;
+
+
+}
+
+void printArray(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+		//cout << *(arr + i) << " ";
+		cout << arr[i] << " ";
+	cout << endl;
+}
+
+int* newArrayExceptOldArray(int*& arr_1, int* size_1, int*& arr_2, int* size_2, int& size_3)
+{
+
+	int* tempArr = new int [*size_1 + *size_2] {};
+	int index = 0;
+	bool isCheck;
+
+	for (size_t i = 0; i < *size_1; i++)
+	{
+		isCheck = true;
+		for (size_t j = 0; j < *size_2; j++)
+		{
+			if (arr_1[i] == arr_2[j])
+			{
+				isCheck = false;
+				break;
+			}
+		}
+		if (isCheck)
+		{
+			for (size_t k = 0; k < index; k++)
+			{
+				if (tempArr[k] == arr_1[i])
+				{
+					isCheck = false;
+					break;
+				}
+			}
+
+			if (isCheck)
+			{
+				tempArr[index++] = arr_1[i];
+			}
+			
+		}
+	}
+
+	for (size_t i = 0; i < *size_2; i++)
+	{
+		isCheck = true;
+		for (size_t j = 0; j < *size_1; j++)
+		{
+			if (arr_2[i] == arr_1[j])
+			{
+				isCheck = false;
+				break;
+			}
+		}
+		if (isCheck)
+		{
+			for (size_t k = 0; k < index; k++)
+			{
+				if (tempArr[k] == arr_2[i])
+				{
+					isCheck = false;
+					break;
+				}
+			}
+			if (isCheck)
+			{
+				tempArr[index++] = arr_2[i];
+			}
+			
+		}
+	}
+
+	int* newArray = new int[index] {};
+	for (size_t i = 0; i < index; i++)
+	{
+		newArray[i] = tempArr[i];
+	}
+
+	delete[] tempArr;
+	tempArr = nullptr;
+
+	size_3 = index;
+	return newArray;
+}
+
+
+void main()
+{
+	srand(time(nullptr));
+	/*
+	* TASK 1 => Referenc ile
+	* 
+		 İki massiv verilib: А[M] və B[N] (M və N klaviaturadan daxil
+			edilir). Minimal ölçüdə üçüncü massiv yaradıb bu iki
+			massivi A massivinə yazın.(ortaq olmayan elementler => )
+
+	*/
+
+
+
+	int size_1;
+	int size_2;
+
+	cout << "Birinci arraytin olcusunu daxil edin: ";
+	cin >> size_1;
+
+
+	cout << "Ikinci arraytin olcusunu daxil edin: ";
+	cin >> size_2;
+
+	int* arr_1 = new int[size_1] {};
+	int* arr_2 = new int[size_2] {};
+	fillArray(arr_1, size_1);
+	fillArray(arr_2, size_2);
+
+	printArray(arr_1, size_1);
+	printArray(arr_2, size_2);
+
+
+
+	int size_3 = 0;
+	int * newArrResualt = newArrayExceptOldArray(arr_1, &size_1, arr_2, &size_2, size_3);
+
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	printArray(newArrResualt, size_3);
+
+
+	//------------------------------------------------------------------
+	// TASK 2:
+	// arr[]
+	// 
+	// while (true)
+	// {
+	// 	   1) void print
+	// 	   2) void append(int*& arrPtr, size_t& n, int element);
+	// 	   3) bool insertByIndex(int*& arrPtr, size_t& n, size_t index, int element);
+	// 	   4) bool deleteByIndex(int*& arrPtr, size_t& n, size_t index);
+	// 	   5) bool pop(int*& arrPtr, size_t& n);
+	// 	   6) bool remove(int*& arrPtr, size_t& n, int element);
+	// 	   0) exit 
+	// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+

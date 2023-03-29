@@ -1,0 +1,23 @@
+Dash  kaxiz qayci oynunun yaradilmasi,
+
+Sizin oynunuzda besh element olacaq   (rock, paper, scissors, lizard, spock)
+
+oyun zonsuz  dovur daxilinde olmalidir program bashladiqda ilk evvel   oyuncuya secim teklif edilir
+	[y] -- new game
+	[e] -- exit
+
+y - secildikde yeni oyun bashlayil ve oyunumuz 3 rounddan ibaret olmalidir, 
+oyunun gorunuzunde ekrana hazirda hansi round olduqunu cap edin,  
+ekrana hazirda hansi round olduqu sixdiqdan sonra istifadeciden 5 elementden birini secmeyini isteyirik
+	[r] -- rock
+	[s] -- sicissors
+	[k] -- spoke
+	[l] -- lizard
+	[p] -- paper
+
+kodunuzu ele qurunki istifadeci bu besh elementden bashqa bir shey secerse ekrana secim yanlishdircixsin
+ve yeniden secim etmeli olsun,
+PLAYER secim etdikden PLAYER_2  secim etmelidir ve daha  sonra hem PLAYERIN hemde PLAYER_2_NIN secimlerini ekrana cap etmek lazimdir
+
+oyununuzu ele programlashdirinki PLAYER_2_NIN ve playerin secimlerine gore her roundu kimin uddugu bilinsin ve udanin scoreu 1 xal artsin
+3 - roundun sonunda umumi netice ortaya cixmalidir oyunun qalibi

@@ -1,0 +1,299 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+
+	/*
+	***  Sort and Search   ***
+
+
+
+
+	*/
+
+
+
+	/*
+
+		12. Ölçüsü 20 olan və random rəqəmlərdən ibarət massiv yaradın.
+		Massivin maximum və minimum elemtini tapan program yazın.
+		(Dəyəri və indeksi qaytarın)
+	*/
+	//srand(time(0));
+	//int arr[20]{};
+
+	//int min = 10, max = 100;
+
+
+	//for (int i = 0; i < 20; i++)
+	//{
+	//	arr[i] = min + rand() % (max- min);
+	//	cout << arr[i] << " ";
+	//}
+	//// -----------------------------------
+
+	////  helli
+	//int maxElement = arr[0], minElement = arr[0], maxIndex, minIndex;
+
+	//for (int i = 0; i < 20; i++)
+	//{
+	//	
+	//	if (maxElement < arr[i]) 
+	//	{
+	//		maxElement = arr[i];
+	//		maxIndex = i;
+	//	}
+
+	//	if (minElement > arr[i])
+	//	{
+	//		minIndex = i;
+	//		minElement = arr[i];
+	//	}
+	//		
+	//}
+
+	//// -----------------------------
+	//cout << endl;
+	//cout << "Maxsimum Element: " << maxElement << "|| Max element index: " << maxIndex << endl;
+	//cout << "Minimum Element: " << minElement << "|| Min element index: " << minIndex << endl;
+	//cout << endl;
+
+
+
+	/*
+
+	19. Bir massivi ikinci massivə kopya edən program yazın. Şərt: kopya
+edərkən birinci sıfırdan kiçik elementlər daha sonra 0-lar daha sonra
+0-dan böyük elementləri kopya etməlidir
+	*/
+
+	//srand(time(0));
+	//int arr[10]{};
+	//int arrCopy[10]{};
+
+	//int min = -10, max = 10;
+	//int len = sizeof arr / sizeof arr[0];
+	//cout << "Original ARRAY " << endl;
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	arr[i] = min + rand() % (max - min);
+	//	cout << arr[i] << " ";
+	//}
+	//cout << endl;
+
+	//// array sort
+
+	//int yaddas;
+	//for (int i = 0; i < len - 1; i++)
+	//{
+
+	//	for (int j = 0; j < len - i -1; j++)
+	//	{
+	//		if (arr[j] > arr[j + 1])
+	//		{
+	//			yaddas = arr[j];
+	//			arr[j] = arr[j + 1];
+	//			arr[j + 1] = yaddas;
+	//		}
+	//	}
+
+	//}
+
+
+	//// print
+	//cout << "Sort ARRAY " << endl;
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	arrCopy[i] = arr[i];
+
+	//}
+
+	//cout << arr << endl;
+	//cout << arrCopy << endl;
+	//cout << endl;
+
+	// -------------------------------------------------
+
+	//// bubble sort
+
+	//int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+	//int n = sizeof arr / sizeof arr[0];
+
+
+	//cout << "Unsorted array: ";
+
+	//for (int i = 0; i < n; i++)
+	//	cout << arr[i] << ' ';
+	//cout << endl;
+
+
+
+	//// Bubble sort
+
+	//bool swapped;  
+	//int temp;
+	//for (int i = 0; i < n - 1; i++) 
+	//{
+	//	swapped = false; 
+	//	for (int j = 0; j < n - i - 1; j++) 
+	//	{
+	//		if (arr[j] > arr[j + 1])
+	//		{
+	//			temp = arr[j];
+	//			arr[j] = arr[j + 1];
+	//			arr[j + 1] = temp;
+
+	//			swapped = true;
+	//		}
+	//	}
+
+	//	if (swapped == false)
+	//		break;
+	//}
+
+
+
+	//cout << "Sorted array: ";
+
+	//for (int i = 0; i < n; i++)
+	//	cout << arr[i] << ' ';
+	//cout << endl;
+
+
+
+	//// selection sort
+	//int arr[] = { 64, 25, 12, 22, 11 };
+	//int n = sizeof arr / sizeof arr[0];
+
+
+	//cout << "Unsorted array: ";
+
+	//for (int i = 0; i < n; i++)
+	//	cout << arr[i] << ' ';
+	//cout << endl;
+
+
+
+	//// Selection sort
+
+	//int min_idx, temp;
+	//for (int i = 0; i < n - 1; i++) 
+	//{
+	//	min_idx = i; 
+	//	for (int j = i + 1; j < n; j++) 
+	//		if (arr[j] < arr[min_idx])
+	//			min_idx = j;
+
+	//	temp = arr[min_idx];
+	//	arr[min_idx] = arr[i];
+	//	arr[i] = temp;
+	//}
+
+
+
+	//cout << "Sorted array: ";
+
+	//for (int i = 0; i < n; i++)
+	//	cout << arr[i] << ' ';
+	//cout << endl;
+
+
+
+
+	////Insertion sort
+	//int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+	//int n = sizeof arr / sizeof arr[0];
+
+
+	//cout << "Unsorted array: ";
+
+	//for (int i = 0; i < n; i++)
+	//	cout << arr[i] << ' ';
+	//cout << endl;
+
+
+
+	//// Insertion sort
+	// 
+	//int key, j;
+	//// { 25, 34, 64, 12, 22, 11, 90 }
+	//for (int i = 1; i < n; i++) // i = 3
+	//{
+	//	key = arr[i]; // key = 25
+	//	j = i - 1;  // j = -1
+
+	//	while (j >= 0 && arr[j] > key)
+	//	{
+	//		arr[j + 1] = arr[j];
+	//		j = j - 1;
+	//	}
+	//	arr[j + 1] = key;
+	//}
+
+
+
+	//cout << "Sorted array: ";
+
+	//for (int i = 0; i < n; i++)
+	//	cout << arr[i] << ' ';
+	//cout << endl;
+
+
+
+	//// Liner search
+	//int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+	//int n = sizeof arr / sizeof arr[0];
+
+
+	//// Linear Search
+	//int find = 0;
+	//bool isFind = false;
+	//int findIndex;
+
+	//for (int i = 0; i < n; i++)
+	//{
+	//	if (arr[i] == find) {
+	//		isFind = true;
+	//		findIndex = i;
+	//		break;
+	//	}
+	//}
+
+	//isFind ? cout << "Found\n" : cout << "Can not find\n";
+
+
+// Binary search
+	int arr[] = { 11, 12, 22, 25, 34, 64, 90 };
+	int n = sizeof arr / sizeof arr[0];
+
+	//// Binary Search
+	//bool result = false;
+	//int search = 22;
+
+	//int maxIndex = n - 1; 
+	//int minIndex = 0;
+	//int mid; 
+
+	//while (maxIndex >= minIndex) {
+	//	mid = (minIndex + maxIndex) / 2; // 5
+
+	//	if (arr[mid] == search) {
+	//		result = true;
+	//		break;
+	//	}
+	//	else if (arr[mid] > search)
+	//		maxIndex = mid - 1;
+	//	else
+	//		minIndex = mid + 1;
+
+	//}
+
+
+	//(result)
+	//	? cout << "Element is present at index: " << mid << '\n'
+	//	: cout << "Element is not present in array: " << search << '\n';
+
+	//  1 2 7 3 4 5 6
+	// 21 => 15
+}

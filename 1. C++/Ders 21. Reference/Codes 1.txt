@@ -1,0 +1,195 @@
+#include<iostream>
+
+using namespace std;
+
+
+
+
+// Ders reference
+int* findMusbetNumbers(int* arr, int* size) {
+	int menfi = 0;
+	for (size_t i = 0; i < *size; i++)
+	{
+		if (arr[i] < 0) menfi++;
+	}
+
+	int newArrSize = (*size) - menfi;
+
+	int* newArr = new int[newArrSize] {};
+
+	for (size_t i = 0, j = 0; i < *size; i++)
+	{
+		if (arr[i] >= 0)
+		{
+			newArr[j++] = arr[i];
+		}
+	}
+
+	(*size) = newArrSize;
+	delete[] arr;
+	arr = nullptr;
+	return newArr;
+
+
+}
+
+
+void foo(int* num)
+{
+	int* newArr = new int[5]{};
+	cout << "Function ici " <<  newArr << endl;
+	num = newArr;
+}
+
+
+void fillArray(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+		//*(arr + i) = rand() % 30;
+		arr[i] = rand() % 30;
+
+
+}
+
+void printArray(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+		//cout << *(arr + i) << " ";
+		cout << arr[i] << " ";
+	cout << endl;
+}
+
+
+// pointer ile
+int* appendArray(int* arr, int* size, int* numeData)
+{
+	int* newArray = new int[*size + 1];
+	for (int i = 0; i < *size; i++)
+		newArray[i] = arr[i];
+
+	newArray[*size] = *numeData;
+	delete[] arr;
+	arr = nullptr;
+
+	(*size)++;
+
+	return newArray;
+
+}
+
+
+// Reference ile
+void appendArray_reference(int*& arr, int* size, int* numeData)
+{
+	int* newArray = new int[*size + 1];
+	for (int i = 0; i < *size; i++)
+		newArray[i] = arr[i];
+
+	newArray[*size] = *numeData;
+
+	delete[] arr;
+	arr = nullptr;
+	arr = newArray;
+	(*size)++;
+
+
+
+}
+
+void main()
+{
+	/*
+	int size = 10;
+	int* arrMain = new int[size] {1,2,3,4,5,6,7,8,9,10};
+
+	int nuwData = 21;
+	printArray(arrMain, size);
+	appendArray_reference(arrMain, &size, &nuwData);
+	printArray(arrMain, size);
+	*/
+
+	/*
+	* TASK 1 => Referenc ile
+	* 
+		 İki massiv verilib: А[M] və B[N] (M və N klaviaturadan daxil
+			edilir). Minimal ölçüdə üçüncü massiv yaradıb bu iki
+			massivi A massivinə yazın.(ortaq olmayan elementler => )
+
+	*/
+
+
+
+
+
+	//------------------------------------------------------------------
+	// TASK 2:
+	// arr[]
+	// 
+	// while (true)
+	// {
+	// 	   1) void print
+	// 	   2) void append(int*& arrPtr, size_t& n, int element);
+	// 	   3) bool insertByIndex(int*& arrPtr, size_t& n, size_t index, int element);
+	// 	   4) bool deleteByIndex(int*& arrPtr, size_t& n, size_t index);
+	// 	   5) bool pop(int*& arrPtr, size_t& n);
+	// 	   6) bool remove(int*& arrPtr, size_t& n, int element);
+	// 	   0) exit 
+	// }
+
+
+
+
+
+
+
+
+	
+
+
+	/*
+	1. Funksiya, parametr olaraq, massiv və onun ölçüsünü qəbul
+	edir. Massivin içərsindəki bütün mənfi ədədləri silin və yeni
+	massivin adresini qaytarın.
+	*/
+	//int size = 10;
+	//int* arrMain = new int[size] {-1, -5, 5, 15, -3, 9, 18, -7, 17, -10};
+	//
+	//printArray(arrMain, size);
+	//arrMain = findMusbetNumbers(arrMain, &size);
+	//printArray(arrMain, size);
+
+	// ----------------------------------------------------------------------------------
+	// Reference =>  Deisene ikinci ad (nikname) vermey
+
+	//int x = 10;
+	//int d = 18;
+	//// int* ptr = &x; // pointer
+	//
+	//int& ref = x;
+	//ref = d;
+	//int& ref_1 = x;
+
+
+	//cout << x << endl;
+	//cout << ref << endl;
+	//cout << ref_1 << endl;
+	
+
+	////------------------
+	//int* arr = new int[5]{ 1,2,3,4,5 };
+	//cout << arr << endl;
+	//foo(arr);
+	//cout << arr << endl;
+
+
+
+
+
+
+
+
+
+}
+
+
+

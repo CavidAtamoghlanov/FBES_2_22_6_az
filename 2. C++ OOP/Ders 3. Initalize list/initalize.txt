@@ -1,0 +1,69 @@
+#pragma once
+
+
+class CarGalery {
+private:
+	char* _name = nullptr;
+	char* _address = nullptr;
+	Car** _cars = nullptr;
+	const size_t _count = 35;
+public:
+	CarGalery() = delete;
+
+	// initalize list => constand field-lere object yaradilan zaman deyer  gondermek vermek
+	CarGalery(size_t count):_count(count){
+	
+	}
+
+
+	CarGalery(const char* name, const char* address);
+	CarGalery(const char* name, const char* address, Car**cars);
+	
+
+	// getMethods
+	const char* getName();
+	const char* getAddress();
+	size_t getCount();
+	Car** getCars();
+	
+
+	// set methods
+	void setName(const char* name);
+	void setAddress(const char* address);
+	void setCount(size_t count);
+	void setCars(Car** cars);
+
+	// print()
+	void print();
+
+	// --------------------
+	void clear();
+	void appendCar(Car* car);
+	void removeCar(Car* car);
+	void deleteCarById(size_t id);
+
+	// destructor
+	~CarGalery();
+
+
+};
+
+// -------------------------------------------------------------
+// -------------------------------------------------------------
+// out of class
+
+
+// carcGalery
+CarGalery::~CarGalery()
+{
+	delete[] this->_name;
+	delete[] this->_address;
+
+
+	for (size_t i = 0; i < this->_count; i++)
+	{
+		delete this->_cars[i];
+	}
+
+	delete[] this->_cars;
+}

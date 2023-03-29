@@ -1,0 +1,142 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+
+	// *** POINTER ***
+
+	// variable => adi, type, deyeri, olcusu, addresi olan ramda 
+	//             saxlanilan yaddas sahesi
+
+	// Pointer => ozunde Deyer olaraq ADDRES  saxlayan deishendir
+
+	// & => address of operator
+	// --------------------------------------------------------
+	//int number = 18;
+	//
+	//int* ptr = &number;
+
+
+	//cout << number << endl;
+	//cout << &number << endl;
+
+	//cout << ptr << endl;
+	//cout << &ptr << endl;
+
+	//cout << sizeof ptr << endl;
+
+	// ------------------
+	// * =>  Dereference operator
+
+	//cout << ptr << endl;
+	//cout << *ptr << endl;
+
+
+	// Stack => 1mb
+	// Heap  => (free memory)
+	// ----------------------------------------------
+
+	// example
+	//int num = 5; // 9
+	//int* ptr = &num; // 9
+
+	//cout << num << endl;   // 5  5  5 
+	//cout << *ptr << endl;  // 5  5  5
+	//*ptr = 8;
+	//num++;
+	//cout << num << endl;   // 9  6  5   9   9
+	//cout << *ptr << endl;  // 9  6  5   -   5
+
+
+	//// example
+
+	//int num = 10;  // 20
+	//int data = 50;  // 100
+	//int* ptr1 = &data;  // 100
+	//int* ptr2 = &data;  // 100
+
+	//*ptr1 = 30;
+	//num = 20;
+	//ptr1 = &data;
+	//*ptr2 = 25;
+	//*ptr1 = 100;
+
+	//cout << num << endl;    // 20       20        20
+	//cout << data << endl;  //50          50        100
+	//cout << *ptr1 << endl; // 100       100        100
+	//cout << *ptr2 << endl; // 25         25        100 
+	//cout << &data << endl;  // addata              
+	//cout << ptr1 << endl;   // addata           
+
+
+	//// swap => with pointer
+
+	//double num_1 = 17.35;
+	//double num_2 = 22.36;
+	//double temp;
+
+	//double* pointer_num_1 = &num_1;
+	//double* pointer_num_2 = &num_2;
+	//double* pointer_temp = &temp;
+
+	//*pointer_num_1 = *pointer_num_1;
+	//*pointer_num_1 = *pointer_num_2;
+	//*pointer_num_2 = *pointer_temp;
+
+
+	//cout << num_1 << endl;
+	//cout << num_2 << endl;
+
+	// --------------------------------------------------
+
+	///*
+	//	istifadeci num1 daxil edir num2 daxil edir operator daxil edir
+	//	daxil edilmish operatora gore hesablamani ekrana cixarin
+	//	Qeyd: pointer switch
+	//*/
+
+	//int num_1;
+	//int num_2;
+	//char op;
+
+	//int* ptr_num1 = &num_1;
+	//int* ptr_num2 = &num_2;
+	//char* ptr_op = &op;
+
+	//cout << "Eded daxil edin: ";
+	//cin >> *ptr_num1;
+	//cout << "operator daxil edin: ";
+	//cin >> *ptr_op;
+	//cout << "Eded daxil edin: ";
+	//cin >> *ptr_num2;
+
+
+	//switch (*ptr_op)
+	//{
+	//case '+':
+	//	cout << *ptr_num1 + *ptr_num2;
+	//	break;
+	//case '-':
+	//	cout << *ptr_num1 - *ptr_num2;
+	//	break;
+	//case '*':
+	//	cout << *ptr_num1 * *ptr_num2;
+	//	break;
+	//case '/':
+	//	cout << *ptr_num1 / *ptr_num2;
+	//	break;
+	//}
+
+	// -----------------------------------------
+	// Funksiyaya Parametir gondermeyin formasi
+	// 
+	// 1. by value       (copy)
+	// 2. by reference   (self)
+	// 3. by pointer     (address)
+
+	
+
+	return 0;
+}

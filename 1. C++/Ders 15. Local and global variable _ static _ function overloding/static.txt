@@ -1,0 +1,35 @@
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+
+/*
+	 static keyword
+	
+*/
+
+
+void foo() 
+{
+
+	/*
+		Funksiyada global deishen yaratmaqa icaze verir. lakin ancaq funksiya daxilinde istifade edilir
+		Ram uzerinden silinmirki  scop yeniden cagrildiqda islesin
+		static deishen scopdan colde islene bilmez
+	*/
+	static int a = 16;
+
+	cout << ++a << endl;
+}
+
+int main()
+{
+	int arr[3]{};
+	foo();
+	foo();
+
+
+	system("pause");
+	return 0;
+}
+

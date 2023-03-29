@@ -1,0 +1,15 @@
+class: Car
+
+class: Manual
+class: Automatic
+
+Manaul ve Automatic-den de mashinlar yaransin.
+Misal class Bmw: Automatic
+
+funksiya yazirisiz, Parametr olaraq Base qebul edir.
+Funksiya icersinde mashinlarin melumatlarni chap edirsiz.
+
+Her mashina aid field-ler ve mehodlar olsun.
+
+Base class adi altinda butun mashinlari vector-da saxlamaq
+Dersde kecdiylermizden istifade etmek...

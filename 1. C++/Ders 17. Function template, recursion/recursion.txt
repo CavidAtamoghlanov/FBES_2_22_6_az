@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+
+int findFactorial(int num) // 5
+{
+	if (num == 1) return 1;
+	return num * findFactorial(num - 1);
+}
+
+void foo(int num)
+{
+	if(num % 2 == 1) cout << num << endl;
+
+	if (num == 0) return;
+	foo(num - 1);
+}
+
+void doo(int num) // 0
+{
+	if (num % 2 == 0) cout << num << endl;
+
+	if (num == 10) return;
+	doo(num + 1);
+}
+
+int sumArrayElements(int arr[], int size)
+{
+	if (size == 1) return arr[0];
+	return arr[size - 1] + sumArrayElements(arr, size - 1);
+}
+
+// yol 2
+int sumArrayElements_2(int arr[], int size, int index)
+{
+	if (size-1 == index) return arr[size-1];
+	return arr[index] + sumArrayElements_2(arr, size, index+1);
+}
+
+
+int main() {
+	//------------------------------------------------------
+	//recursion => funksiyanin oz ozunu cagirmasi
+	
+	// TASk 1 => 10 -dan 0 kimi butun tek 
+			// ededleri ekrana cixaran funksiya
+	
+	
+
+	// task 2 => 0 -dan 10 kimi butun cut 
+			// ededleri ekrana cixaran funksiya
+
+
+	// TASK 3 =>  arrayin elementlerini cemleyen funksiya yazin
+
+	int arr[5]{ 1,2,3,4,5 };
+	int size = sizeof arr / sizeof arr[0];
+	cout << sumArrayElements_2(arr, size, 0);
+}

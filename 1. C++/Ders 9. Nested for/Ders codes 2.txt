@@ -1,0 +1,63 @@
+#include<iostream>
+
+using namespace std;
+
+
+int main()
+{
+	
+
+	//int size = 5;
+	//int space = size - 1;
+	//for (int row = 1; row <= size; row++)
+	//{
+	//	for (int i = 1; i <= space; i++)
+	//	{
+	//		cout << ' ' ;
+	//	}
+
+	//	for (int j = 1; j <= size - space; j++)
+	//	{
+	//		cout << '*' << ' ';
+	//	}
+
+	//	
+	//	space--;
+	//	cout << endl;
+	//}
+
+	////// patterin 136
+	//int size = 5;
+	//int bosluq = 0;
+	//for (int row = 69; row >= 65; row--)
+	//{
+	//	for (int space = 1; space <= bosluq; space++)
+	//	{
+	//		cout << ' ';
+	//	}
+
+
+	//	for (int symbol = 1; symbol <= size-bosluq; symbol++)
+	//	{
+	//		cout << (char)row << ' ';
+	//	}
+
+	//	bosluq++;
+	//	cout << endl;
+	//}
+
+	//
+
+	
+
+	/*for (size_t i = 5; i >= 1; i--)
+	{
+		for (size_t j = 1; j <= i ; j++)
+		{
+			cout << "* ";
+		}
+		cout << endl;
+	}*/
+
+	system("pause");
+}

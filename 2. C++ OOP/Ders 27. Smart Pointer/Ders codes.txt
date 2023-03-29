@@ -1,0 +1,76 @@
+#include <iostream>
+// #include<memory> 
+using namespace std;
+
+/*
+	auto_ptr    => bir addresse bir pointer nezaret ede bilir (ikincisini vermeye calishdiqda move edir)
+	unique_ptr  => bir addresse bir pointer nezaret ede bilir (ikincisini vermeye calishdiqda error verir)
+	shared_ptr  => eyni addressi saxlayan pointerlerin sayida bilinir
+	weak_ptr    => 
+
+*/
+//
+//void myDelete(shared_ptr<int>& data)
+//{
+//	cout << data.use_count() << endl;
+//
+//}
+
+int main()
+{
+	//int* ptr = new int(15);
+
+	
+
+	//// auto_ptr => 
+	//auto_ptr<int> ptr_2(ptr); // empty
+	////auto_ptr<int> ptr_3(ptr); // run time error
+	//auto_ptr<int> ptr_3 = ptr_2; // move constructor isleyir
+	//auto_ptr<int> ptr_4 = move(ptr_3);
+
+	//cout << *ptr_3 << endl;
+
+	//ptr_3.get(); // pointeri return edir
+	//ptr_3.reset(); // pointeri ve saxladiqi yeri silir (hecne return etmir)
+	//int*a = ptr_3.release(); // objecti nullPtr edir ve heap-deki addressi return edir
+
+
+	//// Unique_ptr  => Bir addrese ancaq bir pointer nezaret ede biler (oturule bilmez)(copy silinib) (move constructorun qeyri askarini silibler)
+	//int* ptr = new int(15);
+	//unique_ptr<int> ptr_1(ptr);
+	////unique_ptr<int> ptr_2 = ptr_1;// compiler time error
+	//unique_ptr<int> ptr_2 = move(ptr_1);// move constructor
+
+
+
+	//// shared_ptr
+	//int* a = new int(15);
+	//shared_ptr<int> ptr(a); 
+	//shared_ptr<int> ptr1 = ptr;
+
+	//ptr.reset();
+	//cout << *ptr1 << endl;
+
+
+
+	////////////////////////
+	//// weak_ptr
+
+	//shared_ptr<double> ptr(new double(15.365));
+	//weak_ptr<double> weak(ptr);
+
+	//weak.reset();
+
+
+	/////////////////////////////////////////////////////////////////////
+
+	shared_ptr<int> ptr(new int(15)); // count 2 
+
+	myDelete(ptr);
+
+	cout << ptr.use_count()<<endl;
+
+	cout << *ptr << endl;
+	
+
+}

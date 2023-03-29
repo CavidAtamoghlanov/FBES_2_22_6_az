@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+//// (Function Prototype, Inline Function, Default parameter, Template Function)
+
+
+// Function Prototype
+
+float absolute(float);
+double absolute(double);
+int absolute(int);
+void display(int, float);
+
+
+int main() {
+	cout << absolute(1.1) << endl;
+	cout << absolute(5) << endl;
+	cout << absolute(8.2f) << endl;
+
+	display(5, 12.6f);
+}
+
+
+
+float absolute(float var) {
+	if (var < 0.0)
+		var = -var;
+	return var;
+}
+
+double absolute(double var) {
+	if (var < 0.0)
+		var = -var;
+	return var;
+}
+
+int absolute(int var) {
+	if (var < 0)
+		var = -var;
+	return var;
+}
+
+
+void display(int a, float b) {
+	cout << a << ' ' << b << endl;
+}

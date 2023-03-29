@@ -1,0 +1,6 @@
+https://www.javatpoint.com/function-pointer-in-cpp
+https://www.geeksforgeeks.org/function-pointer-in-c/
+https://www.learncpp.com/cpp-tutorial/function-pointers/
+
+
+https://www.programiz.com/cpp-programming/pointer-void

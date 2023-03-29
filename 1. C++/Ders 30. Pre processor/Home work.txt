@@ -1,0 +1,5 @@
+const deyishenin deyerini deyishmek olar?
+
+nullptr niye var, eger NULL ve ya 0 varsa
+
+multi dimensional dynamic array (tekrar)

@@ -1,0 +1,72 @@
+#include<iostream>
+using namespace std;
+
+
+int sum(int a, int b)
+{
+	return a + b;
+}
+
+int subtract(int a, int b)
+{
+	return a - b;
+}
+
+int divide(int a, int b)
+{
+	return a / b;
+}
+
+void main()
+{
+	
+
+	int (*fPtr[])(int, int) = {sum, subtract, divide};
+
+	//cout << sum(5, 10) << " ";
+	//cout << fPtr[0](5,15) << " ";
+
+	for (size_t i = 0; i < 3; i++)
+	{
+		cout << fPtr[i](1,2) << " ";
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	// pointer to pointer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// 2d dynamic array
+
+
+
+
+}

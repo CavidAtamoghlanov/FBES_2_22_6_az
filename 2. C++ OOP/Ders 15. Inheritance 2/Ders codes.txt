@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+
+//class Elektronic
+//{
+//public:
+//	int price=0;
+//
+//	Elektronic()
+//	{
+//		cout << "Elektronic" << endl;
+//	}
+//
+//	void print(){}
+//};
+//
+//
+//class Printer: virtual public Elektronic
+//{
+//public:
+//	int count;
+//	string text;
+//	Printer()
+//	{
+//		cout << "Printer" << endl;
+//	}
+//};
+//
+//
+//class Scaner : virtual public Elektronic
+//{
+//public:
+//	int count;
+//	int pageCount;
+//	Scaner()
+//	{
+//		cout << "Scaner" << endl;
+//	}
+//};
+//
+//
+//class PrinterScaner : public Printer, public Scaner
+//{
+//public:
+//	PrinterScaner()
+//	{
+//		cout << "PrinterScaner" << endl;
+//	}
+//};
+//
+
+
+
+
+int main()
+{
+
+
+
+
+
+}

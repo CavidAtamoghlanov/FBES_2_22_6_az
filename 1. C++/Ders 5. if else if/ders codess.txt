@@ -1,0 +1,195 @@
+#include<iostream>
+
+
+using namespace std;
+
+
+int main()
+{
+	//// if
+	//if (15 > 12 && 15 % 3 == 0)
+	//{
+	//	cout << "Hakuna MAtata" << endl;
+	//}
+
+
+	//// spopka olmadan => (1 setir kod vere bilerik)
+	//if (16 % 2) 
+	//	cout << "Hakun Matata" << endl;
+	//	cout << "Hakun Matata" << endl;
+
+	// else
+	/*
+	if (16 % 3 == 1) {
+		cout << "Hakuna" << endl;
+		cout << "Hakuna" << endl;
+	}
+	else {
+		cout << "Matata" << endl;
+	}
+	*/
+
+	// TASK 1
+	// Istifadseci dogum ilini daxil edir  pensiya dushub dushmediyini deyin
+
+	// else if
+
+	/*int born;
+	cout << "Dogum ilinizi daxil edin: ";
+	cin >> born;*/
+
+	/*int age = 2022 - born;
+	if (age > 0 && age < 6)
+	{
+		cout << "Baybe" << endl;
+	}
+	else if (age >= 6 && age < 12)
+	{
+		cout << "Child" << endl;
+	}
+	else if (age >= 12 && age < 17)
+	{
+		cout << "Teen" << endl;
+	}
+	else {
+		cout << "Rehmetlik" << endl;
+	}*/
+
+
+	/*
+	istifadeci dogum ilini daxil edir  ve gender daxil edir
+	Q  daxil edibse  Qadin
+	K  daxi edibse Kisi  sayilir
+	Qadinlar 60+ da pesiya ala biler
+	Kisiler 65+ da
+	*/
+
+	// --------------------------------------------------------------------
+	// &&
+
+	//true && cout << "Salam" << endl;
+
+	//int age = 19;
+	//bool  a = age > 15 && cout << "Sagol" << endl;
+	//cout << a << endl;
+
+	// false && cout << "Salam" << endl || cout << "Hakuna" << endl;
+
+	/*
+	* && => and
+	true && true => true
+	true && false => false
+	false && ture => false
+	false && false => false
+
+
+	|| => or
+	true || true => true
+	true || false => true
+	false || true => true
+	false || false => false
+
+
+	! => not
+	!false => true
+	!true  => false
+	*/
+
+
+	// ternary  (?:)
+
+	//(15 > 5) ? cout << "Hakuna" << endl : cout << "matata" << endl;
+	//int num = (16 % 2 == 0) ? 15 : 16;
+	//int number = -4;
+
+
+	//// Using ternary operator
+	// (number > 0) ? 
+	//	 (number % 2 ==0) ? cout << "eded hem cutdur hem musbet" << endl : cout << "eded musbetdir  ve tekdir" : cout << "Negative Number!" << endl;
+
+/*
+* // if olmaz   (ternary  olar)
+	1. Istifadəçi ədəd daxil edir. Ekrana əgər ədəd cütdürsə Y , təkdirsə N çap olunsun.
+
+	2. İstifadəçi 1-20 arası ədəd daxil edir. Ədəd sadədirsə S , mürəkkəbdirsə M çap olunsun.
+	(Sadə ədədlər yalnız özünə və 1-ə bölünən ədədlərdir)
+
+	4. İstifadəçi rəqəm daxil edir ( 1dən-9 rəqəmliyə kimi ola bilər).Onun neçə rəqəmdən ibarət
+	olduğunu tapın. Maximum 2 dəyişən istifadə edə bilərsiniz.
+
+	5. İstifadəçi 3 ədəd daxil edir. Proqram , əgər birinci ədəd o birilərdən böyükdürsə F, ikinci ədəd
+	böyükdürsə S, üçüncü ədəd böyükdürsə T, bütün ədədlər bərabərdirsə E, qalan başqa hallarda
+	N çap olunsun.
+
+
+	------------------------------------------------------------------------------------------------
+	------------------------------------------------------------------------------------------------
+	3. İstifadəçi 5 rəqəmli ədəd daxil edir. Ədədin polindrom olub olmamasını təyin edin. (Polindrom
+- əksinə və düzünə eyni cür oxunur 12321 polindromdur, 12345 polindrom deyil)ı
+
+6. İstifadəçi 6 rəqəmli ədəd daxil edir. Tək yerdə duranların cəmi cüt yerdə duranların cəmindən
+çoxdursa , Tək yerdə duranları çap edin , və ya əksinə.
+(756189) Tək yerdə duranlar - 7,6,8 // Cüt yerdə duranlar - 5,1,9
+
+
+1. Ədədin cüt və ya tək olmasını təyin edən program yazın.
+2. İki ədəd daxil edin onlardan kiçik olanı ekrana çıxarın.( 41,42 - Ekrana - Kiçik ədəd 41dir
+çıxsın)
+3. Daxil edilən ədədin mənfi və ya müsbət olmasını təyin edən program yazın. ( 0 halını da
+nəzərə alın)
+4. Kalkulyator düzəltməli. İki kəsr ədəd daxil edilir a və b. Ekrana seçimlər çıxır
+1) a + b
+2) a – b
+3) a * b
+4) a / b.
+
+*/
+
+
+
+/*
+* izzah
+4. İstifadəçi rəqəm daxil edir ( 1dən-9 rəqəmliyə kimi ola bilər).Onun neçə rəqəmdən ibarət
+	olduğunu tapın. Maximum 2 dəyişən istifadə edə bilərsiniz.
+
+*/
+
+//int num;
+//cout << "Eded daxil edin: ";
+//cin >> num;
+//
+//(num >= 1 && num < 10) ? cout << "Eded 1 reqemlidir" : cout << "" << endl;
+//(num >= 10 && num < 100) ? cout << "Eded 2 reqemlidir" : cout << "" << endl;
+//
+//cout << ((num >= 100 && num < 1000) ? "Eded 3 reqemlidir" : "") << endl;
+
+
+
+
+/*
+IZZAH
+3. İstifadəçi 5 rəqəmli ədəd daxil edir. Ədədin polindrom olub olmamasını təyin edin. (Polindrom
+- əksinə və düzünə eyni cür oxunur 12321 polindromdur, 12345 polindrom deyil)ı
+*/
+
+	/*int num;
+	int ed_1, ed_2, ed_4, ed_5;
+	cout << "45 reqemli eded  daxil edin: ";
+	cin >> num;
+
+	ed_1 = num / 10000;
+	ed_2 = (num / 1000) % 10; 
+	ed_4 = (num / 10) % 10; 
+	ed_5 = num % 10; 
+
+	bool isCheck_1 = (ed_1 == ed_5) ? true : false;
+	bool isCheck_2 = (ed_2 == ed_4) ? true : false;
+
+	bool netice = (isCheck_1 == isCheck_2) ? true : false;
+
+	cout << ((netice) ? "Eded poli indromdur" : "poliindrom deyil") << endl;*/
+
+
+
+
+}

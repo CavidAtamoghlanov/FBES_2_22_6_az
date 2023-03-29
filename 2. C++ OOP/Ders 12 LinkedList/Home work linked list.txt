@@ -1,0 +1,12 @@
+SingleLinkedList   elave edin
+void addBefore(const string& x, const string& item);
+void addAfter(const string& x, const string& item);
+void deleteItem(const string& item);
+
+
+DoubleLinkedList  elave edin
+void addBefore(const string& x, const string& item);
+void addAfter(const string& x, const string& item);
+void deleteItem(const string& item);
+void deleteEnd();
+void deleteFront();

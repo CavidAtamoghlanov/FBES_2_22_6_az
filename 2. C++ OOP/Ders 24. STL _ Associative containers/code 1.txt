@@ -1,0 +1,65 @@
+#include <iostream>
+#include <windows.h>
+#include <vector>
+
+
+
+using namespace std;
+
+
+/*
+static class Messages {
+public:
+
+	  static string ERROR;
+	  static string INFO;
+	  static string WARNING;
+};
+
+string Messages::ERROR = "ERROR message 1";
+string Messages::INFO = "INFO message";
+string Messages::WARNING = "WARNING message";
+
+
+int main() 
+{
+	cout << Messages::ERROR << endl;
+	cout << Messages::INFO << endl;
+	cout << Messages::WARNING << endl;
+
+	magic string
+}
+*/
+
+
+
+
+
+/*
+template<typename T>
+class MyVector :public vector<T>
+{
+public:
+	void foo() {
+		cout << typeid(T).name() << endl;
+	}
+};
+
+
+int main() 
+{
+	MyVector<int> myVector;
+	myVector.foo();
+	myVector.push_back(5);
+}
+*/
+
+
+
+
+int main() {
+
+	cout << "Text" << endl;
+
+	ShellExecuteA(0, 0, R"(C:\Users\t.novruzov\Desktop\link binary code.txt)", 0, 0, SW_SHOW);
+}

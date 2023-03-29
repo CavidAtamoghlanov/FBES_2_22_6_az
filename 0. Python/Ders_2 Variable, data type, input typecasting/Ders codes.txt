@@ -1,0 +1,197 @@
+# print(15 + 5)
+# print("Hakuna Matata")
+# print('Salam', "Huseyn", "Agayev", 15, "15")
+
+# # end  --> printin sonunda  cursorun harda  olacaqini  teyin edirik
+# print("Hakuna", end="*")
+# print("Matata", "Hesen")
+
+# ----------------------------------------
+# Data type
+# int  --> menfi musbet sonsuzluq butun TAM ededler (ram uzerinde tutduqu yer 4 byte)
+# float  --> menfi musbet sonsuzluq  butun KESIR ededler (ram uzerinde tutduqu yer 4 byte)
+# str(string)   --> Butun symbollar ()
+# bool (boolen) --> Mentiqi type (True ve False)  (ram uzerinde 1 byte yer tutur)
+
+# print(15)
+# print(16.0)
+# print(16.5)
+# print('Symbol 15')
+# print(True)
+# print(False)
+
+
+# # type() --> funksiyasi  informasiyanin  type-ni bize qaytarir
+# print(type(15))
+# print(type(15.0))
+# print(type('Aga'))
+# print(type(True))
+
+# # ---------------------------------------------
+# # concatanation --> stringlerin toplanmasi
+# print("Hakuna" + ' ' + "Matata")
+
+# # print("a" + 15) # error  Int ve str  toplana bilmez
+# # int ve str  arasinda  sadece *  ola biler buda copy- demekdir
+# print("Salam " * 3)
+
+# -----------------------------------------------------
+# operators  and operand
+#  operators
+    # 1) arithmetich operators  + , -, *, /, //, %, **
+    # 2) Comperation operators  >, <, >=, <=, ==, !=   (bool --> type-da informasiya qaytarir)
+    # 3) logic operatos         and, or, not           (bool --> type-da informasiya qaytarir)
+    # 4) assign operators       +=,   -=, *=, /=, //=,  **=, %=
+
+
+# -----------------------------------------------------
+# # 1) arithmetich operators  + , -, *, /, //, %, **
+
+# print(15 + 15)
+# print(15 - 10)
+# print(2 ** 5)
+# print(2 * 5)
+# print(34 % 10)
+# print(34 // 10)
+# print(10 / 3)
+
+
+
+# # 2) Comperation operators  >, <, >=, <=, ==, !=
+# print(15 > 10)
+# print(10 > 19)
+# print(21 < 13)
+# print(9 >= 10)
+# print(8 <= 6)
+# print(10 == 10)
+# print(10 != 10)
+
+
+# 3) logic operatos         and, or, not  
+
+# # AND
+# True and True => True
+# True and False => False
+# False and True => False
+# False and False => False
+
+# # example
+# print(15 > 10 and 9 > 13)
+# print(15>9 and 8%2==0 and 10 < 0 and 5%2==1)
+
+# print(16 % 2 == 2 or 15 % 3 == 1)
+
+# OR
+
+
+# True or True => True
+# True or False => True
+# False or True => True
+# False or False => False 
+
+# print(16 < 17 or 18 % 3 == 1)
+# print(16 < 17 or 18 % 3 == 1 and 19 > 15)
+
+# # not 
+# not True => False
+# not False => True
+# print(not 16 > 10 and 16%2==0)
+
+# print(not (15%3==1 and 16>15) and not 13<14 or 16> 18 or 21%3 ==12 and not 11%2==1)
+# operatorlar arasi priorited
+# print((2 + 5 * 8 - 15) / 2 ** 3 - 16 + 5)
+
+# operatorlar
+# 1) Unary --> Sadece bir terefinde operand olur
+# 2) Binary  --> hem saginda hemde  solunda  Operand isteyir
+# 3) Ternal  -->  10 > 20 ? "Cold." : "Perfect!";
+
+# ------------------------------------
+# operator -> isi icra ededir
+# Operand -->  Uzerinde is  icra edilen deyer
+# -------------------------------------------
+
+# variable (deisenler) --> adi, type, deyeri, olcusu, adresi olan ramda saxlanilan yaddas sahesidir
+# initalize  --> deisenin yaradilmasi prosesi
+# assing -->  deisenin deishme prosesi
+
+# vergi = 0.10 # initalize
+# print('Cavid', 500 - (500 * vergi))
+# print('Eli', 1500 - (1500 * vergi))
+# vergi = 0.25 # assing
+# print('Aga', 300 - (300 * vergi))
+# print('Cavad', 450 - (450 * vergi))
+
+# ----------------------------------------------
+# Variable -->> adlandirilmasi
+"""
+1. reqemle bashlaya bilmez
+2. Symbolla bashlaya bilmez
+3. deisenin adinda bosluq olmaz
+3. deisenin adinda tre olmaz
+4. Xususi key word  istifade edile bilmez
+"""
+# ------------------------------------------
+# input() --> istifadecinin klaviaturadan informasiya daxil etmesi ucundur
+# inputdan gelen istenilen  data  STR-typedadir
+
+# name = input('adinizi daxil eidn: ')
+# print("Welcome", name)
+# print(type(name))
+# -----------------------------------
+# TypeCasting --> type-larin cevrilmesi
+    # 1) Askar    -->  programist  terefinden  aparilan
+    # 2) qeyri/askar --> program tetrefinden  aparilan
+    
+    
+# str -> int  (Int ancaq  tam eded  saxlaya bilir)
+# int -> str (Istenilen bit type-i   str-e  cevire bilerik)
+# int -> float (15 => 15.0)
+# float -> int   (15.5 => 15)
+# int -> bool  (0-dan bashqa istenilen bir eded  TRUE-dur)
+# bool -> int   (False --> 0  verir,   True --> 1 Verir)
+# str -> bool (dirnaq icinde istenilen bir symbol  TRUE-dur,  Dirnaq boshdursa False-dur)
+
+
+# num_1 = float(input("Birinci ededi daxil edin: "))
+# num_2 = int(input("Ikinci ededi daxil edin: "))
+# print(type(num_1))
+# print(num_1 + num_2)
+
+# a = 10 / 2
+# print(type(a))
+
+# print(int(15.235))
+# print(float(15))
+# print(bool(-5155))
+# print(bool(0))
+# print(int(False))
+# print(bool("False"))
+
+# -------------------------------------------------------------------------------
+
+# # TASkK 1
+# """
+# N ədədinin F faizini tapan proqram yazın. (F və N istifadəçi daxil edir) 
+# """
+
+# N = int(input("Eded daxil edin: "))
+# F = int(input("Faizi  daxil edin: "))
+# netice = N * F / 100
+# print(netice)
+
+
+
+# TASK 2
+# 1. İki rəqəm daxil edilir, onların ədədi ortasını tapan proqram yazın.
+
+
+
+
+
+
+
+
+
+
+

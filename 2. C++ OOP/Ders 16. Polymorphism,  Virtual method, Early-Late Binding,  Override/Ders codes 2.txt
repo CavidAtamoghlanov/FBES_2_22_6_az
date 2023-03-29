@@ -1,0 +1,79 @@
+#include <iostream>
+#include <stack>
+#include <vector>
+
+using namespace std;
+
+
+// Polymorphsm
+// virtual method , virtual desctructor
+// final keyword
+
+
+// upcasting
+// downcasting
+// // // // // // // // // // // // // // // // 
+// // Polymorphsm  => bir funksiyanin ozunu ferqli ferqli formada aparmasina deyilir
+//    virtual
+//    inhertitence
+
+class Animal
+{
+protected:
+	string name;
+	Animal(string n) : name(n) {}
+public:
+	string getName() { return name; }
+	virtual void sound() { cout << "???????????????\n"; }
+};
+
+
+class Dog :public Animal
+{
+public:
+	Dog(string n) :Animal(n) {}
+	void sound() override { cout << "How How How \n"; }
+};
+
+class Cat :public Animal
+{
+public:
+	Cat(string n) :Animal(n) {}
+	void sound() override { cout << "Meouwwww \n"; }
+};
+
+
+int main()
+{
+	
+	Cat c1("Mestan");
+	Cat c2("Mia");
+	Dog c3("Toplan");
+	Dog c4("Lucy");
+	
+
+	vector<Animal*> animals;
+
+	animals.push_back(&c1);
+	animals.push_back(&c2);
+	animals.push_back(&c3);
+	animals.push_back(&c4);
+	animals.push_back(new Dog("Alabas"));
+
+
+	// for (size_t i = 0; i < animals.size(); i++)
+	// {
+	// 	cout << animals[i]->getName() << endl;
+	// 	animals[i]->sound();
+	// 	cout << "---------------------" << endl;
+	// }
+
+
+ 
+	for (auto i : animals)
+	{
+		 	cout << i->getName() << endl;
+		 	i->sound();
+		 	cout << "---------------------" << endl;
+	}
+}

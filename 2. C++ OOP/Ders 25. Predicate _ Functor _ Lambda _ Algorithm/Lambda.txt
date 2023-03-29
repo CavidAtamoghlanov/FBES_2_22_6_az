@@ -1,0 +1,108 @@
+#include <iostream>
+#include<list>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+
+// Predicat ||  Functor || Lambda || Algorithm
+/////////////////////////////////////////////////////////
+
+
+int main() 
+{
+	
+	// Lambda => anonim Function  => adsiz funksiyalar
+
+	// Syntax
+	//[]()->void {
+	//	cout << "Hakuna Matata" << endl;
+	//};
+
+	//[]()->int {
+	//	cout << "Hakuna Matata" << endl;
+	//	return 1;
+	//}(); // => Anonym
+
+
+	// []  |=> Capture list
+	// ()  |=> Param list
+	// ->  |=> return type
+	// {}  |=> body
+	
+
+
+	//// cout olunmasi
+	//cout << []()->int {
+	//			cout << "Hakuna Matata" << endl;
+	//			return 1;
+	//		}(); // => Anonym
+	
+	
+	//  // Pointer
+	//  int(*b)() = []()->int {
+	//  	cout << "Hakuna Matata" << endl;
+	//  	return 1;
+	//  }; // => Anonym
+	//  
+	//  
+	//  b();
+	//  
+	//  
+	//  // Pointer
+	//  auto a = []()->int {
+	//  	cout << "Hakuna Matata" << endl;
+	//  	return 1;
+	//  }; // => Anonym
+	//  
+	//  
+	//  a();
+
+
+
+
+	// Pointer
+
+	//auto a = [](int num, int a)->int {
+	//	cout << "Hakuna Matata" << endl;
+	//	return num + a;
+	//}(10,2); // => Anonym
+
+	//cout << a << endl;
+
+
+
+
+	int a = 10;
+	int b = 20;
+	int c = 30;
+	
+
+	//// by value (copy) => istifade ede bilerik amma deishe bilmerik
+	//[a,b,c](int q)->void {
+	//	cout << a << endl;
+	//};
+
+	//// = by value
+	//[=](int q)->void {
+	//	cout << a << endl;
+	//};
+
+	// by reference 
+	[&a, b, c](int q)->void {
+		a = 19;
+		cout << a << endl;
+	};
+	
+	[&](int q)->void {
+		a = 19;
+		cout << a << endl;
+	};
+
+
+	[&, a](int q)->void {
+		b = 19;
+		cout << a << endl;
+	};
+}

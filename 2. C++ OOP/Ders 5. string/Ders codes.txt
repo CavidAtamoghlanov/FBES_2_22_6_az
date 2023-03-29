@@ -1,0 +1,95 @@
+# include<iostream>
+
+using namespace std;
+
+
+
+
+
+
+int main() 
+{
+	
+	//string name = "Hesen";
+	//string name1("Cavid");
+	//string name1(15, 'a');
+	//cout << name1 << endl;
+	// 
+	// 
+	//cout << name << endl;
+	//name = "Amin";
+	//cout << name << endl;
+	//
+	// 
+	//cout << name.length() << endl; // symbollarin sayini verdi
+	//cout << name.size() << endl;   // symbollarin sayini verdi
+
+	// capasity(),  shrink_to_fit()
+	//cout << name.capacity() << endl; // 16-1 => bizim ucun yer ayirir
+	//name = "HesenQulu Bey necesiniz Hahahaha huhuhu hehehehe";
+	//cout << name.capacity() << endl;
+	//name = "Ismayil aaaaaaaa";
+	//cout << name.capacity() << endl;
+	//name.shrink_to_fit();
+	//cout << name.capacity() << endl;
+
+
+
+	// append()
+	//string name = "Hesen";
+	//string name1 = "Amin";
+
+	//name.append(5, 'a');
+	//cout << name << endl;
+
+	//name.append("Salam");
+	//cout << name << endl;
+
+	//name.append("salam", 10);
+	//cout << name << endl;
+
+	//name.append(name1, 1, 3);
+	//cout << name << endl;
+
+	string name = "Hesen";
+	//name.assign("a");
+	//cout << name << endl;
+
+
+	//
+	//cout << name.c_str() << endl; // const char*  olaraq datani return edir
+	//const char* a = name.c_str();
+	//cout << name.data() << endl; // const char*  olaraq datani return edir
+
+
+	// at()
+	//cout << name.at(1) << endl; // index-e muraciet
+	//cout << name[1] << endl; // index-e muraciet
+
+	//cout << name.back() << endl; // sonuncunu return edir
+	//name.pop_back(); // sonuncunu silir
+	//cout << name.front() << endl; // birincini verir
+	//name.front() = 'C';
+	
+	/*cout << name.compare(0, 4, "Hesen") << endl;
+	cout << name.compare("Hes") << endl;
+	name.clear();
+	if (name.empty())
+	{
+		cout << "bosdur" << endl;
+	}
+	else {
+		cout << "dolu" << endl;
+	}*/
+
+
+	//cout << name.find("T") << endl;
+
+	// -----------------------------------------------------------------------------
+
+
+
+
+
+	return 0;
+}

@@ -1,0 +1,5 @@
+INheritance => Toreme => Multiple inheritence tekrar
+
+
+
+Polymorphism,  Virtual metho  arasdirin

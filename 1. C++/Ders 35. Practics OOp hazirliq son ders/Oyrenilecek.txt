@@ -1,0 +1,39 @@
+Class  nedir
+Object nedir
+
+
+//// OOP principles
+// Encapsulation
+// Inheritance
+// Polymorphism
+// Abstraction
+
+
+//// Access modifiers or Access specifiers
+// private
+// protected
+// public
+
+//////////////////////////////////
+// Initialize
+// Define
+// Assign
+
+
+//////////////////////////////////
+//// Keywords
+// delete
+// default
+
+//////////////////////////////////
+//// Constructors
+
+// Default Constructor
+// Parameterized Constructor
+// Copy Constructor
+// Move Constructor
+
+
+
+//////////////////////////////////
+//// Destructor

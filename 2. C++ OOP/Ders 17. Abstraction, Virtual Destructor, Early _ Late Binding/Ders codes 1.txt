@@ -1,0 +1,65 @@
+#include <iostream>
+#include<vector>
+
+using namespace std;
+
+// Abstraction, early and late binding
+
+
+///////////////////////////////////////////////////
+// early and late binding
+// 1. Early  binding      &&  Late Binding
+// 2. Early Polymorphsim  &&  Late Polymorphsim
+// 3. Compiler Time       &&  Run Time
+
+
+////3. Compiler Time
+//int sum(int a, int b) { return a + b; }
+//int sum(double a, double b) { return a + b; }
+
+/////////////////////////////////////////////////////////////////
+class Animal
+{
+protected:
+	string name;
+	Animal(string n) : name(n) {}
+public:
+	string getName() { return name; }
+	virtual void sound() { cout << "???????????????\n"; }
+};
+
+
+class Dog :public Animal
+{
+public:
+	Dog(string n) :Animal(n) {}
+	void sound() override { cout << "How How How \n"; }
+};
+
+class Cat :public Animal
+{
+public:
+	Cat(string n) :Animal(n) {}
+	void sound() override { cout << "Meouwwww \n"; }
+};
+
+
+int main()
+{
+	
+	// Run Time
+
+	vector<Animal* >animals;
+	animals.push_back(new Dog("Mestan"));
+	animals.push_back(new Cat("Lucy"));
+	animals.push_back(new Cat("Alabas"));
+	animals.push_back(new Dog("Toplan"));
+
+
+	for (Animal*& i : animals)
+	{
+		i->sound();
+	}
+
+
+}

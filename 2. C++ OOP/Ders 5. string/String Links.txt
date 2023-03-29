@@ -1,0 +1,3 @@
+https://www.javatpoint.com/cpp-strings
+https://www.cplusplus.com/reference/string/string/
+https://www.makeuseof.com/12-c-string-methods-you-should-master-today/

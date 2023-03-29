@@ -1,0 +1,227 @@
+
+"""
+Amin 3.5+++++
+hesen 3.5+++++
+Eldar --> 3.5       +-++-
+kamal --> 1.3.5     --False+
+Nijhad --> 3.5     +-+++
+rsutem --> 3.5    +-+++
+ibrahim --> 4,5     --+++
+Eskerli hesen --> 4.5    ---+-
+Merac --> test4, test 5  -+++-
+Elvin -->  4 , 5    ---++
+Aydinzade hesen --> 3, 5  +++++
+Iman --> 3, 5    -++++
+Mehemmed --> 3.5  ++-++
+Rehimaga --> 3.5   +----
+Ismayil -->3.5   +  +-++
+"""
+# 11. Istənilən tarix daxil edilir. Ondan sonraki günü ekrana çıxaran program yazın.
+
+# gun = int(input("gunu daxil et "))
+# ay = int(input("Ayi daxil et "))
+# il = int(input("Ili daxil edin: "))
+# if ay != 2:
+#     if gun <= 30:
+#         gun += 1
+#         print(gun,".", ay, ".", il)
+#     elif gun == 31:
+#         gun = 1
+#         ay += 1
+#         if ay <=12:
+#             print(gun,".", ay, ".", il)
+#         elif ay > 12:
+#             ay = 1
+#             il += 1
+#             print(gun,".", ay, ".", il)
+# elif ay == 2:
+#     if il % 4 == 0:
+#         if gun <= 28:
+#             gun += 1
+#             print(gun,".", ay, ".", il)
+#         elif gun == 29:
+#             gun = 1
+#             ay += 1
+#             print(gun,".", ay, ".", il)  
+#     else:
+        
+#         if gun <= 27:
+#             gun += 1
+#             print(gun,".", ay, ".", il)
+#         elif gun == 28:
+#             gun = 1
+#             ay += 1
+#             print(gun,".", ay, ".", il)  
+# ----------------------------------------------------------------------
+# 13. İstifadəçi beşrəqəmli ədəd daxil edir, əgər ədədin bütün rəqəmləri sadədirsə, istifadəçiyə
+# bu haqda məlumat verilir. ( sadə rəqəmlər - yalnız 1-ə və özünə bölünə bilən ədədlər)
+
+# eded = int(input("5 reqemli eded  daxil edin: ")) # 12345
+
+# num_5 = eded % 10
+# num_4 = (eded // 10) % 10
+# num_3 = (eded // 100) % 10
+# num_2 = (eded // 1000) % 10
+# num_1 = eded // 10000
+
+# if num_5 == 2 or num_5 == 3 or num_5 == 5 or num_5 == 7:
+#     if num_4 == 2 or num_4 == 3 or num_4 == 5 or num_4 == 7:
+#         if num_3 == 2 or num_3 == 3 or num_3 == 5 or num_3 == 7:
+#             if num_2 == 2 or num_2 == 3 or num_2 == 5 or num_2 == 7:
+#                 if num_1 == 2 or num_1 == 3 or num_1 == 5 or num_1 == 7:
+#                     print("Daxil edilmish ededin herbir reqemi  sadedir")
+# ------------------------------------------------------------------------------    # 
+# ------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+
+
+# ------------------------------------------------------------
+# Hazir method
+# round()  --> yuvarlaglasdirma ucun istifade  olunur 
+#              (iki novu var ya  tam  edede  yuvarlaglasdirir yada nokteden sonra 
+#               verilmish  qeder eded  qalir)
+# print(round(15.54,1))
+
+# # # len()  --> verilmish  toplunun elementleri sayini  size  deyir
+# # print(len("Salam"))
+# abs()  --> modulu hesablayan funksiya
+
+# print(len('15'))
+# ------------------------------------------------------------
+# Error handling
+
+# print("Salam) # SyntaxError  ->  error  file run edilmir 
+
+
+# print(20/0)  # ZeroDivisionError
+# print(name) # NameError
+# print(int("15.5")) # ValueError
+
+# try --> daxilinde yazilmis kodlarda  error olduqu  halda  onu  tutur  ve  programi cokmeye  qoymur
+#   ve INTERPRETATO_RU except-e yonlendirir
+
+# example
+# try:
+#     eded = int(input("Eded  daxil edin: "))
+#     netice = eded / 0
+#     print(netice)
+# except:
+#     print("error") 
+    
+# print("END")
+
+
+
+# example
+
+
+
+# # example 2
+# try:
+#     eded = int(input("Eded  daxil edin: "))
+
+# except:
+#     print("Ancaq reqem daxil edin: ")
+    
+# try:
+#     netice = eded / 0
+#     print(netice)
+# except:
+#     print("Sifira bolmey  olmaz")
+# -----------------------------------------------
+
+
+# # example _1
+# try:
+#     eded = int(input("Eded  daxil edin: "))
+#     netice = eded / 0
+#     print(netice)
+# except ZeroDivisionError:
+#     print("error") 
+    
+# print("END")
+
+
+# # example _2
+# try:
+#     eded = int(input("Eded  daxil edin: "))
+#     netice = eded / 0
+#     print(netice)
+# except (ZeroDivisionError, NameError):
+#     print("error") 
+    
+# print("END")
+
+# # example _3
+# try:
+    
+#     eded = int(input("Eded  daxil edin: "))
+#     netice = eded / 0
+#     print(netice)
+# except ZeroDivisionError:
+#     print("Sifira bolmey  olmaz") 
+# except ValueError:
+#     print("Ancaq reqem daxil edin: ")
+# except:
+#     print("error")
+    
+# print("END")
+
+# --------------------------------------------
+# try:
+#     eded = int(input("Eded  daxil edin: "))
+#     netice = eded / 0
+#     print(netice)
+# except NameError:
+#     print("Bele bir deisen movcud  deyil")
+# except BaseException as ex:
+#     print(ex) 
+    
+# print("END")
+
+# ---------------------------------------------------------------
+# # else,  finally
+# try:
+#     eded = int(input("Eded  daxil edin: "))
+#     netice = eded / 5
+#     print(netice)
+# except NameError:
+#     print("Bele bir deisen movcud  deyil")
+# except BaseException as ex:
+#     print(ex)
+# else:
+#     print("error olmadi !")
+# finally:
+#     print("Finally")
+    
+# print("END")
+
+
+# ------------------------------------------
+# raise --> oz sexsi  errorunuzun  hazirlanmasi
+
+
+# eded = int(input("Eded  daxil edin: "))
+
+# if eded == 3:
+#     raise Exception("3  daxil etmek olmaz")
+# elif eded == 5:
+#     raise Exception("5 daxil etmey  olmaz")
+
+# ------------------------------------------------------
+# number = input("Enter namber: ")   # "16"
+
+# try:
+#     if number % 2 == 0:
+#         raise Exception("Cut eded daxil etmek olmaz...!!")
+#     print(number)
+# except Exception as ex:
+#     print("Error: ", ex)
+# else:
+#     print("Else")
+# finally:
+#     print("Finally")
+# print("End")
+# ----------------------------------------------------------------
+
+

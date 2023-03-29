@@ -1,0 +1,166 @@
+#pragma once
+
+void write_mode_to_text()
+{
+	// varsa acitr yoxdursa yaradir
+
+	//// way 1
+	//ofstream file; // Yazmaq ucun
+	//// file.open("kamal.txt"); // default olaraq out olur
+
+	//// way 2
+	//file.open("kamal.txt", ios::out);
+
+
+	// way 3
+	//ofstream file("C:\\Users\\atamoghlanov_j\\Desktop\\Hesen.txt", ios::out);
+	//ofstream file(R"(C:\Users\atamoghlanov_j\Desktop\Hesen.txt)", ios::out);
+	ofstream file("C:/Users/atamoghlanov_j/Desktop/Hesen.txt", ios::out);
+
+
+	if (!file) throw exception("File could not be created");
+	if (!file.is_open()) throw exception("File could not be opened");
+
+
+	file << "Kamal Necesen" << endl << 15 << " " << 325;
+
+	file.flush(); // 
+
+	file.close();
+
+}
+
+
+void read_mode_from_txt()
+{
+
+
+
+	ifstream  f("Hesen.txt", ios::in); // in => oxumaq ucun
+
+	if (!f) throw exception("File could not  found");
+	if (!f.is_open()) throw exception("File could not be ");
+
+	string data;
+
+
+
+	//f.seekg(0);
+	// ios::beg => basdan neqeder surusheceyini bildirir
+	// ios:: end => sondan neqeder surusheceyini bildirir
+
+
+	f.seekg(3);
+	f >> data;
+	cout << data << endl;
+
+	f >> data;
+	cout << data << endl;
+
+	string c;
+	f.seekg(0);
+	f >> c;
+	cout << c << endl;
+	/*f >> data;
+	cout << data << endl;*/
+
+	//f >> data;
+	//cout << data << endl;
+
+	////////////////////////////
+	//while (!f.eof())
+	//{
+	//	getline(f, data);
+	//	cout << data << endl;
+	//}
+	//	cout << data << endl;
+
+
+
+	/*
+	while (!f.eof())
+	{
+		getline(f, data, ':');
+		cout << data << endl;
+	}
+	*/
+
+	f.close();
+
+}
+
+
+void write_mode_binary()
+{
+	//ofstream file("myFile.bin", ios::out | ios::binary);
+	ofstream file("myFile.bin", ios::binary);
+
+	if (file.is_open())
+	{
+		int arr[]{ 65, 66, 67, 68, 69 };
+
+		file.write((char*)arr, sizeof arr);
+
+		file.close();
+	}
+
+}
+
+
+void read_binary()
+{
+	ifstream file("myFile.bin", ios::binary);
+	int arr[5]{};
+	if (file.is_open())
+	{
+
+		file.read((char*)arr, sizeof arr);
+		file.close();
+	}
+
+	for (size_t i = 0; i < 5; i++)
+	{
+		cout << arr[i] << endl;
+	}
+
+}
+
+
+void together()
+{
+	fstream file("Hesen.txt", ios::in | ios::out | ios::trunc);
+
+	if (file.is_open())
+	{
+
+		file << "Hakuna matata" << endl;
+
+		file.seekg(0);
+		string data;
+		getline(file, data);
+		cout << data << endl;
+
+
+	}
+}
+
+
+class Car
+{
+public:
+	string* _model;
+	string* _color;
+	int* _year;
+	Car(string model, string color, int year) {
+		_model = new string(model);
+		_color = new string(color);
+		_year = new int(year);
+	}
+};
+
+void saveCar(Car* newCar, string filename)
+{
+	ofstream file(filename, ios::app);
+	file << *newCar->_model << " " << *newCar->_color << " " << *newCar->_year << endl;
+
+}

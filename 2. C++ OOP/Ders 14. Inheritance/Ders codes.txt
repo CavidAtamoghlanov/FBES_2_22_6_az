@@ -1,0 +1,206 @@
+#include <iostream>
+//
+//using namespace std;
+//// Class relations
+//
+//// has a  (accotation) => varidir
+//// use    (Depentency)
+//// is a   (INheritance)
+//
+//
+////// ----------------------------------------------------------------
+////// has a  (accotation) => varidir
+////// Bir classda diger classing objectini field olaraq istifade etmek
+////
+////// Person has a name
+////class Person
+////{
+////public:
+////	string name;
+////	string surname;
+////};
+//
+////
+////// ---------------------------------------------------------------------
+////// use    (Depentency => asliliq)
+////// Class daxilinde method-da diger classi  return type  veya parametr kimi istifade etmek
+////
+////// Person use string
+////class Person
+////{
+////public:
+////
+////	string foo()
+////	{}
+////
+////	void foo(string object)
+////	{
+////
+////	}
+////};
+//// -------------------------------------------------------------------------------------------
+//// -------------------------------------------------------------------------------------------
+////// is a   (INheritance)  => 
+////
+////// DON'T REPEAT YOURSELF
+////
+////// BASE    Parent    SuperClass     
+////class Person
+////{
+////public:
+////	string name;
+////	string surname;
+////	int age;
+////
+////	Person()
+////	{
+////		cout << "Person default" << endl;
+////	}
+////	Person(string name, string surname, int age)
+////	{
+////		this->name = name;
+////		this->surname = surname;
+////		this->age = age;
+////		cout << "Person Param" << endl;
+////	}
+////
+////	~Person()
+////	{
+////		cout << "Person DESCT" << endl;
+////	}
+////};
+////
+////// Student ha a Person
+////// Derived
+////class Student : public Person
+////{
+////public:
+////	int avg;
+////	
+////	Student() 
+////	{
+////		cout << "Student default" << endl;
+////	}
+////
+////	Student(string name, string surname, int age, int avg) :Person(name, surname, age)
+////	{
+////		this->avg = avg;
+////		cout << "Student Param" << endl;
+////
+////	}
+////	
+////	~Student()
+////	{
+////		cout << "Styudent DESCT" << endl;
+////	}
+////
+////};
+//
+//
+//
+////// ------------------------------------------------------------------
+////// ------------------------------------------------------------------
+////// ------------------------------------------------------------------
+////// Access modifiers
+////
+////class A
+////{
+////public:
+////	// Classin oz daxilinde. Classin objectinde ve classdan torenen diger classda istifade edile bilir
+////	int x=0;
+////	
+////protected:
+////	// Classin ozunde istifade edilir. classin toremesinde istifade edile bilir. objectde istifade edile bilmir
+////	int y=1;
+////private:
+////	// ancaq ve ancaq classin ozunde istifade edilir
+////	int z=3;
+////};
+////
+////
+////
+////class B :public A
+////{
+////
+////	
+////	void print()
+////	{
+////		cout << "X => " << x << endl;
+////		cout << "Y => " << y << endl;
+////		//cout << "Z => " << z << endl; 
+////	}
+////};
+//// -------------------------------------------------------------------------------
+//// -------------------------------------------------------------------------------
+//// member overried
+//class Person
+//{
+//public:
+//	string name;
+//	string surname;
+//	int age;
+//
+//	Person()
+//	{
+//		cout << "Person default" << endl;
+//	}
+//
+//	Person(string name, string surname, int age)
+//	{
+//		this->name = name;
+//		this->surname = surname;
+//		this->age = age;
+//		cout << "Person param" << endl;
+//	}
+//
+//	void print()
+//	{
+//		cout << "Name: " << this->name << endl
+//			<< "Surname: " << this->surname << endl
+//			<< "Age: " << this->age << endl;
+//	}
+//};
+//
+//
+//class Student: public Person
+//{
+//public:
+//	int avg;
+//
+//
+//	Student()
+//	{
+//		cout << "Student default" << endl;
+//	}
+//
+//	Student(string name, string surname, int age, int avg) : Person(name, surname, age)
+//	{
+//		this->avg = avg;
+//		cout << "Student param" << endl;
+//	}
+//
+//	
+//	void print()
+//	{
+//		Person::print();
+//		cout << this->avg << endl;
+//	}
+//};
+//
+//
+//// Base class istenilen halda oz derived classlarinin pointerini(yani adresini ) saxlaya biler
+//	// Bu zaman Base class pointeri ancaq ozunde olan  memmberlere cata bilir
+//
+//
+//int main()
+//{
+//
+//	//Student s1("Xeyal", "Xeyalov", 15, 11);
+//	//s1.print();
+//
+//	Student * s1 = new Student("Xeyal", "Xeyalov", 15, 11);
+//	Person * s2 = new Student("Xeyal", "Xeyalov", 15, 11);
+//	
+//
+//
+//}

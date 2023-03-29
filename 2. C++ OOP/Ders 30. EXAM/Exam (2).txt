@@ -1,0 +1,103 @@
+#include <iostream>
+#include <iomanip>
+#include <vector>
+#include <direct.h>
+#include <stdio.h>
+#include <conio.h>
+#include <string>
+#include <io.h>
+#include <Windows.h>
+using namespace std;
+
+int offset = 0;
+void show_folder(string path) {
+	cout << setw(offset * 3) << " " << "show_folder(\"" + path + "\") called" << endl;
+	_finddata_t fd;
+	string buf = path + "/*.*";
+	int findHandle = _findfirst(buf.c_str(), &fd);
+	do {
+		if (strcmp(fd.name, "..") == 0 || strcmp(fd.name, ".") == 0) {
+			continue;
+}
+		
+		if (fd.attrib & _A_SUBDIR) {
+			cout << setw(offset * 3) << " ";
+			cout << fd.name << "\t" << "DIR" << endl;
+			offset++;
+			show_folder(path + "/" + fd.name);
+		}
+		else {
+
+			cout << setw(offset * 3) << " ";
+			cout << fd.name << "\t" << fd.size << endl;
+		}
+	} while (_findnext(findHandle, &fd) != -1);
+	_findclose(findHandle);
+	cout << setw(offset * 3) << " " << "show_folder(\"" + path + "\") ended" << endl;
+	offset--;
+}
+
+
+
+
+void main() {
+
+	//show_folder(".");
+	//FILE *f;
+	//fclose(fopen("atatata.bin", "w"));
+	// Create File 
+	//_mkdir("C://users//huse_ot12//okokokok");
+	//CreateDirectoryA("C://users//huse_ot12//okokokok", NULL); // user can create hidden files
+	//system("mkdir hakuna matata");
+	///remove dir
+	//_rmdir("C://users//huse_ot12//okokok");
+	//RemoveDirectoryA("C://users//huse_ot12//okokok");
+	//remove dir and file
+	//remove("C://users//huse_ot12//okokok");\
+	//remove file
+	//DeleteFileA("atatata.bin");
+
+//	rename("ratata.txt", ".//hakuna//ratata.txt");
+	//int a = MessageBoxA(NULL, "HELLOOOOO", "Remove?", MB_OKCANCEL);
+	//cout << a;
+	//ShellExecuteA(0, 0, "C:\\Users\\huse_ot12\\source\\repos\\Exam\\Exam\\index.html", 0, 0, SW_SHOW);
+
+
+
+
+	vector<string> items;
+	int i = 0;
+	while (true) {
+		system("cls");
+		i = 0;
+		items.clear();
+
+		_finddata_t fd;
+		int findHandle = _findfirst("./*.*", &fd);
+		do {
+			items.push_back(fd.name);
+			cout << i  << ". "<< fd.name << endl;
+			i++;
+		}
+
+		while (_findnext(findHandle, &fd) != -1);
+		_findclose(findHandle);
+		cout << "Enter index you want to delete " << endl;
+		int index=0;
+		cin >> index;
+		int res = MessageBoxA(0, "Do you want to remove this really ?? hey ?", "Really ?", MB_OK);
+		if (res == 1) {
+		remove(items[index].c_str());
+			//_rmdir(items[index].c_str());
+		}
+		
+	};
+
+
+
+
+
+	system("pause");
+
+
+}

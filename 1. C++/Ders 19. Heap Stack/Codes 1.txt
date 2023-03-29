@@ -1,0 +1,73 @@
+#include<iostream>
+
+using namespace std;
+
+
+
+void main()
+{
+	/*
+	int x = 10;
+	void* ptr = &x;
+	*/
+
+	/*{
+		int x = 10;
+		char a = 'C';
+	}*/
+
+	// malloch() => C -de heap uzerinde deishen yaradiriq
+	// free()    => heap-den silirik
+
+	// --------------------------------------------------
+	// new  => keywordu vasitesis ile heapde yer ayrilir
+	// delete => delete ile silinir
+
+	//int x = 10;
+	//int arr[10]{};
+
+	//// define 
+	//int* ptr_1 = new int;
+
+	//// initalize 
+	//int* ptr_2 = new int(50);
+	//
+	//cout << *ptr_1 << endl;
+	//cout << *ptr_2 << endl;
+
+	//delete ptr_1;
+	//ptr_1 = nullptr;
+
+	//cout << ptr_1 << endl;
+
+	// ----------------------------------------------
+
+	// ------------------------------------------------
+
+	/*
+	Birdene olcusu 10 olan array yaradib icini random doldurun
+	daha sonra o arrye 1 element daha elave edin
+	*/
+
+	int size = 5;
+	int arrrr[5]{};
+
+	int* arr = new int[size] {1, 2, 3, 4, 5};
+
+	int* arrNew = new int[size + 1] {};
+
+	for (int i = 0; i < size; i++)
+	{
+		arrNew[i] = arr[i];
+	}
+	delete[] arr;
+	arr = nullptr;
+
+	arrNew[size] = 155;
+
+	for (int i = 0; i < size+1; i++)
+	{
+		cout << arrNew[i] << " ";
+	}
+	delete[] arrNew;
+}

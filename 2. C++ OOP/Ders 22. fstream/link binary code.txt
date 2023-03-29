@@ -1,0 +1,1 @@
+https://www.tutorialspoint.com/reading-and-writing-binary-file-in-c-cplusplus

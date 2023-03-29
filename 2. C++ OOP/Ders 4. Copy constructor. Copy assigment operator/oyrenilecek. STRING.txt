@@ -1,0 +1,60 @@
+
+string methods
+
+
+
+
+capacity, reserve, resize, shrink_to_fit
+
+
+capacity() 
+	
+resize(13)
+
+shrink_to_fit()
+
+reserve()
+
+
+
+
+
+
+
+
+clear, empty
+
+	
+clear()
+empty()
+	
+	
+
+
+
+
+
+
+
+string operator +=, +,  =, ==, []
+at method
+
+	
+compare() 
+
+
+front()
+back()
+insert()
+replace()
+append()
+push_back()
+pop_pack()
+assign()
+find()
+rfind()
+c_str()
+data()
+erase()
+swap()
+substr()

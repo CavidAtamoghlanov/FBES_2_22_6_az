@@ -1,0 +1,47 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+
+
+struct Person {
+public:
+	const char* name = nullptr;
+	const char* surname = nullptr;
+	int age = 0;
+protected:
+	int balans = 2000;
+private:
+	int id = 0;
+};
+
+
+struct Worker : Person {
+	char* hobby = nullptr;
+	
+};
+
+
+
+
+void main()
+{
+
+
+	// access modificator
+	// public    => default olaraq public-dir ve public olanlar  hem objectde hem  Structin ozunde hemde toremesinde istifade edile bilir
+	// private   => Ancaq struct daxilinde istifade edile bilir. object veya toreme Structda istifade edile bilmir
+	// prodected => Structin ozunde ve toremesinde istifade edile biler lakin Objectde istifade edile bilmez 
+
+	Person p1;
+	p1.name = "KAmal";
+	p1.surname = "Hesenov";
+
+	
+
+	
+
+	
+	
+
+}

@@ -1,0 +1,210 @@
+#include<iostream>
+
+using namespace std;
+
+
+int main()
+{
+
+	//// enum => Bir cox datani bir ad altinda yigib saxlamaq. (oz data typenizi yaratmaq)
+
+	//enum months {
+	//	Yanvar = 1,
+	//	Fevral,
+	//	Mart = 5,
+	//	Aprel,
+	//	Dekabir,
+	//	May
+
+	//};
+
+	//
+
+	//cout << months::Yanvar << endl;
+
+	//int date;
+	//cin >> date;
+	//switch (date)
+	//{
+	//case Yanvar:
+	//case Dekabir:
+	//case Mart:
+	//case May:
+	//	cout << "31 ";
+	//	break;
+	//case Fevral:
+	//	cout << "28 - 29 ";
+	//	break;
+
+	//case Aprel:
+	//	break;
+	//default:
+	//	break;
+	//}
+
+	// --------------------------------------------------------------------
+	// --------------------------------------------------------------------
+	// --------------------------------------------------------------------
+	//// random =>  
+	//
+	//srand(time(NULL));  // birinci sefer mutleq yazilmalidir (Herzaman tam ferq	li random eded gelmseini verir)
+	//
+
+	//////cout << rand() % 10 << endl;  // 0 ile 10 araliqi random eded
+	//////cout << rand() % 100 << endl; // 0 ile 100 araliqi random eded
+
+	////int min = 30;
+	////cout << rand() << endl;
+	////cout << (min + (rand() % 10)) << endl; // 45 ile => 54 araliqinda random eded
+
+	////int max = 50;
+	////cout << (min + (rand() % (max - min))) << endl;
+
+	//// ----------------------------------------------
+	//// ----------------------------------------------
+	//// kesir eded
+
+	////int min = 30;
+	////cout << rand() << endl;
+	////int random = (rand() % 10);
+
+	////cout << random / 10.0f << endl; // verilmish random ededi  kesir formada verir (30 - 39 araliqinda kesir eded)
+
+
+	//// TASK 1
+	//// 10 - 50
+	////  random gelen ededin cut veya tek olduqunu ekrana cixarin 
+	////------------------------------------------------------------
+	////------------------------------------------------------------
+	////------------------------------------------------------------
+
+	// LOOP => while
+	// int num = 5;
+
+	//while (num) {
+	//	--num;
+	//	cout << num << endl;
+	//	
+	//}
+
+	/*while (--num) {
+
+		cout << num << endl;
+
+	}*/
+
+	// break  => hansi dovrun daxilindedirse onu qirir 
+	// continue => hansi dorun daxilindedirse onu novbeti iterasiyaya (tekrara ) kecirir
+
+
+	//int num = 0;
+	//while (true)
+	//{
+	//	
+	//	if (num == 15) break;
+	//	cout << num << endl;
+	//	num++;
+	//}
+
+
+	//int num = 15;
+	//while (num)
+	//{
+	//	num--;
+	//	if (num == 5) continue;
+	//	cout << num << endl;
+
+	//}
+
+
+
+
+	/*
+		TASKS
+			1. Ekrana bütün ASCİİ kod cədvəlini çıxaran program yazın.
+
+			2. Ekrana istifadəçinin daxil etdiyi say qədər, ulduzlardan üfiqi xətt
+			çıxaran proqram yazın.
+
+			3. Ekrana, 1-50 aralığındakı rəqəmlərdən ancaq cüt olanları çıxaran
+			proqram yazın.
+
+			4. “Ədədi tap” oyununu yazın. Program ağlında bir rəqəm tutacaq, və
+				yazdığınız proqram həmin ədədi bir neçə dəfə təxmin edərək
+				tapmalıdır.
+
+			(0 - 20) => random eded secilmelidir
+			maksimum 5 gedish ede bilim
+
+
+	*/
+	//// TASk 4
+	//srand(time(NULL));
+	//int _rand = 0 + (rand() % 20);
+
+	//int count = 5;
+	//int user;
+
+	//while (count--)
+	//{
+	//	cout << "Eded daxil edin: ";
+	//	cin >> user;
+
+	//	if (user == _rand)
+	//	{
+	//		cout << "Qalib geldiniz" << endl;
+	//		break;
+	//	}
+	//	else if (user < _rand)
+	//	{
+	//		cout << "Daha boyuk eded  daxil edin!!!" << endl;
+	//	}
+	//	else if (user > _rand)
+	//	{
+	//		cout << "Daha kicik eded  daxil edin!!!" << endl;
+	//	}
+	//}
+
+	// do_while => Istenilen halda birinci sefer kodlar isleyir
+
+
+
+	/*
+	1. Do-while-dan istifadə edərək, valyuta mübadiləsi, kalkuyator, mili
+		kilometrə çevirən programları sonsuz dövrə salın.
+	*/
+	int secim;
+
+	do {
+		cout << "1 => Valyuta\n2 => kalkulator\n3 => Mil to km \n0 => exit --> ";
+		cin >> secim;
+		if (secim == 1)
+		{
+
+		}
+		else if (secim == 2)
+		{
+
+		}
+		else if (secim == 3)
+		{
+
+		}
+		else if (secim == 0)
+		{
+			cout << "Bye Bye Bye" << endl;
+			break;
+
+		}
+		else
+		{
+			cout << "Bele secim Movcud deyil" << endl;
+		}
+
+
+	} while (true);
+
+
+
+	system("pause");
+}

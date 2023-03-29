@@ -1,0 +1,138 @@
+# https://www.geeksforgeeks.org/c-data-types/
+
+# @ -------------------------------------------------
+# size = 8
+# for row in range(size):
+#     for column in range(size):
+#         if row == 0 or column == 0 or column == size-1 or \
+#             row == size-1 or row == column or column+row == size-1:
+#             print("*", end=" ")
+#         else:
+#             print(" ", end=" ")
+#     print()
+#-------------------------------------
+"""
+1 1 1 1 1 
+0 0 0 0 0
+1 1 1 1 1 
+0 0 0 0 0
+1 1 1 1 1
+"""
+# size = 5
+# for row in range(size):    
+#     for column in range(size):
+#         if row % 2 == 0:
+#             print("1", end=" ")
+#         else:
+#             print("0", end=" ")
+#     print( )
+
+#---------------------------------------------------------
+
+"""
+*
+* *
+* * * 
+* * * *
+* * * * * 
+"""
+# size = 10
+# for row in range(size):
+#     for column in range(row+1):
+#         print("*", end=" ")
+#     print()
+
+
+"""
+* * * * *
+* * * * 
+* * * 
+* *
+*
+"""
+
+# size = 5
+# for setr in range(5):
+#     for sutun in range(size -setr):
+#         print("*", end = " ")
+#     print("")
+    
+
+# size = 5
+# for setr in range(5):
+#     for sutun in range(setr, size):
+#         print("*", end = " ")
+#     print("")
+
+# size = 5
+# for setr in range(5, 0, -1):
+#     for sutun in range(setr):
+#         print("*", end = " ")
+#     print("")
+
+
+"""
+        *
+      * *
+    * * *
+  * * * *
+* * * * *  
+"""
+# size = 5
+# for row in range(5, 0, -1):
+#     for column_1 in range(row-1):
+#         print(" ", end=" ")
+#     for coulmn_2 in range(size-row+1):
+#         print("*", end=" ")
+#     print()
+
+
+""" 
+* * * * *
+  * * * * 
+    * * * 
+      * *
+        *
+"""
+
+# size = 5
+# for row in range(size):
+#     for colum_1 in range(0, row):
+#         print(" ", end=" ")
+#     for column_2 in range(0, size-row):
+#         print("*", end=" ")
+#     print()
+
+
+
+
+
+
+"""
+    |         |
+____|_________|_____
+    |         |
+    |         |
+____|_________|_____
+    |         |
+    |         |
+"""
+x1 = x2 = x3= x4 = x5 = x6 = x7 = x8 = x9 = " "
+sira = "X"
+
+for i in range(9):
+
+    print(
+    f"""
+    {x1} | {x2} | {x3}
+    _________
+    {x4} | {x5} | {x6}
+    _________
+    {x7} | {x8} | {x9}
+
+    """)
+   
+    
+    
+    
+

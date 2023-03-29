@@ -1,0 +1,45 @@
+#include <iostream>
+#include <queue>	// queue, priority_queue, deque
+
+
+using namespace std;
+
+int main()
+{
+	/*
+		priority_queue<string> students;
+
+		students.push("Leyla");
+		students.push("Tural");
+		students.push("Aydin");
+		students.push("Kenan");
+		students.push("Ali");
+
+		while (!students.empty())
+		{
+			cout << students.top() << endl;
+			students.pop();
+		}
+	*/
+
+
+
+
+	/*
+		deque<string> students;
+
+		students.push_back("Leyla");
+		students.push_front("Tural");
+		students.push_back("Aydin");
+		students.push_front("Kenan");
+
+		while (!students.empty())
+		{
+			cout << "Front: " << students.front() << endl;
+			cout << "Back: " << students.back() << endl;
+
+			// students.pop_back();
+			students.pop_front();
+		}
+	*/
+}

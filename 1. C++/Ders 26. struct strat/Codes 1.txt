@@ -1,0 +1,143 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+
+/*
+
+
+	Pacman => Oynunun yaradilmasi butun xirdaliqlari ozunuz nezere alin
+
+
+
+conio.h  => kitabxanasindan gelir
+_getch()   => cin kimidir enter click etmeden data gonderilir
+_putch()   =>
+*/
+
+
+char** createArray(int size)
+{
+	char** area = new char* [size];
+
+	for (size_t i = 0; i < size; i++)
+	{
+		area[i] = new char[size] {};
+	}
+
+	return area;
+}
+
+
+void dispay(char** area, int size) {
+
+	system("cls");
+
+	for (size_t i = 0; i < size; i++)
+	{
+		for (size_t j = 0; j < size; j++)
+		{
+			cout << area[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
+
+void fillArray(char** area, int size) {
+	for (size_t i = 0; i < size; i++)
+	{
+		for (size_t j = 0; j < size; j++)
+		{
+			if (i == 0 || j == 0 || i == size - 1 || j == size - 1)
+			{
+				area[i][j] = 220;
+			}
+			else
+			{
+				area[i][j] = ' ';
+			}
+		}
+		cout << endl;
+	}
+}
+
+
+
+void main()
+{
+	/*int num;
+	while (true)
+	{
+
+		cout << "Enter number: ";
+		num = _getch();
+		cout << num << endl;
+
+	}*/
+
+	// cout << _putch(122) << endl;
+	//--------------------------------------------------
+	//--------------------------------------------------
+	//--------------------------------------------------
+
+	int size = 17;
+	char** area = createArray(size);
+	fillArray(area, size);
+	dispay(area, size);
+
+
+
+
+
+
+
+
+	int num;
+	while (true)
+	{
+		num = _getch();
+		switch (num)
+		{
+		case 224:
+			num = _getch();
+			switch (num)
+			{
+			case 72:
+				dispay(area, size);
+				break;
+			case 77:
+				dispay(area, size);
+				break;
+			case 75:
+
+				dispay(area, size);
+				break;
+			case 80:
+				dispay(area, size);
+				break;
+			default:
+				break;
+			}
+			break;
+		default:
+			cout << "Other symbol" << endl;
+			break;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

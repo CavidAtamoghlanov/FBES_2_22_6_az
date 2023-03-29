@@ -1,0 +1,58 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+
+
+int main()
+{
+	// _getch()
+	// _putch()
+
+
+
+	// char password[8];
+	// 
+	// 
+	// for (size_t i = 0; i < 8; i++) {
+	// 	password[i] = _getch();
+	// 	cout << '*';
+	// }
+	// 
+	// 
+	// cout << endl;
+	// for (size_t i = 0; i < 8; i++)
+	// 	cout << password[i];
+	// 
+	// cout << endl;
+
+
+	// A - a
+	// a - a
+
+	// char symbol;
+	// 
+	// while (true)
+	// {
+	// 	symbol = _getch();
+	// 
+	// 	if (symbol >= 65 && symbol <= 90) 
+	// 		symbol += 32;
+	// 
+	// 	cout << symbol << endl;
+	// }
+
+
+
+
+	// int asciiNo = _putch('A');
+	// cout << endl << asciiNo << endl;
+
+
+
+	// while (true)
+	// {
+	// 	   _putch(_getch());
+	// }
+}

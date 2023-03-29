@@ -1,0 +1,102 @@
+#include <iostream>
+#include<vector>
+
+using namespace std;
+
+// Abstraction
+// QEYD: Bir classin abstract olmasi ucun en azi bir dene PURE VIRTUAL methodu olmalidir
+// Abstaract classdan torenen class mutleq shekilde virtual methodlari overried etmelidir etmediyi halda o classda abstract class olur ve onunda objecti yaradila bilmir
+//
+//class Animal // Abstract class
+//{
+//protected:
+//	string name;
+//public:
+//	Animal(string n) : name(n) {}
+//	virtual string getName(){ return name; }
+//	virtual void sound() = 0  { cout << "Salam" << endl; }; // pure virtual method
+//
+//	virtual ~Animal() = 0 {}
+//};
+//
+//
+//class Dog :public Animal
+//{
+//public:
+//	Dog(string n) :Animal(n) {}
+//	void sound() { 
+//		cout << "Dog" << endl; }
+//};
+// // // // // // // // // // // // // // // // // // // // // // // //
+ // // // // // // // // // // // // // // // // // // // // // // //
+
+// TASK 1
+// Figure  classi olsun (double area  fieldi olsun) sahe. perimetir. uzunluq  methodlari olsun
+// circle  square   classi toredin
+// 
+
+
+class Shape
+{
+public:
+	double area;
+
+	virtual int sahe() = 0 { area = 0; return area; }
+	virtual int perimetir() { return 0; }
+	virtual int uzunluq() { return 0; }
+
+
+	virtual ~Shape()=0{}
+};
+
+
+class Circle : public Shape
+{
+public:
+	const double PI = 3.14;
+	double radius;
+	Circle(double r) : radius(r) 
+	{
+		area = PI * radius * radius;
+	}
+
+	int sahe() override
+	{
+		return area;
+	}
+
+	int uzunluq()override
+	{
+		return 2 * PI * radius;
+	}
+
+};
+class Square : public Shape
+{
+public:
+	
+	int side;
+	Square(int s) :side(s) {
+		area = side * side;
+	}
+
+	int sahe() override
+	{
+		return area;
+	}
+
+	int perimetir()override
+	{
+		return 4 * side;
+	}
+
+};
+
+int main()
+{
+	
+
+
+	
+
+}

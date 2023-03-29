@@ -1,0 +1,46 @@
+
+
+
+
+# p1 = [1, "Kitab", 10.5]
+# products = [ p1, p1 ]
+# stock = ["Cefercabbarli", "cefer@gmail.com", "28 may metro", products]
+
+# printProduct()  # gonderilen productu ekrana cap etmelidir
+
+def  createStock():
+    name = input("Ad daxl edin: ")
+    email = input("Email daxil edin: ")
+    addres = input("Address daxil edin: ")
+
+    return [name, email, addres, []]
+
+def createpraduct():
+    id = int(input("Id daxil edin: "))
+    name = input("Productun Ad daxl edin: ")
+    price = float(input("Prodcutun qiymetini daxil edin: "))
+    
+    return [id, name, price]
+    
+def printStock(stock_):
+    print(f"{stock_[0]}  {stock_[1]}  {stock_[2]}")
+    for element in stock_[3]:
+        print(element)
+
+def printProduct(products):
+    for i in products:
+        print(i[0],  i[1],  i[2])
+
+# -------------------------------------
+stock = createStock()
+
+a = createpraduct()
+
+stock[3].append(a)
+stock[3].append(a)
+stock[3].append(a)
+stock[3].append(a)
+stock[3].append(a)
+stock[3].append(a)
+printProduct(stock[3])
+print(stock)
